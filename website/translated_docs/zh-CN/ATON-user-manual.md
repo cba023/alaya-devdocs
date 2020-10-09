@@ -84,7 +84,7 @@ title: ATON钱包用户使用手册
 ## 接收
 
 <div>
-<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton15.png" width="300" style="zoom:80%;" /></div><div><br>1. 在钱包首页点击某个具体钱包，点击【接收】栏，则可展示钱包地址和二维码。<br>2. 点击钱包地址复制按钮则可复制地址。<br>3. 点击【保存图片并分享】则可将图片保存至本地相册，并分享给他人。<br>4. 其他方可通过此地址或者扫描此二维码进行LAT转账。<br><br><b>注意</b><br>1. 本APP地址和二维码仅接受PlatON网络的资产，请勿充值其他网络资产至此钱包。<br>2. 充值时，请确认网络的正确性。
+<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton15.png" width="300" style="zoom:80%;" /></div><div><br>1. 在钱包首页点击某个具体钱包，点击【接收】栏，则可展示钱包地址和二维码。<br>2. 点击钱包地址复制按钮则可复制地址。<br>3. 点击【保存图片并分享】则可将图片保存至本地相册，并分享给他人。<br>4. 其他方可通过此地址或者扫描此二维码进行LAT转账。<br><br><b>注意</b><br>1. 本APP地址和二维码仅接受Alaya网络的资产，请勿充值其他网络资产至此钱包。<br>2. 充值时，请确认网络的正确性。
 </div>
 <div style="clear:both"></div>
 <div style="margin-top:40px;"></div>
@@ -104,7 +104,7 @@ title: ATON钱包用户使用手册
 ### 查看验证节点列表
 
 <div>
-<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/atonrank.jpg" width="300"style="zoom:80%;" /></div> <div><br>1. 点击【委托-验证节点】，可查看PlatON网络中的验证节点。<br>2. 节点默认是按照排名进行排序，可支持接受委托量、委托者数、预计委托年化收益率排名。<br>3. 活跃中节点：指当前结算周期参与共识选举并有机会生产区块获得出块奖励的验证节点。<br>4. 候选中节点：指当前结算周期不参与共识选举的验证节点。
+<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/atonrank.jpg" width="300"style="zoom:80%;" /></div> <div><br>1. 点击【委托-验证节点】，可查看Alaya网络中的验证节点。<br>2. 节点默认是按照排名进行排序，可支持接受委托量、委托者数、预计委托年化收益率排名。<br>3. 活跃中节点：指当前结算周期参与共识选举并有机会生产区块获得出块奖励的验证节点。<br>4. 候选中节点：指当前结算周期不参与共识选举的验证节点。
 </div>
 <div style="clear:both"></div>
 <div style="margin-top:40px;"></div>

@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "PlatON",
+    "tagline": "Alaya",
     "docs": {
       "ATON-user-manual": {
         "title": "ATON Wallet User Manual"
@@ -17,8 +17,8 @@
         "sidebar_label": "EVM Smart Contract"
       },
       "index": {
-        "title": "PlatON Developer Docs",
-        "sidebar_label": "PlatON Developer Docs"
+        "title": "Alaya Developer Docs",
+        "sidebar_label": "Alaya Developer Docs"
       },
       "Java_SDK": {
         "title": "Java SDK",
@@ -37,16 +37,16 @@
         "sidebar_label": "MTool Tutorials"
       },
       "Command_Line_Tools": {
-        "title": "PlatON Command Line Tools",
-        "sidebar_label": "PlatON Command line tools"
+        "title": "Alaya Command Line Tools",
+        "sidebar_label": "Alaya Command line tools"
       },
       "WASM_Smart_Contract": {
         "title": "WASM Smart Contract",
         "sidebar_label": "WASM Smart Contract"
       },
-      "Join_PlatON_NetWork": {
-        "title": "Join the PlatON network",
-        "sidebar_label": "Join the PlatON network"
+      "Join_Alaya_NetWork": {
+        "title": "Join the Alaya network",
+        "sidebar_label": "Join the Alaya network"
       },
       "Install_Node": {
         "title": "Install and Deploy a Node",
@@ -60,19 +60,19 @@
         "title": "Deploy Your Own Private Testnet",
         "sidebar_label": "Deploy Your Own Private Testnet"
       },
-      "Install_PlatON": {
-        "title": "Source Installation PlatON",
-        "sidebar_label": "Source Installation PlatON"
+      "Install_Alaya": {
+        "title": "Source Installation Alaya",
+        "sidebar_label": "Source Installation Alaya"
       }
     },
     "links": {},
     "categories": {
-      "PlatON Developer Docs": "PlatON Developer Docs",
+      "Alaya Developer Docs": "Alaya Developer Docs",
       "Run a Node": "Run a Node",
       "Node Tools": "Node Tools",
       "Environment Setup": "Environment Setup",
-      "Smart Contracts": "Smart Contracts",
       "Reference Docs": "Reference Docs",
+	  "SDK Docs": "SDK Docs",
       "Community Projects": "Community Projects"
     }
   },

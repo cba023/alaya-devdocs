@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "PlatON",
+    "tagline": "Alaya",
     "docs": {
       "ATON-user-manual": {
         "title": "ATON钱包用户使用手册"
@@ -13,8 +13,8 @@
         "sidebar_label": "社区项目"
       },
       "index": {
-        "title": "PlatON开发者文档",
-        "sidebar_label": "PlatON开发者文档"
+        "title": "Alaya开发者文档",
+        "sidebar_label": "Alaya开发者文档"
       },
       "Java_SDK": {
         "title": "Java SDK",
@@ -32,9 +32,9 @@
         "title": "MTool教程",
         "sidebar_label": "MTool教程"
       },
-      "Join_PlatON_NetWork": {
-        "title": "加入 PlatON 网络",
-        "sidebar_label": "加入 PlatON 网络"
+      "Join_Alaya_NetWork": {
+        "title": "加入 Alaya 网络",
+        "sidebar_label": "加入 Alaya 网络"
       },
       "Install_Node": {
         "title": "安装一个节点",
@@ -52,27 +52,27 @@
         "title": "WASM智能合约",
         "sidebar_label": "WASM智能合约"
       },
-	  "Install_PlatON": {
-        "title": "源码安装PlatON",
-        "sidebar_label": "源码安装PlatON"
+	  "Install_Alaya": {
+        "title": "源码安装Alaya",
+        "sidebar_label": "源码安装Alaya"
       },
 	  "Build_Private_Chain": {
         "title": "部署私有测试网",
         "sidebar_label": "部署私有测试网"
       },
       "Command_Line_Tools": {
-        "title": "PlatON命令行工具",
-        "sidebar_label": "PlatON命令行工具"
+        "title": "Alaya命令行工具",
+        "sidebar_label": "Alaya命令行工具"
       }
     },
     "links": {},
     "categories": {
-      "PlatON Developer Docs": "PlatON开发者文档",
+      "PlatON Developer Docs": "Alaya开发者文档",
       "Run a Node": "运行一个节点",
 	  "Node Tools": "节点工具",
       "Environment Setup": "设置开发环境",
-	  "Smart Contracts": "智能合约",
       "Reference Docs": "参考文档",
+	  "SDK Docs": "SDK文档",
       "Community Projects": "社区"
     }
   },

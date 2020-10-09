@@ -1,12 +1,12 @@
 ---
-id: Install_PlatON
-title: 源码安装PlatON
-sidebar_label: 源码安装PlatON
+id: Install_Alaya
+title: 源码安装Alaya
+sidebar_label: 源码安装Alaya
 ---
 
-本文档主要是针对有能力在PlatON区块链上进行源代码编译的用户。
+本文档主要是针对有能力在Alaya区块链上进行源代码编译的用户。
 
-- `PlatON`支持Windows和Ubuntu下进行源码编译安装。
+- `Alaya`支持Windows和Ubuntu下进行源码编译安装。
 
 ## Windows源码编译
 
@@ -17,7 +17,7 @@ Windows编译环境需要符合以下条件：
 - mingw：`mingw（V8.1.0）`
 - cmake: `3.0+`
 
-可自行安装以上编译环境，在编译`PlatON`源码之前请确保以上环境可正常运行。
+可自行安装以上编译环境，在编译`Alaya`源码之前请确保以上环境可正常运行。
 
 > 也可使用`Chocolatey`辅助安装编译环境（如果你还没有`chocolatey`，可以按照<https://chocolatey.org>上的说明进行安装），用管理员身份启动`PowerShell`，然后执行以下命令：
 >
@@ -52,12 +52,12 @@ Windows编译环境需要符合以下条件：
 
 - 获取源码
 
-获取源码放到GOPATH路径下，其中`0.13.1_alpha`为分支名称，届时切换到实际的分支：
+获取源码放到GOPATH路径下，其中`alaya`为分支名称，届时切换到实际的分支：
 
 ```
 mkdir -p $GOPATH/src/github.com/PlatONnetwork
 cd $GOPATH/src/github.com/PlatONnetwork
-git clone -b 0.13.1_alpha https://github.com/PlatONnetwork/PlatON-Go.git --recursive
+git clone -b alaya https://github.com/PlatONnetwork/PlatON-Go.git --recursive
 ```
 
 - 添加bls依赖库到环境变量
@@ -89,10 +89,10 @@ go run build/ci.go install ./cmd/keytool
 - go语言开发包：`go(1.11+)`
 - cmake:`3.0+`
 
-**step2.** 获取PlatON源码：
+**step2.** 获取Alaya源码：
 
 ```bash
-git clone -b 0.13.1_alpha https://github.com/PlatONnetwork/PlatON-Go.git --recursive
+git clone -b alaya https://github.com/PlatONnetwork/PlatON-Go.git --recursive
 ```
 
 **step3.** 安装依赖库：
