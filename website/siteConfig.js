@@ -66,7 +66,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `COPYRIGHT  © ${new Date().getFullYear()} PLATON NETWORK.`,
+  copyright: `COPYRIGHT  © ${new Date().getFullYear()} Alaya NETWORK.`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -96,12 +96,12 @@ const siteConfig = {
   //外部链接
   expectUrl:{
     'en':{
-      "PlatON":"https://platon.network/?lang=en",
+      "Alaya":"https://platon.network/?lang=en",
       "Foundation":"https://latticex.foundation/home",
       "Forum":"https://forum.latticex.foundation/"
     },
     "zh-CN":{
-      "PlatON":"https://platon.network/?lang=zh",
+      "Alaya":"https://platon.network/?lang=zh",
       "Foundation":"https://latticex.foundation/home",
       "Forum":"https://forum.latticex.foundation/"
     }

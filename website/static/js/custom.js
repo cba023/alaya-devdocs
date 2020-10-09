@@ -1,6 +1,6 @@
 // 首页重定向
-if(window.location.pathname == '/docs' || window.location.pathname == '/docs/'){
-    window.location.href = '/docs/en'
+if(window.location.pathname == '/alaya-devdocs' || window.location.pathname == '/alaya-devdocs/'){
+    window.location.href = '/alaya-devdocs/en'
 }
 
 //数学公式  mathJax

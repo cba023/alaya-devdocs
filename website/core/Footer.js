@@ -28,8 +28,8 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <a href={this.expectUrl('PlatON', this.props.language)}>
-            PlatON network
+            <a href={this.expectUrl('Alaya', this.props.language)}>
+            Alaya network
             </a>
             <a href={this.expectUrl('Foundation', this.props.language)}>
             Lattice.Foundation
