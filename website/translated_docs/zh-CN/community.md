@@ -11,9 +11,9 @@ sidebar_label: 社区项目
 ## 钱包
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/ATON_logo.svg"></td>
+        <td><img alt="" src="/alaya-devdocs/img/ATON_logo.svg"></td>
         <td>
-            <p class="color"><a target="_blank" href="/docs/zh-CN/ATON-user-manual">ATON</a></p>
+            <p class="color"><a target="_blank" href="/alaya-devdocs/zh-CN/ATON-user-manual">ATON</a></p>
             ATON是PlatON Network的第一个安全易用的移动钱包。
         </td>
     </tr>
@@ -22,7 +22,7 @@ sidebar_label: 社区项目
 ## 区块链浏览器
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/AlayaScan.svg"></td>
+        <td><img alt="" src="/alaya-devdocs/img/AlayaScan.svg"></td>
         <td>
             <p class="color"><a target="_blank" href="http://192.168.9.190:20000/">AlayaScan</a></p>
             AlayaScan是Alaya区块链资源管理与分析平台。
@@ -33,7 +33,7 @@ sidebar_label: 社区项目
 ## 节点工具
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/MTool_logo.svg"></td>
+        <td><img alt="" src="/alaya-devdocs/img/MTool_logo.svg"></td>
         <td>
             <p class="color"><a target="_blank" href="http://47.91.153.183/mtool/mtool-setup/0.11.0/mtool-setup.exe">MTool</a></p>
             节点管理工具。
@@ -44,7 +44,7 @@ sidebar_label: 社区项目
 ## 开发者论坛
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/latticexforumlogo.svg"></td>
+        <td><img alt="" src="/alaya-devdocs/img/latticexforumlogo.svg"></td>
         <td>
             <p class="color"><a target="_blank" href="https://forum.latticex.foundation/">LatticeX Forum</a></p>
             PlatON开发者论坛。 需要相关解决方案帮忙？ 想要提供反馈？ 查看PlatON的开发者论坛！

@@ -20,7 +20,7 @@ This guide introduces the development process of smart contracts and issues shou
 
 ### Introduction
 
-This tutorial is mainly to guide users to create a simple HelloWorld smart contract using solidity language on PlatON, compile, deploy, and call this contract through platon-truffle. If you want to use a richer API you can refer to [Java SDK](/docs/en/Java_SDK) and  [JS SDK](/docs/en/JS_SDK)
+This tutorial is mainly to guide users to create a simple HelloWorld smart contract using solidity language on PlatON, compile, deploy, and call this contract through platon-truffle. If you want to use a richer API you can refer to [Java SDK](/alaya-devdocs/en/Java_SDK) and  [JS SDK](/alaya-devdocs/en/JS_SDK)
 
 ### Platon-truffle Introduction 
 
@@ -1001,7 +1001,7 @@ Ethereum
 
 **Sample Code**
 
-[Click to view code](https://github.com/PlatONnetwork/docs/blob/master/docs/SmartDevelopment.assets/account.sol)
+[Click to view code](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/alaya-devdocs/SmartDevelopment.assets/account.sol)
 
 
 ByteCode
@@ -1034,7 +1034,7 @@ Ethereum
 
 **Sample Code**
 
-[Click to view code](https://github.com/PlatONnetwork/docs/blob/master/docs/SmartDevelopment.assets/token.sol)
+[Click to view code](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/alaya-devdocs/SmartDevelopment.assets/token.sol)
 
 
 ByteCode
@@ -1080,7 +1080,7 @@ When a user sends a transaction, GasLimit and GasPrice are set. `GasLimit * GasP
 
 The higher the GasPrice of the transaction, the higher the execution priority of the transaction and the greater the transaction cost. After each transaction is completed, the remaining unused Gas will be returned to the sender's address account. It is important to note that if the execution of the transaction fails due to the GasLimit is too low, the Gas will not be returned to the user's address at this time, and the user still needs to pay the energy cost for the failed transaction. Therefore, regardless of whether the transaction is executed successfully, the transaction sender needs to pay a certain calculation fee to the miner.
 
-In the `PlatON` network, the maximum gas limit is` 4,700,000` and the minimum is `22,000`. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: `1,000,000`. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface `platon_estimateGas` can be called for approximate estimation to avoid failure due to insufficient Gas. [Click to view JSON-RPC reference documentation](/docs/en/Json_Rpc).
+In the `PlatON` network, the maximum gas limit is` 4,700,000` and the minimum is `22,000`. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: `1,000,000`. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface `platon_estimateGas` can be called for approximate estimation to avoid failure due to insufficient Gas. [Click to view JSON-RPC reference documentation](/alaya-devdocs/en/Json_Rpc).
 
 **LAT Unit Conversion**
 
