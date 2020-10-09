@@ -47,9 +47,9 @@ sidebar_label: PlatON Developer Docs
 <div class="card-wrap">
     <div class="homepage-card">
         <img src="/alaya-devdocs/img/Set_Develop_Env.svg">
-        <a href="/alaya-devdocs/en/Install_PlatON" class="card-title">Environment Setup</a>
+        <a href="/alaya-devdocs/en/Install_Alaya" class="card-title">Environment Setup</a>
         <div class="card-description">
-        Learn how to install PlatON and deploy a private test network.
+        Learn how to install Alaya and deploy a private test network.
         </div>
     </div>
     <div class="homepage-card">
