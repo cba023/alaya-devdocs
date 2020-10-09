@@ -22,10 +22,10 @@ The LatticeX Foundation has now opened the [Grants program](https://latticex.fou
 ## Block Explorers
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/platscanlogo.svg"></td>
+        <td><img alt="" src="/docs/img/AlayaScan.svg"></td>
         <td>
-            <p class="color"><a target="_blank" href="https://platscan.test.platon.network/?lang=en">PlatScan</a></p>
-            PlatScan is a Block Explorer and Analytics Platform for PlatON.
+            <p class="color"><a target="_blank" href="http://192.168.9.190:20000/">AlayaScan</a></p>
+            AlayaScan is a Block Explorer and Analytics Platform for Alaya.
         </td>
     </tr>
 </table>

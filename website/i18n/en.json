@@ -36,25 +36,9 @@
         "title": "MTool Tutorials",
         "sidebar_label": "MTool Tutorials"
       },
-      "PlatON_Solution": {
-        "title": "PlatON Consensus Solution",
-        "sidebar_label": "PlatON Consensus Solution"
-      },
       "Command_Line_Tools": {
         "title": "PlatON Command Line Tools",
         "sidebar_label": "PlatON Command line tools"
-      },
-      "PlatON_Overall_Solution": {
-        "title": "PlatON Overall Solution",
-        "sidebar_label": "PlatON Overall Solution"
-      },
-      "PlatON_Governance_Solution": {
-        "title": "PlatON Governance Solution",
-        "sidebar_label": "PlatON Governance Solution"
-      },
-      "Economic_Model": {
-        "title": "PlatON Economic Model",
-        "sidebar_label": "PlatON Economic Model"
       },
       "WASM_Smart_Contract": {
         "title": "WASM Smart Contract",
@@ -63,14 +47,6 @@
       "Join_PlatON_NetWork": {
         "title": "Join the PlatON network",
         "sidebar_label": "Join the PlatON network"
-      },
-      "Verifiable_Computation": {
-        "title": "Verifiable Computation",
-        "sidebar_label": "Verifiable Computation"
-      },
-      "Secure_Multi_Party_Computation": {
-        "title": "Secure Multi Party Computation",
-        "sidebar_label": "Secure Multi Party Computation"
       },
       "Install_Node": {
         "title": "Install and Deploy a Node",
@@ -97,7 +73,6 @@
       "Environment Setup": "Environment Setup",
       "Smart Contracts": "Smart Contracts",
       "Reference Docs": "Reference Docs",
-      "Abount PlatON": "Abount PlatON",
       "Community Projects": "Community Projects"
     }
   },

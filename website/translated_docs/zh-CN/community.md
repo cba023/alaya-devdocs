@@ -22,10 +22,10 @@ sidebar_label: 社区项目
 ## 区块链浏览器
 <table class="commmunity-table">
     <tr>
-        <td><img alt="" src="/docs/img/platscanlogo.svg"></td>
+        <td><img alt="" src="/docs/img/AlayaScan.svg"></td>
         <td>
-            <p class="color"><a target="_blank" href="https://platscan.test.platon.network/?lang=zh">PlatScan</a></p>
-            PlatScan是PlatON区块链资源管理与分析平台。
+            <p class="color"><a target="_blank" href="http://192.168.9.190:20000/">AlayaScan</a></p>
+            AlayaScan是Alaya区块链资源管理与分析平台。
         </td>
     </tr>
 </table>

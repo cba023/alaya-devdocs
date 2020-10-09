@@ -12,10 +12,10 @@
 
 
 const siteConfig = {
-  title: 'PlatON', // Title for your website.
-  tagline: 'PlatON',
+  title: 'Alaya', // Title for your website.
+  tagline: 'Alaya',
   url: 'https://luo-dahui.github.io/', // Your website URL
-  baseUrl: '/docs/', // Base URL for your project */
+  baseUrl: '/alaya-devdocs/', // Base URL for your project */
   // Used for publishing and more
   projectName: 'Docs',
   organizationName: 'luo-dahui',
@@ -41,8 +41,8 @@ const siteConfig = {
   //users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/PlatON-logo.svg',
-  footerIcon: 'img/PlatON-logo2.svg',
+  headerIcon: 'img/alaya-logo.svg',
+  footerIcon: 'img/alaya-logo.svg',
   favicon: 'img/logo.png',
 
   /* Colors for website */

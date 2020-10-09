@@ -32,33 +32,9 @@
         "title": "MTool教程",
         "sidebar_label": "MTool教程"
       },
-      "PlatON_Solution": {
-        "title": "PlatON共识方案",
-        "sidebar_label": "PlatON共识方案"
-      },
-      "PlatON_Overall_Solution": {
-        "title": "PlatON总体方案",
-        "sidebar_label": "PlatON总体方案"
-      },
-      "PlatON_Governance_Solution": {
-        "title": "PlatON治理方案",
-        "sidebar_label": "PlatON治理方案"
-      },
-      "Economic_Model": {
-        "title": "PlatON经济方案",
-        "sidebar_label": "PlatON经济方案"
-      },
       "Join_PlatON_NetWork": {
         "title": "加入 PlatON 网络",
         "sidebar_label": "加入 PlatON 网络"
-      },
-      "Verifiable_Computation": {
-        "title": "可验证计算",
-        "sidebar_label": "可验证计算"
-      },
-      "Secure_Multi_Party_Computation": {
-        "title": "安全多方计算",
-        "sidebar_label": "安全多方计算"
       },
       "Install_Node": {
         "title": "安装一个节点",
@@ -97,7 +73,6 @@
       "Environment Setup": "设置开发环境",
 	  "Smart Contracts": "智能合约",
       "Reference Docs": "参考文档",
-      "Abount PlatON": "关于PlatON",
       "Community Projects": "社区"
     }
   },
