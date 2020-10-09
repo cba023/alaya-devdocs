@@ -4,7 +4,7 @@ title: Alaya命令行工具
 sidebar_label: Alaya命令行工具
 ---
 
-## PlatON命令行参数说明 
+## Alaya命令行参数说明 
 
 ```conf
 NAME:
