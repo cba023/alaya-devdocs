@@ -84,9 +84,9 @@
 <p>maven reference:</p>
 </blockquote>
 <pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.platon.client<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.13.1.4<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alaya.client<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>alaya-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.13.2.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="gradle"></a><a href="#gradle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gradle</h3>
@@ -100,7 +100,7 @@
 <blockquote>
 <p>gradle way of reference:</p>
 </blockquote>
-<pre><code class="hljs"><span class="hljs-selector-tag">compile</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.client</span><span class="hljs-selector-pseudo">:core</span><span class="hljs-selector-pseudo">:0.13.1.4</span>
+<pre><code class="hljs"><span class="hljs-selector-tag">compile</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.alaya</span><span class="hljs-selector-class">.client</span><span class="hljs-selector-pseudo">:alaya-core</span><span class="hljs-selector-pseudo">:0.13.2.0"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="basic-api-usage"></a><a href="#basic-api-usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic API Usage</h2>
 <h3><a class="anchor" aria-hidden="true" id="bech32-address"></a><a href="#bech32-address" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bech32 Address</h3>
@@ -109,15 +109,15 @@
 </ul>
 <pre><code class="hljs css language-java">String hex = <span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac5cf4f818"</span>;
 String bech32Address = Bech32.addressEncode(NetworkParameters.TestNetParams.getHrp(), hex);
-assertThat(bech32Address, is(<span class="hljs-string">"lax1f7wp58h65lvphgw2hurl9sa943w0f7qc3dp390"</span>));
+assertThat(bech32Address, is(<span class="hljs-string">"atx1f7wp58h65lvphgw2hurl9sa943w0f7qcdcev89"</span>));
 
 bech32Address = Bech32.addressEncode(NetworkParameters.MainNetParams.getHrp(), hex);
-assertThat(bech32Address, is(<span class="hljs-string">"lat1f7wp58h65lvphgw2hurl9sa943w0f7qc7gn7tq"</span>));
+assertThat(bech32Address, is(<span class="hljs-string">"atp1f7wp58h65lvphgw2hurl9sa943w0f7qc879x50"</span>));
 </code></pre>
 <ul>
 <li><strong>bech32 address to 0x address</strong></li>
 </ul>
-<pre><code class="hljs css language-java">String bech32Address = <span class="hljs-string">"lax1f7wp58h65lvphgw2hurl9sa943w0f7qc3dp390"</span>;
+<pre><code class="hljs css language-java">String bech32Address = <span class="hljs-string">"atx1f7wp58h65lvphgw2hurl9sa943w0f7qcdcev89"</span>;
 String hex =  Bech32.addressDecodeHex(bech32Address);
 assertThat(hex, is(<span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac5cf4f818"</span>));
 </code></pre>
@@ -128,7 +128,7 @@ assertThat(hex, is(<span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac
 <blockquote>
 <p>Because bech 32 format address support is added, in order to be compatible with the old API, the function of setting the network parameters globally is added, and the old API outputs the corresponding format address according to the current network parameters</p>
 </blockquote>
-<pre><code class="hljs css language-java">NetworkParameters.setCurrentNetwork(<span class="hljs-number">101L</span>);  <span class="hljs-comment">// default mainnet 100L</span>
+<pre><code class="hljs css language-java">NetworkParameters.setCurrentNetwork(<span class="hljs-number">101L</span>);  <span class="hljs-comment">// default mainnet 201018L</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="wallet-related"></a><a href="#wallet-related" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wallet Related</h3>
 <ul>
@@ -832,7 +832,7 @@ Optional&lt;TransactionReceipt&gt; req = request.send(). GetTransactionReceipt()
 <li><strong>Example</strong></li>
 </ul>
 <pre><code class="hljs css language-java">Web3j platonWeb3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://127.0.0.1:6789"</span>));
-org.web3j.protocol.core.methods.request.PlatonFilter filter = <span class="hljs-keyword">new</span> org.web3j.protocol.core.methods.request.PlatonFilter();
+PlatonFilter filter = <span class="hljs-keyword">new</span> PlatonFilter();
 filter.addSingleTopic(<span class="hljs-string">""</span>);
 Request &lt;?, PlatonFilter&gt; request = currentValidWeb3j.platonNewFilter(filter);
 BigInteger req = request.send().getFilterId();
@@ -978,7 +978,7 @@ List&lt;PlatonLog.LogResult&gt; req = request.send().getLogs();
 <li><strong>Example</strong></li>
 </ul>
 <pre><code class="hljs css language-java">Web3j platonWeb3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://127.0.0.1:6789"</span>));
-org.web3j.protocol.core.methods.request.PlatonFilter filter = <span class="hljs-keyword">new</span> org.web3j.protocol.core.methods.request.PlatonFilter();
+PlatonFilter filter = <span class="hljs-keyword">new</span> PlatonFilter();
 filter.addSingleTopic(<span class="hljs-string">""</span>);
 Request&lt;?, PlatonLog&gt; request = currentValidWeb3j.platonGetLogs(filter);
 List&lt;LogResult&gt; = request.send(). GetLogs();
@@ -1361,9 +1361,9 @@ StakingContract contract = StakingContract.load(web3j, credentials, chainId);
 <li><p><strong>Contract use</strong></p></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"1000000"</span>, Unit.LAT);
+BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"1000000"</span>, Convert.Unit.ATP);
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-String benifitAddress = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String benifitAddress = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 String externalId = <span class="hljs-string">""</span>;
 String nodeName = <span class="hljs-string">"integration-node1"</span>;
 String webSite = <span class="hljs-string">"https://www.platon.network/#/"</span>;
@@ -1443,7 +1443,7 @@ TransactionResponse baseResponse = stakingContract.getTransactionResponse(platon
 <li><p><strong>Contract use</strong></p></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-String benifitAddress = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String benifitAddress = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 String externalId = <span class="hljs-string">""</span>;
 String nodeName = <span class="hljs-string">"integration-node1-u"</span>;
 String webSite = <span class="hljs-string">"https://www.platon.network/#/"</span>;
@@ -1489,7 +1489,7 @@ TransactionResponse baseResponse = stakingContract.getTransactionResponse(platon
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-BigDecimal addStakingAmount = Convert.toVon(<span class="hljs-string">"4000000"</span>, Unit.LAT);
+BigDecimal addStakingAmount = Convert.toVon(<span class="hljs-string">"4000000"</span>, Convert.Unit.ATP);
 
 PlatonSendTransaction platonSendTransaction = stakingContract.addStakingReturnTransaction(nodeId, stakingAmountType, addStakingAmount.toBigInteger()).send();
 TransactionResponse baseResponse = stakingContract.getTransactionResponse(platonSendTransaction).send();
@@ -1624,7 +1624,7 @@ CallResponse&lt;Node&gt; baseResponse = stakingContract.getStakingInfo(nodeId).s
 <h4><a class="anchor" aria-hidden="true" id="load-delegate-contract"></a><a href="#load-delegate-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load Delegate Contract</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 DelegateContract delegateContract = DelegateContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -1655,7 +1655,7 @@ DelegateContract delegateContract = DelegateContract.load(web3j, credentials, ch
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-BigDecimal amount = Convert.toVon(<span class="hljs-string">"500000"</span>, Unit.LAT);
+BigDecimal amount = Convert.toVon(<span class="hljs-string">"500000"</span>, Convert.Unit.ATP);
 
 PlatonSendTransaction platonSendTransaction = delegateContract.delegateReturnTransaction(nodeId, stakingAmountType, amount.toBigInteger()).send();
 TransactionResponse baseResponse = delegateContract.getTransactionResponse(platonSendTransaction).send();
@@ -1727,7 +1727,7 @@ TransactionResponse baseResponse = delegateContract.getTransactionResponse(plato
 <li><p><strong>Java SDK contract use</strong></p></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-String address = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String address = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 BigInteger stakingBlockNum = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">"10888"</span>);
 
 CallResponse&lt;Delegation&gt; baseResponse = delegateContract.getDelegateInfo(nodeId, address, stakingBlockNum).send();
@@ -1765,14 +1765,14 @@ CallResponse&lt;Delegation&gt; baseResponse = delegateContract.getDelegateInfo(n
 <li><strong>Contract use</strong></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"500000"</span>, Unit.LAT);
+BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"500000"</span>, Convert.Unit.ATP);
 BigInteger stakingBlockNum = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">"12134"</span>);
 
 PlatonSendTransaction platonSendTransaction = delegateContract.unDelegateReturnTransaction(nodeId, stakingBlockNum, stakingAmount.toBigInteger()).send();
 TransactionResponse baseResponse = delegateContract.getTransactionResponse(platonSendTransaction).send();
 
 <span class="hljs-keyword">if</span>(baseResponse.isStatusOk()){ 
-       BigInteger reward = delegateContract.decodeUnDelegateLog(baseResponse.getTransactionReceipt());
+    BigInteger reward = delegateContract.decodeUnDelegateLog(baseResponse.getTransactionReceipt());
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="reward-related-interface"></a><a href="#reward-related-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reward Related Interface</h3>
@@ -1782,7 +1782,7 @@ TransactionResponse baseResponse = delegateContract.getTransactionResponse(plato
 <h4><a class="anchor" aria-hidden="true" id="load-reward-contract"></a><a href="#load-reward-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load Reward Contract</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 RewardContract rewardContract = RewardContract.load(web3j, deleteCredentials, chainId);
 </code></pre>
@@ -1863,9 +1863,9 @@ CallResponse&lt;List&lt;Reward&gt;&gt; baseResponse = rewardContract.getDelegate
 <h4><a class="anchor" aria-hidden="true" id="load-node-contract"></a><a href="#load-node-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load Node Contract</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
-NodeContract contract = NodeContract.load(web3j, credentials, chainId);
+NodeContract nodeContract = NodeContract.load(web3j, credentials, chainId);
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="interface-description-3"></a><a href="#interface-description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interface Description</h4>
 <h5><a class="anchor" aria-hidden="true" id="getverifierlist"></a><a href="#getverifierlist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>GetVerifierList</strong></h5>
@@ -2009,9 +2009,9 @@ NodeContract contract = NodeContract.load(web3j, credentials, chainId);
 <h4><a class="anchor" aria-hidden="true" id="load-governance-contract"></a><a href="#load-governance-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load governance contract</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
-ProposalContract contract = ProposalContract.load(web3j, credentials, chainId);
+ProposalContract proposalContract = ProposalContract.load(web3j, credentials, chainId);
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="interface-description-4"></a><a href="#interface-description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interface Description</h4>
 <h5><a class="anchor" aria-hidden="true" id="submitproposal"></a><a href="#submitproposal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>submitProposal</strong></h5>
@@ -2284,7 +2284,7 @@ ProposalUtils.versionInterToStr(baseResponse.getData());
 <h4><a class="anchor" aria-hidden="true" id="load-report-contract"></a><a href="#load-report-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load Report Contract</h4>
 <pre><code class="hljs"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Web3j</span>.</span></span>build(<span class="hljs-keyword">new</span> <span class="hljs-constructor">HttpService(<span class="hljs-string">"http://localhost:6789"</span>)</span>);
-String chainId = <span class="hljs-string">"103"</span>;
+long chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">WalletUtils</span>.</span></span>load<span class="hljs-constructor">Credentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>)</span>;
 SlashContract contract = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SlashContract</span>.</span></span>load(web3j, credentials, chainId);
 </code></pre>
@@ -2350,7 +2350,7 @@ TransactionResponse baseResponse = slashContract.getTransactionResponse(platonSe
 <h4><a class="anchor" aria-hidden="true" id="loading-the-hedging-contract"></a><a href="#loading-the-hedging-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loading The Hedging Contract</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 RestrictingPlanContract contract = RestrictingPlanContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -2511,7 +2511,7 @@ Put <span class="hljs-keyword">the</span> bytecode attribute <span class="hljs-k
 <h3><a class="anchor" aria-hidden="true" id="solidity-smart-contract-java-packaging-class"></a><a href="#solidity-smart-contract-java-packaging-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solidity Smart Contract Java Packaging Class</h3>
 <p>The Java SDK supports automatic generation of Java wrapper classes for Solidity smart contracts from an <code>abi</code> file.</p>
 <ul>
-<li>Generate Java wrapper classes via command line tools（<a href="https://download.platon.network/sdk/0.13.1.4-20200824/platon-web3j-0.13.1.4.zip">platon-web3j download</a>）:</li>
+<li>Generate Java wrapper classes via command line tools（<a href="https://download.platon.network/sdk/0.13.1.5-20200915/platon-web3j-0.13.1.5.zip">platon-web3j download</a>）:</li>
 </ul>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> platon-web3j solidity generate [--javaTypes|--solidityTypes] /path/to/&lt;smart-contract&gt;.bin /path/to/&lt;smart-contract&gt;.abi -o /path/to/src/main/java -p com.your.organisation.name</span>
 </code></pre>
@@ -2522,7 +2522,7 @@ Put <span class="hljs-keyword">the</span> bytecode attribute <span class="hljs-k
 compile <span class="hljs-string">"com.platon.client:console:{version}"</span>
 
 String args[] = {<span class="hljs-string">"generate"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.bin"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.abi"</span>, <span class="hljs-string">"-o"</span>, <span class="hljs-string">"/path/to/src/main/java"</span>, <span class="hljs-string">"-p"</span> , <span class="hljs-string">"com.your.organisation.name"</span>};
-org.web3j.codegen.SolidityFunctionWrapperGenerator.run(args);
+SolidityFunctionWrapperGenerator.run(args);
 </code></pre>
 <p>The <code>bin</code> and<code>abi</code> files are generated after compiling the solidity source code.</p>
 <p>The main functions supported by the Java wrapper class corresponding to the Solidity smart contract:</p>
@@ -2614,7 +2614,7 @@ GasProvider gasProvider  = <span class="hljs-keyword">new</span> ContractGasProv
 <li>Directly call the tool class in the Java SDK to generate a Java wrapper class:</li>
 </ul>
 <pre><code class="hljs css language-java">String args[] = {<span class="hljs-string">"generate"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.wasm"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.abi.json"</span>, <span class="hljs-string">"-o"</span>, <span class="hljs-string">"/path/to/src/main/java"</span>, <span class="hljs-string">"-p"</span> , <span class="hljs-string">"com.your.organisation.name"</span>};
-org.web3j.codegen.WasmFunctionWrapperGenerator.run(args);
+WasmFunctionWrapperGenerator.run(args);
 </code></pre>
 <p>The <code>wasm</code> and<code>abi.json</code> files are generated after compiling the WASM contract source code.</p>
 <p>The main functions supported by the Java wrapper class corresponding to the WASM smart contract:</p>

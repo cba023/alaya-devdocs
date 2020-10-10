@@ -84,9 +84,9 @@
 <p>maven引用方式:</p>
 </blockquote>
 <pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.platon.client<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.13.1.4<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alaya.client<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>alaya-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.13.2.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="gradle"></a><a href="#gradle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gradle</h3>
@@ -100,7 +100,7 @@
 <blockquote>
 <p>gradle引用方式:</p>
 </blockquote>
-<pre><code class="hljs"><span class="hljs-selector-tag">compile</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.client</span><span class="hljs-selector-pseudo">:core</span><span class="hljs-selector-pseudo">:0.13.1.4"</span>
+<pre><code class="hljs"><span class="hljs-selector-tag">compile</span> "<span class="hljs-selector-tag">com</span><span class="hljs-selector-class">.alaya</span><span class="hljs-selector-class">.client</span><span class="hljs-selector-pseudo">:alaya-core</span><span class="hljs-selector-pseudo">:0.13.2.0"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="基础api使用"></a><a href="#基础api使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基础api使用</h2>
 <h3><a class="anchor" aria-hidden="true" id="bech32地址"></a><a href="#bech32地址" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bech32地址</h3>
@@ -109,15 +109,15 @@
 </ul>
 <pre><code class="hljs css language-java">String hex = <span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac5cf4f818"</span>;
 String bech32Address = Bech32.addressEncode(NetworkParameters.TestNetParams.getHrp(), hex);
-assertThat(bech32Address, is(<span class="hljs-string">"lax1f7wp58h65lvphgw2hurl9sa943w0f7qc3dp390"</span>));
+assertThat(bech32Address, is(<span class="hljs-string">"atx1f7wp58h65lvphgw2hurl9sa943w0f7qcdcev89"</span>));
 
 bech32Address = Bech32.addressEncode(NetworkParameters.MainNetParams.getHrp(), hex);
-assertThat(bech32Address, is(<span class="hljs-string">"lat1f7wp58h65lvphgw2hurl9sa943w0f7qc7gn7tq"</span>));
+assertThat(bech32Address, is(<span class="hljs-string">"atp1f7wp58h65lvphgw2hurl9sa943w0f7qc879x50"</span>));
 </code></pre>
 <ul>
 <li><strong>bech32地址转0x地址</strong></li>
 </ul>
-<pre><code class="hljs css language-java">String bech32Address = <span class="hljs-string">"lax1f7wp58h65lvphgw2hurl9sa943w0f7qc3dp390"</span>;
+<pre><code class="hljs css language-java">String bech32Address = <span class="hljs-string">"atx1f7wp58h65lvphgw2hurl9sa943w0f7qcdcev89"</span>;
 String hex =  Bech32.addressDecodeHex(bech32Address);
 assertThat(hex, is(<span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac5cf4f818"</span>));
 </code></pre>
@@ -128,7 +128,7 @@ assertThat(hex, is(<span class="hljs-string">"0x4f9c1a1efaa7d81ba1cabf07f2c3a5ac
 <blockquote>
 <p>因为加入了bech32格式地址支持，为了兼容旧的api，加入了全局设置网络参数的功能，旧的api根据当前网络参数输出相应格式地址</p>
 </blockquote>
-<pre><code class="hljs css language-java">NetworkParameters.setCurrentNetwork(<span class="hljs-number">101L</span>);  <span class="hljs-comment">// default mainnet 100L</span>
+<pre><code class="hljs css language-java">NetworkParameters.setCurrentNetwork(<span class="hljs-number">101L</span>);  <span class="hljs-comment">// default mainnet 201018L</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="钱包相关"></a><a href="#钱包相关" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>钱包相关</h3>
 <ul>
@@ -839,7 +839,7 @@ Optional&lt;TransactionReceipt&gt; req = request.send().getTransactionReceipt();
 <li><strong>示例</strong></li>
 </ul>
 <pre><code class="hljs css language-java">Web3j platonWeb3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://127.0.0.1:6789"</span>));
-org.web3j.protocol.core.methods.request.PlatonFilter filter = <span class="hljs-keyword">new</span> org.web3j.protocol.core.methods.request.PlatonFilter();
+PlatonFilter filter = <span class="hljs-keyword">new</span> PlatonFilter();
 filter.addSingleTopic(<span class="hljs-string">""</span>);
 Request &lt;?, PlatonFilter&gt; request = currentValidWeb3j.platonNewFilter(filter);
 BigInteger req = request.send().getFilterId();
@@ -987,7 +987,7 @@ List&lt;PlatonLog.LogResult&gt; req = request.send().getLogs();
 <li><strong>示例</strong></li>
 </ul>
 <pre><code class="hljs css language-java">Web3j platonWeb3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://127.0.0.1:6789"</span>));
-org.web3j.protocol.core.methods.request.PlatonFilter filter = <span class="hljs-keyword">new</span> org.web3j.protocol.core.methods.request.PlatonFilter();
+PlatonFilter filter = <span class="hljs-keyword">new</span> PlatonFilter();
 filter.addSingleTopic(<span class="hljs-string">""</span>);
 Request &lt;?, PlatonLog&gt; request = currentValidWeb3j.platonGetLogs(filter);
 List&lt;LogResult&gt; = request.send().getLogs();
@@ -1335,7 +1335,7 @@ String debugEconomicConfig = req.send().getEconomicConfigStr();
 <h4><a class="anchor" aria-hidden="true" id="加载质押合约"></a><a href="#加载质押合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载质押合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 StakingContract stakingContract = StakingContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -1376,9 +1376,9 @@ StakingContract stakingContract = StakingContract.load(web3j, credentials, chain
 <li><strong>合约使用</strong></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"1000000"</span>, Unit.LAT);
+BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"1000000"</span>, Convert.Unit.ATP);
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-String benifitAddress = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String benifitAddress = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 String externalId = <span class="hljs-string">""</span>;
 String nodeName = <span class="hljs-string">"integration-node1"</span>;
 String webSite = <span class="hljs-string">"https://www.platon.network/#/"</span>;
@@ -1462,7 +1462,7 @@ TransactionResponse baseResponse = stakingContract.getTransactionResponse(platon
 <li><strong>合约使用</strong></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-String benifitAddress = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String benifitAddress = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 String externalId = <span class="hljs-string">""</span>;
 String nodeName = <span class="hljs-string">"integration-node1-u"</span>;
 String webSite = <span class="hljs-string">"https://www.platon.network/#/"</span>;
@@ -1508,7 +1508,7 @@ TransactionResponse baseResponse = stakingContract.getTransactionResponse(platon
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-BigDecimal addStakingAmount = Convert.toVon(<span class="hljs-string">"4000000"</span>, Unit.LAT);
+BigDecimal addStakingAmount = Convert.toVon(<span class="hljs-string">"4000000"</span>, Convert.Unit.ATP);
 
 PlatonSendTransaction platonSendTransaction = stakingContract.addStakingReturnTransaction(nodeId, stakingAmountType, addStakingAmount.toBigInteger()).send();
 TransactionResponse baseResponse = stakingContract.getTransactionResponse(platonSendTransaction).send();
@@ -1645,7 +1645,7 @@ CallResponse&lt;Node&gt; baseResponse = stakingContract.getStakingInfo(nodeId).s
 <h4><a class="anchor" aria-hidden="true" id="加载委托合约"></a><a href="#加载委托合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载委托合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 DelegateContract delegateContract = DelegateContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -1678,7 +1678,7 @@ DelegateContract delegateContract = DelegateContract.load(web3j, credentials, ch
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
 StakingAmountType stakingAmountType = StakingAmountType.FREE_AMOUNT_TYPE;
-BigDecimal amount = Convert.toVon(<span class="hljs-string">"500000"</span>, Unit.LAT);
+BigDecimal amount = Convert.toVon(<span class="hljs-string">"500000"</span>, Convert.Unit.ATP);
 
 PlatonSendTransaction platonSendTransaction = delegateContract.delegateReturnTransaction(nodeId, stakingAmountType, amount.toBigInteger()).send();
 TransactionResponse baseResponse = delegateContract.getTransactionResponse(platonSendTransaction).send();
@@ -1754,7 +1754,7 @@ TransactionResponse baseResponse = delegateContract.getTransactionResponse(plato
 <li><p><strong>Java SDK合约使用</strong></p></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-String address = <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>;
+String address = <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>;
 BigInteger stakingBlockNum = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">"10888"</span>);
 
 CallResponse&lt;Delegation&gt; baseResponse = delegateContract.getDelegateInfo(nodeId, address, stakingBlockNum).send();
@@ -1790,7 +1790,7 @@ CallResponse&lt;Delegation&gt; baseResponse = delegateContract.getDelegateInfo(n
 <li><p><strong>合约使用</strong></p></li>
 </ul>
 <pre><code class="hljs css language-java">String nodeId = <span class="hljs-string">"77fffc999d9f9403b65009f1eb27bae65774e2d8ea36f7b20a89f82642a5067557430e6edfe5320bb81c3666a19cf4a5172d6533117d7ebcd0f2c82055499050"</span>;
-BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"500000"</span>, Unit.LAT);
+BigDecimal stakingAmount = Convert.toVon(<span class="hljs-string">"500000"</span>, Convert.Unit.ATP);
 BigInteger stakingBlockNum = <span class="hljs-keyword">new</span> BigInteger(<span class="hljs-string">"12134"</span>);
 
 PlatonSendTransaction platonSendTransaction = delegateContract.unDelegateReturnTransaction(nodeId, stakingBlockNum, stakingAmount.toBigInteger()).send();
@@ -1807,7 +1807,7 @@ TransactionResponse baseResponse = delegateContract.getTransactionResponse(plato
 <h4><a class="anchor" aria-hidden="true" id="加载奖励合约"></a><a href="#加载奖励合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载奖励合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 RewardContract rewardContract = RewardContract.load(web3j, deleteCredentials, chainId);
 </code></pre>
@@ -1888,7 +1888,7 @@ CallResponse&lt;List&lt;Reward&gt;&gt; baseResponse = rewardContract.getDelegate
 <h4><a class="anchor" aria-hidden="true" id="加载节点合约"></a><a href="#加载节点合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载节点合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 NodeContract nodeContract = NodeContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -2038,7 +2038,7 @@ NodeContract nodeContract = NodeContract.load(web3j, credentials, chainId);
 <h4><a class="anchor" aria-hidden="true" id="加载治理合约"></a><a href="#加载治理合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载治理合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 ProposalContract proposalContract = ProposalContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -2321,7 +2321,7 @@ ProposalUtils.versionInterToStr(baseResponse.getData());
 <h4><a class="anchor" aria-hidden="true" id="加载举报合约"></a><a href="#加载举报合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载举报合约</h4>
 <pre><code class="hljs"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Web3j</span>.</span></span>build(<span class="hljs-keyword">new</span> <span class="hljs-constructor">HttpService(<span class="hljs-string">"http://localhost:6789"</span>)</span>);
-String chainId = <span class="hljs-string">"103"</span>;
+long chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">WalletUtils</span>.</span></span>load<span class="hljs-constructor">Credentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>)</span>;
 SlashContract contract = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">SlashContract</span>.</span></span>load(web3j, credentials, chainId);
 </code></pre>
@@ -2382,7 +2382,7 @@ TransactionResponse baseResponse = slashContract.getTransactionResponse(platonSe
 <ul>
 <li><strong>合约使用</strong></li>
 </ul>
-<pre><code class="hljs css language-java">CallResponse&lt;String&gt; baseResponse = slashContract.checkDoubleSign(DuplicateSignType.PREPARE_BLOCK, <span class="hljs-string">"lax1qtp5fqtmudzge9aqt9rnzgdxv729pdq5vug5vt"</span>, BigInteger.valueOf(<span class="hljs-number">500L</span>)).send();
+<pre><code class="hljs css language-java">CallResponse&lt;String&gt; baseResponse = slashContract.checkDoubleSign(DuplicateSignType.PREPARE_BLOCK, <span class="hljs-string">"atp1qtp5fqtmudzge9aqt9rnzgdxv729pdq560vrat"</span>, BigInteger.valueOf(<span class="hljs-number">500L</span>)).send();
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="锁仓相关接口"></a><a href="#锁仓相关接口" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>锁仓相关接口</h3>
 <blockquote>
@@ -2391,7 +2391,7 @@ TransactionResponse baseResponse = slashContract.getTransactionResponse(platonSe
 <h4><a class="anchor" aria-hidden="true" id="加载锁仓合约"></a><a href="#加载锁仓合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>加载锁仓合约</h4>
 <pre><code class="hljs css language-java"><span class="hljs-comment">//Java 8</span>
 Web3j web3j = Web3j.build(<span class="hljs-keyword">new</span> HttpService(<span class="hljs-string">"http://localhost:6789"</span>));
-String chainId = <span class="hljs-string">"100"</span>;
+<span class="hljs-keyword">long</span> chainId = <span class="hljs-number">201018</span>;
 Credentials credentials = WalletUtils.loadCredentials(<span class="hljs-string">"password"</span>, <span class="hljs-string">"/path/to/walletfile"</span>);
 RestrictingPlanContract contract = RestrictingPlanContract.load(web3j, credentials, chainId);
 </code></pre>
@@ -2556,7 +2556,7 @@ Warnin<span class="hljs-variable">g:</span> This <span class="hljs-keyword">is</
 <h3><a class="anchor" aria-hidden="true" id="solidity智能合约java包装类"></a><a href="#solidity智能合约java包装类" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solidity智能合约Java包装类</h3>
 <p>Java SDK支持从<code>abi</code>文件中自动生成Solidity智能合约对应的Java包装类。</p>
 <ul>
-<li>通过命令行工具生成Java包装类（<a href="https://download.platon.network/sdk/0.13.1.4-20200824/platon-web3j-0.13.1.4.zip">platon-web3j下载</a>）：</li>
+<li>通过命令行工具生成Java包装类（<a href="https://download.platon.network/sdk/0.13.1.5-20200915/platon-web3j-0.13.1.5.zip">platon-web3j下载</a>）：</li>
 </ul>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> platon-web3j solidity generate [--javaTypes|--solidityTypes] /path/to/&lt;smart-contract&gt;.bin /path/to/&lt;smart-contract&gt;.abi -o /path/to/src/main/java -p com.your.organisation.name</span>
 </code></pre>
@@ -2567,7 +2567,7 @@ Warnin<span class="hljs-variable">g:</span> This <span class="hljs-keyword">is</
 compile <span class="hljs-string">"com.platon.client:console:{version}"</span>
 
 String args[] = {<span class="hljs-string">"generate"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.bin"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.abi"</span>, <span class="hljs-string">"-o"</span>, <span class="hljs-string">"/path/to/src/main/java"</span>, <span class="hljs-string">"-p"</span> , <span class="hljs-string">"com.your.organisation.name"</span>};
-org.web3j.codegen.SolidityFunctionWrapperGenerator.run(args);
+SolidityFunctionWrapperGenerator.run(args);
 </code></pre>
 <p>其中<code>bin</code>和<code>abi</code>文件是编译solidity源代码以后生成的。</p>
 <p>Solidity智能合约对应的Java包装类支持的主要功能：</p>
@@ -2659,7 +2659,7 @@ GasProvider gasProvider  = <span class="hljs-keyword">new</span> ContractGasProv
 <li>直接调用Java SDK中的工具类生成Java包装类：</li>
 </ul>
 <pre><code class="hljs css language-java">String args[] = {<span class="hljs-string">"generate"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.wasm"</span>, <span class="hljs-string">"/path/to/&lt;smart-contract&gt;.abi.json"</span>, <span class="hljs-string">"-o"</span>, <span class="hljs-string">"/path/to/src/main/java"</span>, <span class="hljs-string">"-p"</span> , <span class="hljs-string">"com.your.organisation.name"</span>};
-org.web3j.codegen.WasmFunctionWrapperGenerator.run(args);
+WasmFunctionWrapperGenerator.run(args);
 </code></pre>
 <p>其中<code>wasm</code>和<code>abi.json</code>文件是编译wasm源代码以后生成的。</p>
 <p>Wasm智能合约对应的Java包装类支持的主要功能：</p>
