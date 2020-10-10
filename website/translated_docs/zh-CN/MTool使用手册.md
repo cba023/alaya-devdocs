@@ -125,8 +125,8 @@ mtool-client account new staking
 >-name: staking
 >-type: NORMAL
 >-address:
-> mainnet: lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr
-> testnet: lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v
+> mainnet: atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv
+> testnet: atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx
 >-public key: 0x9521cd81ba28d5d1c23bb7ddb7042d146375203d35000c0289178027abd4dc09bca30257739df166201e73497485242f41d5f50d46bc3c7e4385f81bde560db0
 >
 >Important write this Private Key in a safe place.
@@ -140,9 +140,9 @@ mtool-client account new staking
 >
 >钱包地址格式调整为Bech32，其中：
 >
->`lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr`：为主网账户地址，以lat开头；
+>`atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv`：为主网账户地址，以atp开头；
 >
->`lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v`：为测试网账户地址，以lax开头；
+>`atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx`：为测试网账户地址，以atx开头；
 >
 >`4630b6d86bc74bffd4ca8cfc18bceec562cb40fc5080c258452a04a69bc1ee07` 为钱包私钥；
 >
@@ -206,7 +206,7 @@ mtool-client tx transfer --keystore $MTOOLDIR/keystore/staking.json --amount "1"
 
 >keystore：发送转账交易的钱包路径
 >
->amount：转账金额，单位：LAT
+>amount：转账金额，单位：ATP
 >
 >recipient：接收地址
 
@@ -244,14 +244,14 @@ mtool-client account balance -a $address --config $MTOOLDIR/validator/validator_
 
 ### 发起质押操作
 
-如果共识节点部署完成，并且已经同步区块成功，您就可以使用MTool进行质押操作。质押资金申请完成后，确保质押账户余额足够，根据用户情况替换质押金额，质押最低门槛为100万LAT。
+如果共识节点部署完成，并且已经同步区块成功，您就可以使用MTool进行质押操作。质押资金申请完成后，确保质押账户余额足够，根据用户情况替换质押金额，质押最低门槛为1万ATP。
 
-注意：请保持质押账户里面有足够LAT，以备后续发起节点管理的交易有足够的交易手续费，比如升级提案的投票，解质押等交易。
+注意：请保持质押账户里面有足够ATP，以备后续发起节点管理的交易有足够的交易手续费，比如升级提案的投票，解质押等交易。
 
 - 执行命令
 
 ```bash
-mtool-client staking --amount 1000000 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
+mtool-client staking --amount 10000 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
 ```
 提示：**please input keystore password:** 输入质押钱包的密码，然后回车，如果显示如下信息则代表质押成功：
 
@@ -264,16 +264,16 @@ SUCCESS
 
 - 参数说明
 
-> amount: 质押数，不少于1000000lat-质押门槛，小数点不超过8位
+> amount: 质押数，不少于10000atp-质押门槛，小数点不超过8位
 >
-> restrictedamount: 不少于1000000lat-质押门槛，小数点不超过8位（使用锁仓余额质押）
+> restrictedamount: 不少于10000atp-质押门槛，小数点不超过8位（使用锁仓余额质押）
 
 ### 修改验证人信息操作
 
 - 执行命令
 
 ```bash
-mtool-client update_validator --name VerifierName --url "http://www.platon.com" --identity IdentifyID --delegated-reward-rate 100 --reward lax1x0f9xwr9steccekttqvml0d26zgsxwdnhq3fkv --introduction "Modify the verifier information operation" --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
+mtool-client update_validator --name VerifierName --url "http://www.platon.com" --identity IdentifyID --delegated-reward-rate 100 --reward atx1x0f9xwr9steccekttqvml0d26zgsxwdnt4f55x --introduction "Modify the verifier information operation" --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
 ```
 
 - 参数说明
@@ -314,7 +314,7 @@ mtool-client increasestaking --amount 5000000 --keystore $MTOOLDIR/keystore/stak
 
 - 参数说明
 
-> amount：用账户余额来增加质押量(LAT)，不少于10最小增加值，小数点不超过8位
+> amount：用账户余额来增加质押量(ATP)，不少于10最小增加值，小数点不超过8位
 >
 > restrictedamount： 用账户锁仓余额来增加质押量，不少于10质押门槛，小数点不超过8位（使用锁仓余额质押）
 
