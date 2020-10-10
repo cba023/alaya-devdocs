@@ -146,8 +146,8 @@
 <pre><code class="hljs css language-shell">-name: staking
 -type: NORMAL
 -address:
-mainnet: lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr
-testnet: lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v
+mainnet: atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv
+testnet: atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx
 -public key: 0x9521cd81ba28d5d1c23bb7ddb7042d146375203d35000c0289178027abd4dc09bca30257739df166201e73497485242f41d5f50d46bc3c7e4385f81bde560db0
 
 Important write this Private Key in a safe place.
@@ -159,8 +159,8 @@ It is the important way to recover your account if you ever forget your password
 worry jewel penalty jealous expect embark outer eternal verb rebuild rice kidney
 </code></pre>
 <p>钱包地址格式调整为Bech32，其中：</p>
-<p><code>lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr</code>：为主网账户地址，以lat开头；</p>
-<p><code>lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v</code>：为测试网账户地址，以lax开头；</p>
+<p><code>atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv</code>：为主网账户地址，以atp开头；</p>
+<p><code>atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx</code>：为测试网账户地址，以atx开头；</p>
 <p><code>4630b6d86bc74bffd4ca8cfc18bceec562cb40fc5080c258452a04a69bc1ee07</code> 为钱包私钥；</p>
 <p><code>worry jewel penalty jealous expect embark outer eternal verb rebuild rice kidney</code> 为助记词。</p>
 <p>出于安全考虑，用户需对钱包私钥或助记词进行备份（可都进行备份，也可备份其中一个），钱包丢失时，可用于恢复。建议用户将助记词或者私钥备份到安全的存储介质上，如离线机器等。</p>
@@ -207,7 +207,7 @@ worry jewel penalty jealous expect embark outer eternal verb rebuild rice kidney
 </ul>
 <blockquote>
 <p>keystore：发送转账交易的钱包路径</p>
-<p>amount：转账金额，单位：LAT</p>
+<p>amount：转账金额，单位：ATP</p>
 <p>recipient：接收地址</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="查看钱包列表"></a><a href="#查看钱包列表" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>查看钱包列表</h3>
@@ -241,12 +241,12 @@ worry jewel penalty jealous expect embark outer eternal verb rebuild rice kidney
 <p>a：钱包地址</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="发起质押操作"></a><a href="#发起质押操作" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发起质押操作</h3>
-<p>如果共识节点部署完成，并且已经同步区块成功，您就可以使用MTool进行质押操作。质押资金申请完成后，确保质押账户余额足够，根据用户情况替换质押金额，质押最低门槛为100万LAT。</p>
-<p>注意：请保持质押账户里面有足够LAT，以备后续发起节点管理的交易有足够的交易手续费，比如升级提案的投票，解质押等交易。</p>
+<p>如果共识节点部署完成，并且已经同步区块成功，您就可以使用MTool进行质押操作。质押资金申请完成后，确保质押账户余额足够，根据用户情况替换质押金额，质押最低门槛为1万ATP。</p>
+<p>注意：请保持质押账户里面有足够ATP，以备后续发起节点管理的交易有足够的交易手续费，比如升级提案的投票，解质押等交易。</p>
 <ul>
 <li>执行命令</li>
 </ul>
-<pre><code class="hljs css language-bash">mtool-client staking --amount 1000000 --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json
+<pre><code class="hljs css language-bash">mtool-client staking --amount 10000 --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json
 </code></pre>
 <p>提示：<strong>please input keystore password:</strong> 输入质押钱包的密码，然后回车，如果显示如下信息则代表质押成功：</p>
 <pre><code class="hljs css language-bash">operation finished
@@ -258,14 +258,14 @@ SUCCESS
 <li>参数说明</li>
 </ul>
 <blockquote>
-<p>amount: 质押数，不少于1000000lat-质押门槛，小数点不超过8位</p>
-<p>restrictedamount: 不少于1000000lat-质押门槛，小数点不超过8位（使用锁仓余额质押）</p>
+<p>amount: 质押数，不少于10000atp-质押门槛，小数点不超过8位</p>
+<p>restrictedamount: 不少于10000atp-质押门槛，小数点不超过8位（使用锁仓余额质押）</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="修改验证人信息操作"></a><a href="#修改验证人信息操作" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>修改验证人信息操作</h3>
 <ul>
 <li>执行命令</li>
 </ul>
-<pre><code class="hljs css language-bash">mtool-client update_validator --name VerifierName --url <span class="hljs-string">"http://www.platon.com"</span> --identity IdentifyID --delegated-reward-rate 100 --reward lax1x0f9xwr9steccekttqvml0d26zgsxwdnhq3fkv --introduction <span class="hljs-string">"Modify the verifier information operation"</span> --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json
+<pre><code class="hljs css language-bash">mtool-client update_validator --name VerifierName --url <span class="hljs-string">"http://www.platon.com"</span> --identity IdentifyID --delegated-reward-rate 100 --reward atx1x0f9xwr9steccekttqvml0d26zgsxwdnt4f55x --introduction <span class="hljs-string">"Modify the verifier information operation"</span> --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json
 </code></pre>
 <ul>
 <li>参数说明</li>
@@ -301,7 +301,7 @@ SUCCESS
 <li>参数说明</li>
 </ul>
 <blockquote>
-<p>amount：用账户余额来增加质押量(LAT)，不少于10最小增加值，小数点不超过8位</p>
+<p>amount：用账户余额来增加质押量(ATP)，不少于10最小增加值，小数点不超过8位</p>
 <p>restrictedamount： 用账户锁仓余额来增加质押量，不少于10质押门槛，小数点不超过8位（使用锁仓余额质押）</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="提交文本提案操作"></a><a href="#提交文本提案操作" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>提交文本提案操作</h3>
