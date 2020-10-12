@@ -34,7 +34,7 @@ mtool-client --version
 
 **step1. 下载MTool安装包**
 
-在在线机器上，复制链接<https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/mtool/mtool-setup/0.13.1/mtool-setup.exe>或者 <http://47.91.153.183/mtool/mtool-setup/0.13.1/mtool-setup.exe> 到浏览器下载MTool安装包。
+在在线机器上，复制链接<http://47.91.153.183/mtool/mtool-setup/0.13.2/mtool-setup.exe> 到浏览器下载MTool安装包。
 
 **step2. 安装MTool**
 
@@ -51,13 +51,7 @@ mtool-client --version
 **step1. 下载MTool工具包**
 
 ``` bash
-wget https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/mtool/0.13.1/mtool-client.zip
-```
-
-或者
-
-``` bash
-wget http://47.91.153.183/mtool/0.13.1/mtool-client.zip
+wget http://47.91.153.183/mtool/0.13.2/mtool-client.zip
 ```
 
 **step2. 解压MTool工具包**
@@ -69,12 +63,6 @@ wget http://47.91.153.183/mtool/0.13.1/mtool-client.zip
 **step3. 下载脚本**
 
 >脚本下载到<font color=red>mtool-client</font> 目录下，否则脚本无法找到新版本mtool的路径。
-
-``` bash
-wget https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/opensource/scripts/mtool_install.sh
-```
-
-或者
 
 ``` bash
 wget http://47.91.153.183/opensource/scripts/mtool_install.sh
@@ -335,7 +323,7 @@ mtool-client submit_textproposal --pid_id 100 --keystore $MTOOLDIR/keystore/stak
 - 执行命令
 
 ```bash
-mtool-client submit_versionproposal --newversion 0.13.1 --end_voting_rounds 345 --pid_id 100 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
+mtool-client submit_versionproposal --newversion 0.13.2 --end_voting_rounds 345 --pid_id 100 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
 ```
 
 - 参数说明
