@@ -6,13 +6,13 @@ sidebar_label: 加入 Alaya 网络
 
 ## 简介
 
-Alaya公有网络将于北京时间2020年10月24日正式上线对外开放，ChainID为201018。
+Alaya主网络将于北京时间2020年10月24日正式上线对外开放，ChainID为201018。
 
 
 
 ## 准备
 
-在加入Alaya公有网络前请确保服务器本地具备以下条件：
+在加入Alaya主网络前请确保服务器本地具备以下条件：
 
 - 已经按照[安装一个节点](/alaya-devdocs/zh-CN/Install_Node)指引安装好Alaya节点并创建好节点密钥。
 
@@ -20,16 +20,16 @@ Alaya公有网络将于北京时间2020年10月24日正式上线对外开放，C
 
 
 
-## 加入Alaya网络
+## 加入Alaya主网络
 
-任何人、任何组织都可以加入 Alaya 网络。
+任何人、任何组织都可以加入 Alaya 主网络。
 
 ### 启动验证节点
 
-执行以下命令即可启动验证节点加入Alaya测试网：
+执行以下命令即可启动验证节点加入Alaya主网络：
 
 ```bash
-nohup platon --identity alaya --datadir ./data --port 16789 --alayatestnet --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
+nohup platon --identity alaya --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
 ```
 
 **提示：**
