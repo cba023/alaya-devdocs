@@ -29,7 +29,7 @@ Alaya主网络将于北京时间2020年10月24日正式上线对外开放，Chai
 执行以下命令即可启动验证节点加入Alaya主网络：
 
 ```bash
-nohup platon --identity alaya --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
+nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
 ```
 
 **提示：**
@@ -110,4 +110,4 @@ platon attach http://localhost:6789
 2235
 ```
 
-节点列表中出现一系列测试网络节点并且块高在不断增长，则表示连接成功！
+节点列表中出现一系列Alaya网络节点并且块高在不断增长，则表示连接成功！

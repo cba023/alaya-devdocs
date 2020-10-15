@@ -34,7 +34,7 @@ Double-click `C:\tools\unins000.exe` to uninstall all old versions of MTool and 
 
 **Step1. Download MTool installation package**
 
-On the online machine, copy the link <https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/mtool/mtool-setup/0.13.1/mtool-setup.exe> or <http://47.91.153.183/mtool/mtool-setup/0.13.1/mtool-setup.exe> to the browser and download the MTool installation package.
+On the online machine, copy the link http://47.91.153.183/alaya/mtool/windows/0.13.2/mtool-setup.exe  to the browser and download the MTool installation package.
 
 **Step2. Install MTool**
 
@@ -51,13 +51,7 @@ Proceed as follows:
 **Step1. Download MTool toolkit**
 
 ```bash
-wget https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/mtool/0.13.1/mtool-client.zip
-```
-
-or
-
-```bash
-wget http://47.91.153.183/mtool/0.13.1/mtool-client.zip
+wget http://47.91.153.183/alaya/mtool/linux/0.13.2/mtool-client.zip
 ```
 
 **Step2. Extract the MTool toolkit**
@@ -69,12 +63,6 @@ wget http://47.91.153.183/mtool/0.13.1/mtool-client.zip
 **Step3. Download script**
 
 > The script is downloaded to the <font color=red>mtool-client</font> directory, otherwise the script cannot find the path of the new version of mtool.
-
-```bash
-wget https://7w6qnuo9se.s3.eu-central-1.amazonaws.com/opensource/scripts/mtool_install.sh
-```
-
-or
 
 ```bash
 wget http://47.91.153.183/opensource/scripts/mtool_install.sh
@@ -122,8 +110,8 @@ mtool-client account new staking
 >-name: staking
 >-type: NORMAL
 >-address:
-> mainnet: lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr
-> testnet: lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v
+> mainnet: atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv
+> testnet: atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx
 >-public key: 0x9521cd81ba28d5d1c23bb7ddb7042d146375203d35000c0289178027abd4dc09bca30257739df166201e73497485242f41d5f50d46bc3c7e4385f81bde560db0
 >Important write this Private Key in a safe place.
 >It is the important way to recover your account if you ever forget your password.
@@ -136,9 +124,9 @@ mtool-client account new staking
 >
 >  Wallet address format adjusted to Bech32, among them: 
 >
->`lat124xmsmd0uf5cvk7v3s36eytqezqsjfcxfw2lmr`: Main network account address, beginning with LAT;
+>`atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv`: Main network account address, beginning with atp;
 >
->`lax124xmsmd0uf5cvk7v3s36eytqezqsjfcxxtcs4v`: Test newwork account address, start with LAX;
+>`atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx`: Test newwork account address, start with atx;
 >
 >`4630b6d86bc74bffd4ca8cfc18bceec562cb40fc5080c258452a04a69bc1ee07` : the private key of the wallet;
 >
@@ -202,7 +190,7 @@ mtool-client tx transfer --keystore $MTOOLDIR/keystore/staking.json --amount "1"
 
 > keystore: path of the wallet sending the transaction
 >
-> amount: transfer amount, unit: LAT
+> amount: transfer amount, unit: ATP
 >
 > recipient: receiving address
 
@@ -240,14 +228,14 @@ mtool-client account balance -a $address --config $MTOOLDIR/validator/validator_
 
 ### Initiate a staking operation
 
-If the deployment of the consensus node is complete and the block has been synchronized successfully, you can use MTool for staking operations. After the staking fund application is completed, ensure that the balance of the staking account is sufficient, and replace the staking amount according to the user's situation. The minimum threshold for staking is 1 million LAT.
+If the deployment of the consensus node is complete and the block has been synchronized successfully, you can use MTool for staking operations. After the staking fund application is completed, ensure that the balance of the staking account is sufficient, and replace the staking amount according to the user's situation. The minimum threshold for staking is ten thousand ATP.
 
-Note: Please keep enough LAT in the staking account, so that the transactions initiated by the subsequent node management have sufficient transaction fees, such as voting for upgrading proposals, and unsecured transactions.
+Note: Please keep enough ATP in the staking account, so that the transactions initiated by the subsequent node management have sufficient transaction fees, such as voting for upgrading proposals, and unsecured transactions.
 
 - Excuting the command
 
 ```bash
-mtool-client staking --amount 1000000 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
+mtool-client staking --amount 10000 --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
 ```
 
 Prompt:**please input keystore password:**Enter the password of the staking wallet and press Enter. If the following information is displayed, the staking is successful:
@@ -261,16 +249,16 @@ SUCCESS
 
 - Parameters Description
 
-> amount: staking amount, not less than 1000000lat-staking threshold, no more than 8 decimal places
+> amount: staking amount, not less than 10000atp-staking threshold, no more than 8 decimal places
 >
-> restrictedamount: not less than 1000000lat- staking threshold, no more than 8 decimal points (staking using locked balance)
+> restrictedamount: not less than 10000atp- staking threshold, no more than 8 decimal points (staking using locked balance)
 
 ### Modify validator information operation
 
 - Excuting the command
 
 ```bash
-mtool-client update_validator --name VerifierName --url "http://www.platon.com" --identity IdentifyID --delegated-reward-rate 100 --reward lax1rquxycp7xacmj25wy75l8mrux23tjvwxww6hcx --introduction "Modify the verifier information operation" --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
+mtool-client update_validator --name VerifierName --url "http://www.platon.com" --identity IdentifyID --delegated-reward-rate 100 --reward atx1rquxycp7xacmj25wy75l8mrux23tjvwxjmz26v --introduction "Modify the verifier information operation" --keystore $MTOOLDIR/keystore/staking.json --config $MTOOLDIR/validator/validator_config.json
 ```
 
 - Parameters Description
@@ -311,7 +299,7 @@ mtool-client increasestaking --amount 5000000 --keystore $MTOOLDIR/keystore/stak
 
 - Parameters Description
 
-> amount: Use the account balance to increase the staking amount (LAT), the minimum added value is not less than 10, and the decimal point does not exceed 8 digits
+> amount: Use the account balance to increase the staking amount (ATP), the minimum added value is not less than 10, and the decimal point does not exceed 8 digits
 >
 > restrictedamount: use the account balance to increase the amount of staking, not less than 10 staking threshold, the decimal point does not exceed 8
 

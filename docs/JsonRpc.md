@@ -268,7 +268,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"platon_accounts","params":[],"id
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": ["lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3"]
+  "result": ["atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym"]
 }
 ```
 
@@ -311,7 +311,7 @@ Returns the balance of the account of given address.
 
 ```js
 params: [
-   'lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3',
+   'atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym',
    'latest'
 ]
 ```
@@ -324,7 +324,7 @@ params: [
 ##### Example
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getBalance","params":["lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3", "latest"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getBalance","params":["atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym", "latest"],"id":1}'
 
 // Result
 {
@@ -349,7 +349,7 @@ Returns the value from a storage position at a given address.
 
 ```js
 params: [
-   'lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3',
+   'atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym',
    '0x0', // storage position at 0
    '0x2' // state at block number 2
 ]
@@ -363,7 +363,7 @@ params: [
 ##### Example
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getStorageAt","params":["lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3", "0x0", "0x2"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getStorageAt","params":["atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym", "0x0", "0x2"],"id":1}'
 
 // Result
 {
@@ -387,7 +387,7 @@ Returns the number of transactions *sent* from an address.
 
 ```js
 params: [
-   'lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3',
+   'atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym',
    'latest' // state at the latest block
 ]
 ```
@@ -400,7 +400,7 @@ params: [
 ##### Example
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getTransactionCount","params":["lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3","latest"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getTransactionCount","params":["atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym","latest"],"id":1}'
 
 // Result
 {
@@ -493,7 +493,7 @@ Returns code at a given address.
 
 ```js
 params: [
-   'lax14984xa8uuhkmer32s6tuz5e3valxa0ct68a0c5',
+   'atx14984xa8uuhkmer32s6tuz5e3valxa0ctxj9j67',
    '0x2'  // 2
 ]
 ```
@@ -506,7 +506,7 @@ params: [
 ##### Example
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getCode","params":["lax14984xa8uuhkmer32s6tuz5e3valxa0ct68a0c5", "0x2"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getCode","params":["atx14984xa8uuhkmer32s6tuz5e3valxa0ctxj9j67", "0x2"],"id":1}'
 
 // Result
 {
@@ -537,7 +537,7 @@ Signs data with a given address.
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"platon_sign","params":["lax16xk7yhxd842s5l44x2k8t89v00sfcfcej8gsug", "Schoolbus"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"platon_sign","params":["atx16xk7yhxd842s5l44x2k8t89v00sfcfcewjsd7z", "Schoolbus"],"id":1}'
 
 // Result
 {
@@ -566,8 +566,8 @@ Creates new message call transaction or a contract creation, if the data field c
 
 ```js
 params: [{
-  "from": "lax1kc8gm4sut5etaqzchw8tjuy8purjxv245450s0",
-  "to": "lax163hgm4nut5etaqzchw8tjuy8purjg3t87dtrgq",
+  "from": "atx1kc8gm4sut5etaqzchw8tjuy8purjxv24gqvjj9",
+  "to": "atx163hgm4nut5etaqzchw8tjuy8purjg3t8zcn722",
   "gas": "0x76c0", // 30400,
   "gasPrice": "0x9184e72a000", // 10000000000000
   "value": "0x9184e72a", // 2441406250
@@ -754,7 +754,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getBlockByHash","params":
     "logsBloom": "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
     "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
     "stateRoot": "0xd5855eb08b3387c0af375e9cdb6acfc05eb8f519e419b874b6ff2ffda7ed1dff",
-    "miner": "lax1fejlmgs4j432f9he7dfzlzgj9gcgsjt6c4ujsh",
+    "miner": "atx1fejlmgs4j432f9he7dfzlzgj9gcgsjt6yqy0ja",
     "difficulty": "0x027f07", // 163591
     "totalDifficulty":  "0x027f07", // 163591
     "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -847,8 +847,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getTransactionByHash","pa
     "blockHash": "0xbeab0aa2411b7ab17f30a99d3cb9c6ef2fc5426d6ad6fd9e2a26a6aed1d1055b",
     "blockNumber": "0x15df", // 5599
     "transactionIndex":  "0x1", // 1
-    "from":"lax1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxpnkqrx3",
-    "to":"lax163hgm4nut5etaqzchw8tjuy8purjg3t87dtrgq",
+    "from":"atx1gp7h8k9ynm4ct5ev73j4qlwhr4g8zqxp0rc7ym",
+    "to":"atx163hgm4nut5etaqzchw8tjuy8purjg3t8zcn722",
     "value":"0x7f110" // 520464
     "gas": "0x7f110" // 520464
     "gasPrice":"0x09184e72a000",
@@ -967,7 +967,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getTransactionReceipt","p
      blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
      cumulativeGasUsed: '0x33bc', // 13244
      gasUsed: '0x4dc', // 1244
-     contractAddress: 'lax1kc8gm4sut5etaqzchw8tjuy8purjxv245450s0' // or null, if none was created
+     contractAddress: 'atx1kc8gm4sut5etaqzchw8tjuy8purjxv24gqvjj9' // or null, if none was created
      logs: [{
          // logs as returned by getFilterLogs, etc.
      }, ...]
@@ -994,7 +994,7 @@ To check if the state has changed, call platon_getFilterChanges.
 params: [{
   "fromBlock": "0x1",
   "toBlock": "0x2",
-  "address": "lax13zy0ruv447se9nlwscrfskzvqv85e8d35gau40",
+  "address": "atx13zy0ruv447se9nlwscrfskzvqv85e8d3ga9ph9",
   "topics": ["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b", null, [0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b, 0x000000000000000000000000aff3454fce5edbc8cca8697c15331677e6ebccc]]
 }]
 ```
@@ -1155,7 +1155,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"platon_getFilterChanges","params
     "blockHash": "0x8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcfdf829c5a142f1fccd7d",
     "transactionHash":  "0xdf829c5a142f1fccd7d8216c5785ac562ff41e2dcfdf5785ac562ff41e2dcf",
     "transactionIndex": "0x0", // 0
-    "address": "lax1zmzhskk9vtl5rckulhuzn3dpgtclenta5fjs08",
+    "address": "atx1zmzhskk9vtl5rckulhuzn3dpgtclentagu2ddd",
     "data":"0x0000000000000000000000000000000000000000000000000000000000000000",
     "topics": ["0x59ebeb90bc63057b6515673c3ecf9438e5058bca0f92585014eced636878c9a5"]
     },{

@@ -6,66 +6,59 @@ sidebar_label: Join the Alaya network
 
 ## Overview
 
-Currently PlatON  has two public networks.  One is the PlatON main network that has not yet been officially launched and operates independently. The chain ID is 100.
-
-The other is the test network Baleyworld, which has been officially launched on 2020-2-20 Beijing time, and is open to developers. The chain ID is 103.
-
+The Alaya main network will be officially launched on October 24, 2020 Beijing time, and the ChainID is 201018.
 
 
 ## Preparation
 
-Before joining the PlatON public network, please ensure that the server has the following conditions:
+Before joining the Alaya public network, please ensure that the server has the following conditions:
 
-- The PlatON node has been installed and the wallet file and node key have been created according to the instructions of [Installing a Node](/alaya-devdocs/en/Install_Node).
+- The Alaya node has been installed and the wallet file and node key have been created according to the instructions of [Installing a Node](/alaya-devdocs/en/Install_Node).
 
 This section assumes that the server is Ubuntu 18.04, and the working directory of the executable file is `~/platon-node`. Note that all subsequent commands should be run under the same working directory.
 
 
 
 
-## Join the Main Network
+## Join the Alaya Main Network
 
-The mainnet has not been officially launched yet.
+Anyone and any organization can join the Alaya main network.
 
-
-
-## Join the Baley Network
-
-Anyone or any organization can join PlatON test network.
 
 ### Start as a validator node
 
 **Execute the following command to join the Baleyworld as a validator node**
 
 ```bash
-nohup platon --identity platon --datadir ./data --port 16789 --testnet --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
+nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
 ```
 
 **Prompt:**
 
-| **Parameters** | **Description**                                              |
-| -------------- | ------------------------------------------------------------ |
-| --identity     | Specify the network name                                     |
-| --datadir      | Specify the data directory path                              |
-| --rpcaddr      | Specify rpc server address                                   |
-| --rpcport      | Specifying the RPC protocol communication port               |
-| --rpcapi       | Specify the rpcapi name open by the node                     |
-| --rpc          | Specify http-rpc communication method                        |
-| --nodekey      | Specify the node private key file                            |
-| --cbft.blskey  | Specify the node bls private key file                        |
-| --testnet      | Specify to connect to the test network (Default: main network) |
-| --syncmode     | fast: Fast synchronization mode, full: All synchronous mode  |
-| --db.nogc      | Enable archive mode                                          |
+| **Parameters** | **Description**                                             |
+| -------------- | ----------------------------------------------------------- |
+| --identity     | Specify the network name                                    |
+| --datadir      | Specify the data directory path                             |
+| --rpcaddr      | Specify rpc server address                                  |
+| --rpcport      | Specifying the RPC protocol communication port              |
+| --rpcapi       | Specify the rpcapi name open by the node                    |
+| --rpc          | Specify http-rpc communication method                       |
+| --nodekey      | Specify the node private key file                           |
+| --cbft.blskey  | Specify the node bls private key file                       |
+| --alaya        | Specify to connect to the Alaya's main network              |
+| --alayatestnet | Specify to connect to the Alaya's test network              |
+| --syncmode     | fast: Fast synchronization mode, full: All synchronous mode |
+| --db.nogc      | Enable archive mode                                         |
 
 See more parameters with the command `platon --help`
 
-When PlatON is successfully started, under normal circumstances, it will automatically establish a connection with the node closest to it through the node discovery protocol. After the connection is successful, block synchronization will be started. You can determine whether joining the network successfully by looking at the peers of the node and confirming whether the block height of the node is increasing.
+When Alaya is successfully started, under normal circumstances, it will automatically establish a connection with the node closest to it through the node discovery protocol. After the connection is successful, block synchronization will be started. You can determine whether joining the network successfully by looking at the peers of the node and confirming whether the block height of the node is increasing.
 
 If the key is not generated in advance, the node is automatically generated in the node's data directory at startup. If it is automatically generated, only the node private key and BLS private key will be generated, and the relevant public key will not be automatically generated.
 
 
 
-### Enter `PlatON` console
+### Enter `Alaya` console
 
 ```bash
 platon attach http://localhost:6789
@@ -109,11 +102,11 @@ platon attach http://localhost:6789
 
 ### View the current block height
 
-You can get the block height of the current node by executing the following command in the `PlatON` console.
+You can get the block height of the current node by executing the following command in the `Alaya` console.
 
 ```bash
 > platon.blockNumber
 2235
 ```
 
-A series of test network nodes appear in the node list and the block height is increasing, indicating that the connection is successful.
+A series of Alaya main network nodes appear in the node list and the block height is increasing, indicating that the connection is successful.

@@ -6,9 +6,9 @@ sidebar_label: Source Installation Alaya
 
 
 
-This document is intended for users with the ability to compile source code on the PlatON blockchain.
+This document is intended for users with the ability to compile source code on the Alaya blockchain.
 
-- PlatON supports source code compilation and installation under Windows and Ubuntu. 
+- Alaya supports source code compilation and installation under Windows and Ubuntu. 
 
 ## Windows source code compilation
 
@@ -19,7 +19,7 @@ Windows compilation environment requirements :
 - mingw: `mingw (V8.1.0)`
 - cmake: `3.0 +`
 
-You can install the above compilation environment yourself. Please make sure the above environment can run normally before compiling `PlatON` source code.
+You can install the above compilation environment yourself. Please make sure the above environment can run normally before compiling `Alaya` source code.
 
 > You can also use `Chocolatey` to install the compilation environment (if you do not already have `chocolatey`, you can follow the instructions on <https://chocolatey.org> to install), start `PowerShell` as an administrator, and then execute the following command:
 >
@@ -54,12 +54,12 @@ You can install the above compilation environment yourself. Please make sure the
 
 - Get the source code
 
-Get the source code and put it in the GOPATH path, where `0.13.1_alpha` is the branch name, then switch to the actual branch:
+Get the source code and put it in the GOPATH path, where `feature/alaya-launching` is the branch name, then switch to the actual branch:
 
 ```
 mkdir -p $GOPATH/src/github.com/PlatONnetwork
 cd $GOPATH/src/github.com/PlatONnetwork
-git clone -b 0.13.1_alpha https://github.com/PlatONnetwork/PlatON-Go.git --recursive
+git clone -b feature/alaya-launching https://github.com/PlatONnetwork/PlatON-Go.git --recursive
 ```
 
 - Add bls dependent library to environment variables
@@ -91,10 +91,10 @@ After compiling, `platon`,` keytool` executable files will be generated in the` 
 - Go language development kit: `go (1.11+)`
 - cmake: `3.0 +`
 
-**step2.** Get the PlatON source:
+**step2.** Get the Alaya source:
 
 ```bash
-git clone -b 0.13.1_alpha https://github.com/PlatONnetwork/PlatON-Go.git --recursive
+git clone -b feature/alaya-launching https://github.com/PlatONnetwork/PlatON-Go.git --recursive
 ```
 
 **step3.** Install dependency library:
