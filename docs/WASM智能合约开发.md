@@ -6,7 +6,7 @@ sidebar_label: WASM Smart Contract
 
 WebAssembly (wasm for short) is a binary instruction set designed for stacked virtual machines. Wasm was designed to be a compile target for platforms such as C / C ++ / Rust, and was originally designed to solve JavaScript performance issues. Wasm is a web standard being led by the W3C and supported by browser vendors such as Google, Microsoft, and Mozilla.
 
-This tutorial is mainly to guide users to create a WASM smart contract using wasm language on PlatON.
+This tutorial is mainly to guide users to create a WASM smart contract using wasm language on Alaya.
 
 It is mainly explained from the following aspects： 
 
@@ -20,11 +20,11 @@ It is mainly explained from the following aspects：
 
 ### Introduction
 
-This tutorial is mainly to guide users to create a simple HelloWorld smart contract using wasm language on PlatON, compile, deploy, and call this contract through platon-truffle.If you want to use a richer API. 
+This tutorial is mainly to guide users to create a simple HelloWorld smart contract using wasm language on Alaya, compile, deploy, and call this contract through platon-truffle.If you want to use a richer API. 
 
 ### Platon-truffle Introduction 
 
-Platon-truffle is a tool provided by PlatON that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:
+Platon-truffle is a tool provided by Alaya that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:
 
 - Platon-truffle develop tools[specific installation](https://platon-truffle.readthedocs.io/en/v0.13.1/getting-started/installation.html)
 - Platon-truffle develop tools[usage manuals](https://platon-truffle.readthedocs.io/en/v0.13.1/)
@@ -163,7 +163,7 @@ networks: {
        host: "10.1.1.6",     // blockchain server address
        port: 8806,            // server port
        network_id: "*",       // Any network (default: none)
-       from: "lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl",
+       from: "atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp",
        gas: 999999,
        gasPrice: 1000000000,
 	},
@@ -184,7 +184,7 @@ web3.platon.personal.importRawKey("Your wallet private key","Your wallet passwor
 ```
 Successful import will see the address corresponding to the private key as follows：
 ```
-'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'
+'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'
 ```
 
 Unlock wallet account
@@ -209,9 +209,9 @@ If deploying successfully，you will see log info as follows:
 receipt:  { blockHash:
    '0x266733b693ba650315a59c34e72804c06ca3e27fab145625797bd42259b572c5',
   blockNumber: 70441,
-  contractAddress: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  contractAddress: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   cumulativeGasUsed: 291314,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 291314,
   logs: [],
   logsBloom:
@@ -225,15 +225,15 @@ receipt:  { blockHash:
 ======================
 
    > transactionHash:     0x60946ebf0ccddc76a0234353435de73e7901888227fb2f03922fb0ce265a4e9d
-   > contract address:    lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np
+   > contract address:    atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx
    > block number:        70441
    > block timestamp:     1583247148341
-   > account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   > account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    > balance:             3533694129556768659166595001485837031654967793751237866225582808584074296
    > gas limit:           100000000
    > gas used:            291314
-   > gas price:           0.000000050000000004 LAT
-   > total cost:          0.014565700001165256 LAT
+   > gas price:           0.000000050000000004 ATP
+   > total cost:          0.014565700001165256 ATP
 ```
 
 ### Call HelloWorld Contract
@@ -249,7 +249,7 @@ platon-truffle console
 
 ```json
 var abi = [{"baseclass":[],"fields":[{"name":"head","type":"string"}],"name":"message","type":"struct"},{"baseclass":["message"],"fields":[{"name":"body","type":"string"},{"name":"end","type":"string"}],"name":"my_message","type":"struct"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"init","output":"void","type":"Action"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"add_message","output":"void","type":"Action"},{"constant":true,"input":[],"name":"get_message_size","output":"uint8","type":"Action"},{"constant":true,"input":[{"name":"index","type":"uint8"}],"name":"get_message_body","output":"string","type":"Action"}];
-var contractAddr = 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np';
+var contractAddr = 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx';
 
 var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 }); 
 ```
@@ -263,7 +263,7 @@ Description：
 
 ```javascript
 helloworld.methods.add_message('[[["5"], "6", "7"]]').send({
-	from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',gas: 999999
+	from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',gas: 999999
 }).on('receipt', function(receipt) {
 	console.log(receipt);
 }).on('error', console.error);
@@ -282,12 +282,12 @@ Description：
   blockNumber: 74665,
   contractAddress: null,
   cumulativeGasUsed: 108549,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 108549,
   logsBloom:
    '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   status: true,
-  to: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d0000a',
   transactionIndex: 0,
@@ -297,12 +297,12 @@ Description：
   blockNumber: 74665,
   contractAddress: null,
   cumulativeGasUsed: 108549,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 108549,
   logsBloom:
    '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   status: true,
-  to: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d0000a',
   transactionIndex: 0,
@@ -327,7 +327,7 @@ Description：
 
 ### Summary
 
-In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the PlatON network. `EVM` and `WASM`, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the `EVM`/`WASM` virtual machine of `PlatON` with the Ethereum virtual machine. In terms of contracts, a simple `SET/GET` function contract is used as a small test contract. The medium-sized contract example will use an open source [Tweet](https://github.com/yep/eth-tweet) contract The large contract is a smart contract that implements the `ERC20` standard.
+In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. `EVM` and `WASM`, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the `EVM`/`WASM` virtual machine of `Alaya` with the Ethereum virtual machine. In terms of contracts, a simple `SET/GET` function contract is used as a small test contract. The medium-sized contract example will use an open source [Tweet](https://github.com/yep/eth-tweet) contract The large contract is a smart contract that implements the `ERC20` standard.
 
 
 #### Data Overview
@@ -336,27 +336,27 @@ In a blockchain system, developing smart contracts based on any public chain sys
 
 | Platform    | Contract Level | Size     | GasUsed | GasPrice            | Amount        | Remark            |
 | :---------- | :------------- | :------- | :------ | :------------------ | :------------ | :---------------- |
-| PlatON-EVM  | Small-sized    | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `LAT` |
+| Alaya-EVM  | Small-sized    | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `ATP` |
 | Ethereum    | Small-sized    | 0.3 kb   | 127173  | 5,000,000,000 `wei` | 635865 `Gwei` | 0.000635865 `ETH` |
-| PlatON-WASM | Small-sized    | 13.55 kb | 184043  | 5,000,000,000 `VON` | 920215 `gVON` | 0.000920215 `LAT` |
+| Alaya-WASM | Small-sized    | 13.55 kb | 184043  | 5,000,000,000 `VON` | 920215 `gVON` | 0.000920215 `ATP` |
 
 
 **eth-tweet Contract**
 
 | Platform    | Contract Level | Size     | GasUsed | GasPrice            | Amount         | Remark            |
 | :---------- | :------------- | :------- | :------ | :------------------ | :------------- | :---------------- |
-| PlatON-EVM  | Medium-sized   | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `LAT` |
+| Alaya-EVM  | Medium-sized   | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `ATP` |
 | Ethereum    | Medium-sized   | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
-| PlatON-WASM | Medium-sized   | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `LAT` |
+| Alaya-WASM | Medium-sized   | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `ATP` |
 
 
 **ERC20 Token Contract**
 
 | Platform    | Contract Level | Size    | GasUsed | GasPrice            | Amount          | Remark            |
 | :---------- | :------------- | :------ | :------ | :------------------ | :-------------- | :---------------- |
-| PlatON-EVM  | Large-sized    | 4.45 kb | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `LAT` |
+| Alaya-EVM  | Large-sized    | 4.45 kb | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `ATP` |
 | Ethereum    | Large-sized    | 4.45 kb | 1282171 | 5,000,000,000 `wei` | 6410855  `Gwei` | 0.006410855 `ETH` |
-| PlatON-WASM | Large-sized    | 35.9 kb | 486274  | 5,000,000,000 `VON` | 2431370  `gVON` | 0.00243137 `LAT`  |
+| Alaya-WASM | Large-sized    | 35.9 kb | 486274  | 5,000,000,000 `VON` | 2431370  `gVON` | 0.00243137 `ATP`  |
 
 
 ### Small-sized Contract
@@ -431,11 +431,11 @@ ByteSize: `13882 byte => 13.55 kb`
 
 ###### Cost
 
-PlatON-EVM
+Alaya-EVM
 
 * GasUsed: 76953
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  384765 `gVON`（0.000384765 `LAT`）
+* Costs:  384765 `gVON`（0.000384765 `ATP`）
 
 Ethereum 
 
@@ -443,11 +443,11 @@ Ethereum
 * GasPrice: 5,000,000,000 (5 `Gwei`)
 * Costs:  635865 `Gwei`（0.000635865 `ETH`）
 
-PlatON-WASM
+Alaya-WASM
 
 * GasUsed: 184043
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  920215 `gVON`（0.000920215 `LAT`）
+* Costs:  920215 `gVON`（0.000920215 `ATP`）
 
 -----------------------------------
 
@@ -600,11 +600,11 @@ ByteSize: `30788` byte => 30.07 kb`
 
 ###### Costs
 
-PlatON-EVM
+Alaya-EVM
 
 * GasUsed: 257065
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  1285325 `gVON`（0.001285325 `LAT`）
+* Costs:  1285325 `gVON`（0.001285325 `ATP`）
 
 Ethereum
 
@@ -612,11 +612,11 @@ Ethereum
 * GasPrice: 5,000,000,000 (5 `Gwei`)
 * Costs:  3106925 `Gwei`（0.003106925 `ETH`）
 
-PlatON-WASM
+Alaya-WASM
 
 * GasUsed: 349713
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  1748565 `gVON`（0.001748565 `LAT`）
+* Costs:  1748565 `gVON`（0.001748565 `ATP`）
 
 ------------------------
 
@@ -749,7 +749,7 @@ CONTRACT LATToken: public platon::Contract, public StandardToken
 {
 	
 	public:
-		platon::StorageType<"name"_n, std::string> name;		// fancy name: eg PlatON Token
+		platon::StorageType<"name"_n, std::string> name;		// fancy name: eg Alaya Token
 		platon::StorageType<"decimals"_n, uint8_t> decimals;	// HOw many decimals to show.
 		platon::StorageType<"symbol"_n, std::string> symbol;	// An identifier: eg LTT
 		platon::StorageType<"version"_n, std::string> version;	// 0.1 standard. Just an arbitrary versioning scheme.
@@ -810,11 +810,11 @@ ByteSize: `36764 byte => 35.9 kb`
 
 ###### Costs
 
-PlatON-EVM
+Alaya-EVM
 
 * GasUsed: 552823
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  2764115 `gVON`（0.002764115 `LAT`）
+* Costs:  2764115 `gVON`（0.002764115 `ATP`）
 
 Ethereum
 
@@ -822,11 +822,11 @@ Ethereum
 * GasPrice: 5,000,000,000 (5 `Gwei`)
 * Costs:  6410855 `Gwei`（0.006410855 `ETH`）
 
-PlatON-WASM
+Alaya-WASM
 
 * GasUsed: 486274
 * GasPrice: 5,000,000,000 (5 `gVON`)
-* Costs:  2431370 `gVON`（0.00243137 `LAT`）
+* Costs:  2431370 `gVON`（0.00243137 `ATP`）
 
 ------------------------
 
@@ -842,10 +842,10 @@ failure, and how to encode a more standardized smart contract.
 
 ### Reasonable Cost Setting
 
-When you need to deploy a contract on the main network of PlatON, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in PlatON. This restriction is mainly accomplished through Gas. Gas is the fuel value of the PlatON network world, which determines the normal operation of the PlatON network ecosystem. Gas is usually used to measure how much “work” is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the PlatON network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by LAT. Any transaction, contract execution, and data storage on the network need to use Gas.
+When you need to deploy a contract on the main network of Alaya, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in Alaya. This restriction is mainly accomplished through Gas. Gas is the fuel value of the Alaya network world, which determines the normal operation of the Alaya network ecosystem. Gas is usually used to measure how much “work” is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the Alaya network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by ATP. Any transaction, contract execution, and data storage on the network need to use Gas.
 
-PlatON is similar to Ethereum’s blockchain system. It uses `LAT` for payment and
-maintenance networks. One `LAT` is divided into: `mLAT/uLAT/gVON/mVON/kVON/VON`, and `VON` is the smallest unit.
+Alaya is similar to Ethereum’s blockchain system. It uses `ATP` for payment and
+maintenance networks. One `ATP` is divided into: `mATP/uATP/gVON/mVON/kVON/VON`, and `VON` is the smallest unit.
 
 Gas consists of two parts: GasLimit and GasPrice. GasLimit is the maximum Gas consumption (minimum 21,000) that a user is willing to pay to perform an operation or confirm a transaction. GasPrice is the unit price of each Gas.
 
@@ -853,9 +853,9 @@ When a user sends a transaction, GasLimit and GasPrice are set. GasLimit * GasPr
 
 The higher the GasPrice of the transaction, the higher the execution priority of the transaction and the greater the transaction cost. After each transaction is completed, the remaining unused Gas will be returned to the sender’s address account. It is important to note that if the execution of the transaction fails because the GasLimit is set too low, the Gas will not be returned to the user’s address at this time, and the user still needs to pay the energy cost for the failed transaction. Therefore, regardless of whether the transaction is executed successfully, the transaction sender needs to pay a certain calculation fee to the miner.
 
-In the PlatON network, the maximum gas limit is `100,800,000` and the minimum is 22,000. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: 1,000,000. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface platon_estimateGas can be called for approximate estimation to avoid failure due to insufficient Gas.
+In the Alaya network, the maximum gas limit is `100,800,000` and the minimum is 22,000. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: 1,000,000. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface platon_estimateGas can be called for approximate estimation to avoid failure due to insufficient Gas.
 
-**LAT Unit Conversion**
+**ATP Unit Conversion**
 
 | Unit     | VON Value | VON                                   |
 | -------- | --------- | ------------------------------------- |
@@ -863,16 +863,16 @@ In the PlatON network, the maximum gas limit is `100,800,000` and the minimum is
 | kVON     | 1e3 VON   | 1,000                                 |
 | mVON     | 1e6 VON   | 1,000,000                             |
 | gVON     | 1e9 VON   | 1,000,000,000                         |
-| microLAT | 1e12 VON  | 1,000,000,000,000                     |
-| milliLAT | 1e15 VON  | 1,000,000,000,000,000                 |
-| LAT      | 1e18 VON  | 1,000,000,000,000,000,000             |
-| kLAT     | 1e21 VON  | 1,000,000,000,000,000,000,000         |
-| mLAT     | 1e24 VON  | 1,000,000,000,000,000,000,000,000     |
-| gLAT     | 1e27 VON  | 1,000,000,000,000,000,000,000,000,000 |
+| microATP | 1e12 VON  | 1,000,000,000,000                     |
+| milliATP | 1e15 VON  | 1,000,000,000,000,000                 |
+| ATP      | 1e18 VON  | 1,000,000,000,000,000,000             |
+| kATP     | 1e21 VON  | 1,000,000,000,000,000,000,000         |
+| mATP     | 1e24 VON  | 1,000,000,000,000,000,000,000,000     |
+| gATP     | 1e27 VON  | 1,000,000,000,000,000,000,000,000,000 |
 
 ### Avoid Timeouts
 
-Sending transactions on the PlatON network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum GasLimit value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.
+Sending transactions on the Alaya network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum GasLimit value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.
 
 If the call function of a published contract is called (a call is a stateless operation in the contract logic), there is a 5s timeout limit. If the contract logic is not executed within 5s, a timeout will occur and the virtual machine will forcely exit , causing the query to fail.
 
@@ -889,9 +889,9 @@ In general, invalid opcodes have the following conditions:
   supported by the network lock
 - Use float type to do operation
 
-When operating a contract in the PlatON network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.
+When operating a contract in the Alaya network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.
 
-The normal operation is to use the latest Truffle/PlatON-CDT officially provided by PlatON to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.
+The normal operation is to use the latest Truffle/PlatON-CDT officially provided by Alaya to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.
 
 ### C/C++ Language Limit
 
@@ -1222,7 +1222,7 @@ Get the address of contract.
 ```cpp
 template <size_t M> std::pair<Address, bool> make_address(const char (&str)[M])
 ```
-The default address recognized by CDT is the main network address, that is, the address prefix is lat. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.
+The default address recognized by CDT is the main network address, that is, the address prefix is atp. If you want to recognize the test network address prefix is atx, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.
 
 Converts a c-style string to an address object.
 
@@ -1236,7 +1236,7 @@ Converts a c-style string to an address object.
 ```cpp
 std::pair<Address, bool> make_address(const std::string &str_address)
 ```
-The default address recognized by CDT is the main network address, that is, the address prefix is lat. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.
+The default address recognized by CDT is the main network address, that is, the address prefix is atp. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.
 
 Converts a string to an address object.
 

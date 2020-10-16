@@ -6,7 +6,7 @@ sidebar_label: EVM智能合约
 
 
 
-本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在PlatON网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解：
+本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在Alaya网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解：
 
 - [合约开发入门手册](#合约开发入门手册)
 - [合约迁移](#合约迁移)
@@ -20,10 +20,10 @@ sidebar_label: EVM智能合约
 
 ### 简介
 
-本教程主要是指导用户在PlatON上使用solidity语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。如果您想使用更加丰富的API可以参考[Java SDK开发指南](/alaya-devdocs/zh-CN/Java_SDK) 或者 [JS SDK开发指南](/alaya-devdocs/zh-CN/JS_SDK)
+本教程主要是指导用户在Alaya上使用solidity语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。如果您想使用更加丰富的API可以参考[Java SDK开发指南](/alaya-devdocs/zh-CN/Java_SDK) 或者 [JS SDK开发指南](/alaya-devdocs/zh-CN/JS_SDK)
 
 - solidity智能合约语法请参考[Solidity官方文档](https://solidity.readthedocs.io/en/develop/)
-- 在开发合约前，如果需要搭建节点连接到PlatON网络或者创建私有网络请参考：[连接 PlatON 网络](/alaya-devdocs/zh-CN/Join_PlatON_NetWork)
+- 在开发合约前，如果需要搭建节点连接到Alaya网络或者创建私有网络请参考：[连接 Alaya 网络](/alaya-devdocs/zh-CN/Join_Alaya_NetWork)
 
 ### platon-truffle开发工具介绍
 
@@ -158,7 +158,7 @@ networks: {
        host: "10.1.1.6",     // 区块链所在服务器主机
        port: 8806,            // 链端口号
        network_id: "*",       // Any network (default: none)
-       from: "lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl", //部署合约账号的钱包地址
+       from: "atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp", //部署合约账号的钱包地址
        gas: 999999,
        gasPrice: 50000000004,
 	},
@@ -178,7 +178,7 @@ web3.platon.personal.importRawKey("您的钱包私钥","您的钱包密码");
 ```
 导入成功将看到私钥对应的地址：
 ```
-'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'
+'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'
 ```
 
 解锁钱包账户
@@ -205,26 +205,26 @@ platon-truffle migrate
    ----------------------
    > transaction hash:    0x87cd48cc467f9bc943fd096c57c8a7e7b7fa941380538d9e59797800c6c4292c
    > Blocks: 0            Seconds: 0
-   > contract address:    lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07
+   > contract address:    atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la
    > block number:        282520
    > block timestamp:     1585535169200
-   > account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   > account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    > balance:             16447231233352977496646259638377769924557918764752765436645.336513079692286014
    > gas used:            145569
    > gas price:           1 gvon
-   > value sent:          0 LAT
-   > total cost:          0.000145569 LAT
+   > value sent:          0 ATP
+   > total cost:          0.000145569 ATP
 
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.000145569 LAT
+   > Total cost:          0.000145569 ATP
 
 Summary
 =======
 > Total deployments:   2
-> Final cost:          0.000259892 LAT
+> Final cost:          0.000259892 ATP
 ```
 
 ### 调用HelloWorld合约
@@ -241,7 +241,7 @@ platon-truffle console
 ```json
 var abi = [{"constant":false,"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"setName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]; //可以从HelloWorld/build/contracts/HelloWorld.json文件中获取到
 
-var contractAddr = 'lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07';//部署合约时的获取的地址
+var contractAddr = 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la';//部署合约时的获取的地址
 var helloWorld = new web3.platon.Contract(abi,contractAddr); 
 ```
 
@@ -253,7 +253,7 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
 **step3.**  调用合约
 
 ```javascript
-helloWorld.methods.setName("hello world").send({from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'}).on('receipt', function(receipt) {console.log(receipt);}).on('error', console.error);
+helloWorld.methods.setName("hello world").send({from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'}).on('receipt', function(receipt) {console.log(receipt);}).on('error', console.error);
  
 ```
 
@@ -272,12 +272,12 @@ helloWorld.methods.setName("hello world").send({from: 'lax1uqug0zq7rcxddndleq4ux
   blockNumber: 283911,
   contractAddress: null,
   cumulativeGasUsed: 44820,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 44820,
   logsBloom:
 '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   status: true,
-  to: '0x0680df2d6e38e5a6c89e3856836e017c6572dab2',//交易调用的合约地址
+  to: 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la',//交易调用的合约地址
   transactionHash:
    '0x2b381a8efab4774ae029fdf2e2585b48c03c033c64d543c9c606c925689fca31',//交易hash
   transactionIndex: 0,
@@ -303,11 +303,11 @@ helloWorld.methods.getName().call(null,function(error,result){console.log("name 
 
 ### 简介 
 
-PlatON支持的solidity最高版本号是0.5.13，如果迁移0.5.13以上版本的合约，需要降低版本号，去除高版本相关语法。
+Alaya支持的solidity是0.4.26、0.5.17、0.6.12、0.7.1 四个版本，如果迁移0.7.1以上版本的合约，需要降低版本号，去除高版本相关语法。
 
-如果您希望将以太坊的智能合约迁移到PlatON上，可以通过platon-truffle开发工具来进行。首先确保您正确安装了platon-truffle,只需按照以下步骤操作即可。
+如果您希望将以太坊的智能合约迁移到Alaya上，可以通过platon-truffle开发工具来进行。首先确保您正确安装了platon-truffle,只需按照以下步骤操作即可。
 
-以下将演示将以太坊的ERC200513Token合约迁移至PlatON上，ERC200513Token.sol合约文件如下
+以下将演示将以太坊的ERC200513Token合约迁移至Alaya上，ERC200513Token.sol合约文件如下
 ```
 pragma solidity 0.5.13;
 
@@ -515,8 +515,8 @@ ls contracts/
 ```
 
 - 将看到 ERC200513Token.sol
-- PlatON智能合约中的货币单位为LAT和VON。要将以太坊智能合约迁移至PlatON，请将以太币面额更改为PlatON面额。同时注意以太/LAT市场汇率（此合约我们假设市场汇率1:1，将uint256 public totalSupply = 10000000000000000000 ether; 修改成uint256 public totalSupply = 10000000000000000000 LAT; ）
-- PlatON智能合约中block.timestamp表示的是当前区块以毫秒为单位的时间戳，以太坊是以秒为单位。
+- Alaya智能合约中的货币单位为ATP和VON。要将以太坊智能合约迁移至Alaya，请将以太币面额更改为Alaya面额。同时注意以太/ATP市场汇率（此合约我们假设市场汇率1:1，将uint256 public totalSupply = 10000000000000000000 ether; 修改成uint256 public totalSupply = 10000000000000000000 ATP; ）
+- Alaya智能合约中block.timestamp表示的是当前区块以毫秒为单位的时间戳，以太坊是以秒为单位。
 
 **step4.** 修改truffle-config.js中的编译版本号及链相关配置
 
@@ -527,7 +527,7 @@ module.exports = {
       host: "10.1.1.6",     // 链地址
       port: 8806,            // 链使用的rpc端口
       network_id: "*",       // Any network (default: none)
-      from: "lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl", //部署合约所使用的钱包地址
+      from: "atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp", //部署合约所使用的钱包地址
       gas: 999999,
       gasPrice: 50000000004,	     
      },
@@ -592,25 +592,25 @@ Everything is up to date, there is nothing to compile.
    --------------------------
    > transaction hash:    0x5667101234fcd3b9dadf96a19bce20d1b94d742e0fd8f3528c641fa587b17eb3
    > Blocks: 0            Seconds: 0
-   > contract address:    lax1uetshtp4tp6l067tl02e4x435py9ajrfdhsrd4
+   > contract address:    atp1kekwl4v2q0qc0g9cr6c8adsx0p2n7c90ygp5tv
    > block number:        2153
    > block timestamp:     1585538899787
-   > account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   > account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    > balance:             4499992.02433
    > gas used:            641243
    > gas price:           1 gvon
-   > value sent:          0 LAT
-   > total cost:          0.000641243 LAT
+   > value sent:          0 ATP
+   > total cost:          0.000641243 ATP
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.000641243 LAT
+   > Total cost:          0.000641243 ATP
 
 Summary
 =======
 > Total deployments:   2
-> Final cost:          0.000755566 LAT
+> Final cost:          0.000755566 ATP
 ```
 ---------
 
@@ -642,7 +642,7 @@ pragma solidity ^0.5.13;
 
 contract CrowdFunding {
     address payable public beneficiaryAddress = address(0x0); //受益人地址，设置为合约创建者
-    uint256 public fundingGoal = 100 LAT;  //众筹目标，单位是LAT
+    uint256 public fundingGoal = 100 ATP;  //众筹目标，单位是ATP
     uint256 public amountRaised = 0; //已筹集金额数量， 单位是VON
     uint256 public deadline; //截止时间
     uint256 public price;  //代币价格
@@ -653,7 +653,7 @@ contract CrowdFunding {
     
     mapping(address => uint256) public tokenMap; //保存众筹者所拥有的代币数量
 
-    //记录已接收的LAT通知
+    //记录已接收的ATP通知
     event GoalReached(address _beneficiaryAddress, uint _amountRaised);
 
     //转帐通知
@@ -668,7 +668,7 @@ contract CrowdFunding {
     /**
      * 初始化构造函数
      *
-     * @param _fundingGoalInlats 众筹LAT币总量
+     * @param _fundingGoalInlats 众筹ATP币总量
      * @param _durationInMinutes 众筹截止,单位是分钟
      */
     constructor (
@@ -676,9 +676,9 @@ contract CrowdFunding {
         uint _durationInMinutes
     )public {
 	    beneficiaryAddress = msg.sender;
-        fundingGoal = _fundingGoalInlats * 1 LAT;
+        fundingGoal = _fundingGoalInlats * 1 ATP;
         deadline = now + _durationInMinutes * 1 minutes;
-        price = 500 finney; //1个LAT币可以买 2 个代币
+        price = 500 finney; //1个ATP币可以买 2 个代币
     }
 
 
@@ -845,7 +845,7 @@ networks: {
        host: "10.1.1.6",     // 区块链所在服务器主机
        port: 8806,            // 链端口号
        network_id: "*",       // Any network (default: none)
-       from: "lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl", //部署合约账号的钱包地址
+       from: "atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp", //部署合约账号的钱包地址
        gas: 999999,
        gasPrice: 50000000004,
 	},
@@ -867,19 +867,19 @@ Compiling your contracts...
     Deploying 'CrowdFunding'
      transaction hash:    0x3a6419cd4169d7cfb430a1fc5632239ac4a01845827f20df9b3229a334c5488b
      Blocks: 0            Seconds: 0
-     contract address:    lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt //部署后的合约地址
+     contract address:    atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya //部署后的合约地址
      block number:        280532
      block timestamp:     1581751224032
-     account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+     account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
      balance:             90000000.806077629992489796
      gas used:            379154
      gas price:           50.000000004 gVON
-     value sent:          0 LAT
-     total cost:          0.018957700001516616 LAT
+     value sent:          0 ATP
+     total cost:          0.018957700001516616 ATP
  
      Saving migration to chain.
      Saving artifacts
-     Total cost:     0.018957700001516616 LAT
+     Total cost:     0.018957700001516616 ATP
 ```
 
 
@@ -895,7 +895,7 @@ platon-truffle console
 **step2.**  构建的众筹合约对象
 ```
 var abi = [...]; //众筹合约的ABI，从编译后的文件获取
-var contractAddr = 'lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt'; //众筹合约地址
+var contractAddr = 'atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya'; //众筹合约地址
 var crowdFunding = new web3.platon.Contract(abi,contractAddr);  
 ```
 
@@ -906,7 +906,7 @@ crowdFunding.methods.amountRaised().call(null,function(error,result){console.log
 
 **step4.**  众筹者判断众筹是否成功
 ```
-crowdFunding.methods.safeWithdrawal().send({from:'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'}).on('data', function(event){ console.log(event);}).on('error', console.error); 
+crowdFunding.methods.safeWithdrawal().send({from:'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'}).on('data', function(event){ console.log(event);}).on('error', console.error); 
 ```
 
 调用合约命令说明：
@@ -923,11 +923,11 @@ crowdFunding.methods.safeWithdrawal().send({from:'lax1uqug0zq7rcxddndleq4ux2ft3t
 
 ### 介绍
 
-在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如在网络上部署/调用智能合约，进行能量转换，质押/委托等操作都是需要花费一定的成本，不同区块链网络开发成本各不相同，在 `PlatON` 网络上开发智能合约的成本与以太坊及类似协议相近。本手册将以直观的格式进行分析比较，让用户对开发成本有一个比较清晰的认识。
+在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如在网络上部署/调用智能合约，进行能量转换，质押/委托等操作都是需要花费一定的成本，不同区块链网络开发成本各不相同，在 `Alaya` 网络上开发智能合约的成本与以太坊及类似协议相近。本手册将以直观的格式进行分析比较，让用户对开发成本有一个比较清晰的认识。
 
 ### 概要
 
-本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时对 `PlatON` 与以太坊之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ERC20` 标准的智能合约。
+本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时对 `Alaya` 与以太坊之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ERC20` 标准的智能合约。
 
 
 #### 资源消耗
@@ -936,7 +936,7 @@ crowdFunding.methods.safeWithdrawal().send({from:'lax1uqug0zq7rcxddndleq4ux2ft3t
 
 | 系统     | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗      | 备注              |
 | :------- | :------- | :------- | :------ | :------------------ | :------------ | :---------------- |
-| PlatON   | 小型合约 | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `LAT` |
+| Alaya    | 小型合约 | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `ATP` |
 | Ethereum | 小型合约 | 0.3 kb   | 127173  | 5,000,000,000 `wei` | 635865 `Gwei` | 0.000635865 `ETH` |
 
 
@@ -944,15 +944,14 @@ crowdFunding.methods.safeWithdrawal().send({from:'lax1uqug0zq7rcxddndleq4ux2ft3t
 
 | 系统     | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗       | 备注              |
 | :------- | :------- | :------- | :------ | :------------------ | :------------- | :---------------- |
-| PlatON   | 中型合约 | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `LAT` |
+| Alaya    | 中型合约 | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `ATP` |
 | Ethereum | 中型合约 | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
-
 
 **ERC20标准Token**
 
 | 系统     | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗        | 备注              |
 | :------- | :------- | :------- | :------ | :------------------ | :-------------- | :---------------- |
-| PlatON   | 大型合约 | 4.45 kb  | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `LAT` |
+| Alaya    | 大型合约 | 4.45 kb  | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `ATP` |
 | Ethereum | 大型合约 | 4.45 kb  | 1282171 | 5,000,000,000 `wei` | 6410855  `Gwei` | 0.006410855 `ETH` |
 
 
@@ -989,11 +988,11 @@ contract SimpleTest {
 
 - 创建&部署合约成本
 
-PlatON
+Alaya
 
 * Gas消耗: 76953
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  384765 `gVON`（0.000384765 `LAT`）
+* 总成本:  384765 `gVON`（0.000384765 `ATP`）
 
 以太坊
 
@@ -1022,11 +1021,11 @@ PlatON
 
 ###### 创建&部署合约成本
 
-PlatON
+Alaya
 
 * Gas消耗: 257065
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  1285325 `gVON`（0.001285325 `LAT`）
+* 总成本:  1285325 `gVON`（0.001285325 `ATP`）
 
 以太坊
 
@@ -1055,11 +1054,11 @@ PlatON
 
 - 创建&部署合约成本
 
-PlatON
+Alaya
 
 * Gas消耗: 552823
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  2764115 `gVON`（0.002764115 `LAT`）
+* 总成本:  2764115 `gVON`（0.002764115 `ATP`）
 
 以太坊
 
@@ -1078,9 +1077,9 @@ PlatON
 
 ### 费用合理设置
 
-当需要在`PlatON`的主网上部署合约时，需要设置一个合理的费用限制。费用限制是指 `PlatON` 中智能合约部署/执行的能源消耗成本的上限。该限制主要通过 `Gas` 完成，`Gas` 是 PlatON 网络世界的燃料值，它决定了 PlatON 网络生态系统的正常运行。通常使用 Gas 来衡量执行某些动作需要多少"工作量"，这些工作量就是为了执行该动作所需要支付给 PlatON 网络的费用额度。简单理解， Gas 是网络旷工的佣金，并通过 `LAT` 的方式支付，在网络上的任何交易、合约执行，数据存储，都需要使用到 Gas。
+当需要在`Alaya`上部署合约时，需要设置一个合理的费用限制。费用限制是指 `Alaya` 中智能合约部署/执行的能源消耗成本的上限。该限制主要通过 `Gas` 完成，`Gas` 是 Alaya 网络世界的燃料值，它决定了 Alaya 网络生态系统的正常运行。通常使用 Gas 来衡量执行某些动作需要多少"工作量"，这些工作量就是为了执行该动作所需要支付给 Alaya 网络的费用额度。简单理解， Gas 是网络旷工的佣金，并通过 `ATP` 的方式支付，在网络上的任何交易、合约执行，数据存储，都需要使用到 Gas。
 
-PlatON与以太坊区块链系统类似，使用 `LAT` 进行支付和维护网络，一枚 LAT 分为：`mLAT/uLAT/gVON/mVON/kVON/VON`，其中`VON`是最小单位。
+Alaya与以太坊区块链系统类似，使用 `ATP` 进行支付和维护网络，一枚 ATP 分为：`mATP/uATP/gVON/mVON/kVON/VON`，其中`VON`是最小单位。
 
 Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 `GasLimit` 是用户愿意为执行某个操作或确认交易支付的最大 `Gas` 消耗量（最少21,000）。GasPrice是 `gVON` 的数量，用于愿意为每个 `Gas` 所支付的单价。
 
@@ -1088,9 +1087,9 @@ Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 `
 
 交易设置的 `GasPrice` 越高，则交易的执行优先级更高，交易成本也会更大。每笔交易在完成后，剩余未使用的Gas都会退回到发送者的地址账户中。有一点要特别注意，如果因为 `GasLimit` 设置过低导致交易执行失败，此时的 Gas 不会被回退到用户地址，用户依然需要为这次失败的交易支付能量成本。因此，无论交易是否执行成功，交易发送者都需要向旷工支付一定的计算费用。
 
-在 `PlatON` 网络中，最高 Gas 的限制为 `4,700,000`，最低为 `22,000`，过低或者过高都会导致交易失败。在部署大型合约或者运行复杂功能时，可以将Gas的限制调高，例如：`1,000,000`。如果是普通转账则设置为最低值即可。具体的值需要根据合约的规模及复杂度进行估算，在合约发布前可以调用接口 `platon_estimateGas` 进行大概估算，避免因不足而导致失败。 [点击查看JSON-RPC参考文档](/alaya-devdocs/zh-CN/Json_Rpc)。
+在 `Alaya` 网络中，最高 Gas 的限制为 `4,700,000`，最低为 `22,000`，过低或者过高都会导致交易失败。在部署大型合约或者运行复杂功能时，可以将Gas的限制调高，例如：`1,000,000`。如果是普通转账则设置为最低值即可。具体的值需要根据合约的规模及复杂度进行估算，在合约发布前可以调用接口 `platon_estimateGas` 进行大概估算，避免因不足而导致失败。 [点击查看JSON-RPC参考文档](/alaya-devdocs/zh-CN/Json_Rpc)。
 
-**LAT 单位转换**
+**ATP 单位转换**
 
 | 单位 | VON值    | VON                                   |
 | :--- | :------- | :------------------------------------ |
@@ -1098,13 +1097,13 @@ Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 `
 | kVON | 1e3 VON  | 1,000                                 |
 | mVON | 1e6 VON  | 1,000,000                             |
 | gVON | 1e9 VON  | 1,000,000,000                         |
-| LAT  | 1e18 VON | 1,000,000,000,000,000,000             |
-| mLAT | 1e24 VON | 1,000,000,000,000,000,000,000,000     |
-| gLAT | 1e27 VON | 1,000,000,000,000,000,000,000,000,000 |
+| ATP  | 1e18 VON | 1,000,000,000,000,000,000             |
+| mATP | 1e24 VON | 1,000,000,000,000,000,000,000,000     |
+| gATP | 1e27 VON | 1,000,000,000,000,000,000,000,000,000 |
 
 ### 避免超时 
 
-在 `PlatON` 网络上发送交易，没有超时的概念，但是最终会根据所设置的 Gas 限制值停止，如果限制值低于合约部署所需要的消耗，则交易发送失败，同时会扣除对应的手续费。手续费的设定不可能无限大，因为在网络中，区块本身有一个最大的Gas上限，当交易的 `GasLimit` 超过该值时，交易将无法被接收。
+在 `Alaya` 网络上发送交易，没有超时的概念，但是最终会根据所设置的 Gas 限制值停止，如果限制值低于合约部署所需要的消耗，则交易发送失败，同时会扣除对应的手续费。手续费的设定不可能无限大，因为在网络中，区块本身有一个最大的Gas上限，当交易的 `GasLimit` 超过该值时，交易将无法被接收。
 
 如果是针对已发布的合约执行 `call` 调用（call调用指合约逻辑内无状态变更操作），存在 5s 超时的限制，如果在 `5s` 内合约逻辑没有执行完成，虚拟机会超时强制退出，导致查询失败。
 
@@ -1120,9 +1119,9 @@ Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 `
 1.对正常已编译出的合约手动更改了指令码；        
 2.合约编译器版本与网络锁支持的合约版本不一致；
 
-在 `PlatON` 网络中操作合约时，请务必先确认当前网络所支持的智能合约版本，然后选择对应版本对的编译器。
+在 `Alaya` 网络中操作合约时，请务必先确认当前网络所支持的智能合约版本，然后选择对应版本对的编译器。
 
-常规操作是使用 `PlatON` 官方提供的最新的`Truffle`/`PlatON-CDT`来编译/部署/执行合约，同时在切换到主网操作前，务必在测试网进行有效的验证。
+常规操作是使用 `Alaya` 官方提供的最新的`Truffle`/`PlatON-CDT`来编译/部署/执行合约，同时在切换到主网操作前，务必在测试网进行有效的验证。
 
 
 ### 编码规范
@@ -1159,7 +1158,7 @@ Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 `
 #### 几点建议 
 
 * 在智能合约中，获取 public 修饰的状态变量的值，不需要编写 `get` 函数；
-* 在智能合约中，在合约中加入 `payable` 修饰的匿名函数，则合约地址可接受 LAT 转账；
+* 在智能合约中，在合约中加入 `payable` 修饰的匿名函数，则合约地址可接受 ATP 转账；
 
 -----------------
 

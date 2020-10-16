@@ -4,9 +4,9 @@ title: WASM智能合约
 sidebar_label: WASM智能合约
 ---
 
-PlatON区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。
+Alaya区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。
 
-开发高性能和安全的智能合约，C++是最好的语言。PlatON WASM合约支持C++编写，同时在目前最为成熟的编译工具链clang/llvm的C/C++编译器基础上定制一个符合PlatON协议标准的编译器，本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题，引导开发者可以使用C++在PlatON网络快速开发出高质量的智能合约。
+开发高性能和安全的智能合约，C++是最好的语言。Alaya WASM合约支持C++编写，同时在目前最为成熟的编译工具链clang/llvm的C/C++编译器基础上定制一个符合Alaya协议标准的编译器，本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题，引导开发者可以使用C++在Alaya网络快速开发出高质量的智能合约。
 
 主要从以下几个方面进行讲解：
 
@@ -20,7 +20,7 @@ PlatON区块链支持使用WebAssembly (WASM)来执行用户编写的智能合�
 
 ### 概要
 
-本教程主要是指导用户在PlatON上使用wasm语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。
+本教程主要是指导用户在Alaya上使用wasm语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。
 
 
 ### platon-truffle开发工具介绍
@@ -86,7 +86,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 
 - 可调用函数只有在PLATON_DISPATCH 宏定义统一入口函数，才能够被外部调用。
 
-- 目前 platon 会将合约类的成员变量持久化存储，成员变量必须是 platon::StorageType 类型，platon::StorageType模板的第一个参数字符串后面加上_n，字符串必须为.12345abcdefghijklmnopqrstuvwxyz这32字符中的字符。第二个参数为实际存储的具体类型。成员函数修改成员变量需要通过 self() 函数获取具体类型的实例，然后执行相应的实例函数。
+- 目前 Alaya 会将合约类的成员变量持久化存储，成员变量必须是 platon::StorageType 类型，platon::StorageType模板的第一个参数字符串后面加上_n，字符串必须为.12345abcdefghijklmnopqrstuvwxyz这32字符中的字符。第二个参数为实际存储的具体类型。成员函数修改成员变量需要通过 self() 函数获取具体类型的实例，然后执行相应的实例函数。
 
 - platon::StorageType 模板的第二个参数类型为自定义类型，此类型定义中需加上 PLATON_SERIALIZE 宏声明序列化函数，此类型继承自其他类型，需加上 PLATON_SERIALIZE_DERIVED 宏声明序列化函数。
 
@@ -161,7 +161,7 @@ networks: {
        host: "10.1.1.6",     // 区块链所在服务器主机
        port: 8806,            // 链端口号
        network_id: "*",       // Any network (default: none)
-       from: "lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl",
+       from: "atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp",
        gas: 999999,
        gasPrice: 50000000004,
 	},
@@ -181,7 +181,7 @@ web3.platon.personal.importRawKey("您的钱包私钥","您的钱包密码");
 ```
 导入成功将看到私钥对应的地址：
 ```
-'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'
+'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'
 ```
 
 解锁钱包账户
@@ -206,9 +206,9 @@ platon-truffle deploy --wasm --contract-name HelloWorld --params '[[["1"], "2", 
 receipt:  { blockHash:
    '0x266733b693ba650315a59c34e72804c06ca3e27fab145625797bd42259b572c5',
   blockNumber: 70441,
-  contractAddress: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  contractAddress: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   cumulativeGasUsed: 291314,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 291314,
   logs: [],
   logsBloom:
@@ -222,15 +222,15 @@ receipt:  { blockHash:
 ======================
 
    > transactionHash:     0x60946ebf0ccddc76a0234353435de73e7901888227fb2f03922fb0ce265a4e9d
-   > contract address:    lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np
+   > contract address:    atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx
    > block number:        70441
    > block timestamp:     1583247148341
-   > account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   > account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    > balance:             3533694129556768659166595001485837031654967793751237866225582808584074296
    > gas limit:           100000000
    > gas used:            291314
-   > gas price:           0.000000050000000004 LAT
-   > total cost:          0.014565700001165256 LAT
+   > gas price:           0.000000050000000004 ATP
+   > total cost:          0.014565700001165256 ATP
 ```
 
 ### 调用HelloWorld合约
@@ -246,7 +246,7 @@ platon-truffle console
 
 ```json
 var abi = [{"baseclass":[],"fields":[{"name":"head","type":"string"}],"name":"message","type":"struct"},{"baseclass":["message"],"fields":[{"name":"body","type":"string"},{"name":"end","type":"string"}],"name":"my_message","type":"struct"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"init","output":"void","type":"Action"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"add_message","output":"void","type":"Action"},{"constant":true,"input":[],"name":"get_message_size","output":"uint8","type":"Action"},{"constant":true,"input":[{"name":"index","type":"uint8"}],"name":"get_message_body","output":"string","type":"Action"}];
-var contractAddr = 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np';
+var contractAddr = 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx';
  
 var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 }); 
 ```
@@ -260,7 +260,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 
 ```javascript
 helloworld.methods.add_message([["5"], "6", "7"]).send({
-	from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',gas: 999999
+	from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',gas: 999999
 }).on('receipt', function(receipt) {
 	console.log(receipt);
 }).on('error', console.error);
@@ -282,12 +282,12 @@ helloworld.methods.add_message([["5"], "6", "7"]).send({
   blockNumber: 74665,
   contractAddress: null,
   cumulativeGasUsed: 108549,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 108549,
   logsBloom:
    '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   status: true,
-  to: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d0000a',
   transactionIndex: 0,
@@ -297,12 +297,12 @@ helloworld.methods.add_message([["5"], "6", "7"]).send({
   blockNumber: 74665,
   contractAddress: null,
   cumulativeGasUsed: 108549,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: 108549,
   logsBloom:
    '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   status: true,
-  to: 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d0000a',
   transactionIndex: 0,
@@ -328,36 +328,35 @@ helloworld.methods.get_message_body(0).call()
 ### 概要
 
 
-在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 `PlatON` 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 `WASN` 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 `PlatON` 的 `EVM`/`WASM`虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ERC20` 标准的智能合约。
+在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 `Alaya` 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 `WASN` 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 `Alaya` 的 `EVM`/`WASM`虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ERC20` 标准的智能合约。
 
 
 #### 资源消耗
 
 **简单set/get合约**
 
-| 系统        | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗      | 备注              |
-| :---------- | :------- | :------- | :------ | :------------------ | :------------ | :---------------- |
-| PlatON-EVM  | 小型合约 | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `LAT` |
-| Ethereum    | 小型合约 | 0.3 kb   | 127173  | 5,000,000,000 `wei` | 635865 `Gwei` | 0.000635865 `ETH` |
-| PlatON-WASM | 小型合约 | 13.55 kb | 184043  | 5,000,000,000 `VON` | 920215 `gVON` | 0.000920215 `LAT` |
-
+| 系统       | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗      | 备注              |
+| :--------- | :------- | :------- | :------ | :------------------ | :------------ | :---------------- |
+| Alaya-EVM  | 小型合约 | 0.3 kb   | 76953   | 5,000,000,000 `VON` | 384765 `gVON` | 0.000384765 `ATP` |
+| Ethereum   | 小型合约 | 0.3 kb   | 127173  | 5,000,000,000 `wei` | 635865 `Gwei` | 0.000635865 `ETH` |
+| Alaya-WASM | 小型合约 | 13.55 kb | 184043  | 5,000,000,000 `VON` | 920215 `gVON` | 0.000920215 `ATP` |
 
 **微博客**
 
-| 系统        | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗       | 备注              |
-| :---------- | :------- | :------- | :------ | :------------------ | :------------- | :---------------- |
-| PlatON-EVM  | 中型合约 | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `LAT` |
-| Ethereum    | 中型合约 | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
-| PlatON-WASM | 中型合约 | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `LAT` |
+| 系统       | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗       | 备注              |
+| :--------- | :------- | :------- | :------ | :------------------ | :------------- | :---------------- |
+| Alaya-EVM  | 中型合约 | 2.08 kb  | 257065  | 5,000,000,000 `VON` | 1285325 `gVON` | 0.001285325 `ATP` |
+| Ethereum   | 中型合约 | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
+| Alaya-WASM | 中型合约 | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `ATP` |
 
 
 **ERC20标准Token**
 
-| 系统        | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗        | 备注              |
-| :---------- | :------- | :------- | :------ | :------------------ | :-------------- | :---------------- |
-| PlatON-EVM  | 大型合约 | 4.45 kb  | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `LAT` |
-| Ethereum    | 大型合约 | 4.45 kb  | 1282171 | 5,000,000,000 `wei` | 6410855  `Gwei` | 0.006410855 `ETH` |
-| PlatON-WASM | 大型合约 | 35.9 kb  | 486274  | 5,000,000,000 `VON` | 2431370  `gVON` | 0.00243137 `LAT`  |
+| 系统       | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗        | 备注              |
+| :--------- | :------- | :------- | :------ | :------------------ | :-------------- | :---------------- |
+| Alaya-EVM  | 大型合约 | 4.45 kb  | 552823  | 5,000,000,000 `VON` | 2764115  `gVON` | 0.002764115 `ATP` |
+| Ethereum   | 大型合约 | 4.45 kb  | 1282171 | 5,000,000,000 `wei` | 6410855  `Gwei` | 0.006410855 `ETH` |
+| Alaya-WASM | 大型合约 | 35.9 kb  | 486274  | 5,000,000,000 `VON` | 2431370  `gVON` | 0.00243137 `ATP`  |
 
 
 ### 小型合约示例
@@ -432,23 +431,23 @@ PLATON_DISPATCH(SimpleStorage,(init)(set)(get))
 
 ###### 创建&部署合约成本
 
-PlatON-EVM
+Alaya-EVM
 
 * Gas消耗: 76953
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  384765 `gVON`（0.000384765 `LAT`）
+* 总成本:  384765 `gVON`（0.000384765 `ATP`）
 
 以太坊
 
 * Gas消耗: 127173 
 * Gas单价: 5,000,000,000 (5 `Gwei`)
-* 总成本:  635865 `Gwei`（0.000635865 `ETH`）
+* 总成本:  635865 `Gwei`（0.000635865 `ATP`）
 
-PlatON-WASM
+Alaya-WASM
 
 * Gas消耗: 184043
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  920215 `gVON`（0.000920215 `LAT`）
+* 总成本:  920215 `gVON`（0.000920215 `ATP`）
 
 -----------------------------------
 
@@ -597,11 +596,11 @@ PLATON_DISPATCH(TweetAccount,(init)(isAdmin)(tweet)(getTweet)(getLatestTweet)
 
 ###### 创建&部署合约成本
 
-PlatON-EVM
+Alaya-EVM
 
 * Gas消耗: 257065
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  1285325 `gVON`（0.001285325 `LAT`）
+* 总成本:  1285325 `gVON`（0.001285325 `ATP`）
 
 以太坊
 
@@ -609,11 +608,11 @@ PlatON-EVM
 * Gas单价: 5,000,000,000 (5 `Gwei`)
 * 总成本:  3106925 `Gwei`（0.003106925 `ETH`）
 
-PlatON-WASM
+Alaya-WASM
 
 * Gas消耗: 349713
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  1748565 `gVON`（0.001748565 `LAT`）
+* 总成本:  1748565 `gVON`（0.001748565 `ATP`）
 
 ------------------------
 
@@ -808,11 +807,11 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(transfer)(transferFrom)(approve)(allo
 
 ###### 创建&部署合约成本
 
-PlatON-EVM
+Alaya-EVM
 
 * Gas消耗: 552823
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  2764115 `gVON`（0.002764115 `LAT`）
+* 总成本:  2764115 `gVON`（0.002764115 `ATP`）
 
 以太坊
 
@@ -820,11 +819,11 @@ PlatON-EVM
 * Gas单价: 5,000,000,000 (5 `Gwei`)
 * 总成本:  6410855 `Gwei`（0.006410855 `ETH`）
 
-PlatON-WASM
+Alaya-WASM
 
 * Gas消耗: 486274
 * Gas单价: 5,000,000,000 (5 `gVON`)
-* 总成本:  2431370 `gVON`（0.00243137 `LAT`）
+* 总成本:  2431370 `gVON`（0.00243137 `ATP`）
 
 ------------------------
 
@@ -838,15 +837,15 @@ PlatON-WASM
 
 ### 费用合理设置
 
-当需要在 `PlatON` 的主网上部署合约时, 需要设置一个合理的费用限制. 费用限制是指
-`PlatON` 中智能合约部署/执行的能源消耗成本的上限. 该限制主要通过 `Gas` 完成,
-`Gas` 是 `PlatON` 网络世界的燃料值, 它决定了 `PlatON` 网络生态系统的正常运行. 通
+当需要在 `Alaya` 的主网上部署合约时, 需要设置一个合理的费用限制. 费用限制是指
+`Alaya` 中智能合约部署/执行的能源消耗成本的上限. 该限制主要通过 `Gas` 完成,
+`Gas` 是 `Alaya` 网络世界的燃料值, 它决定了 `Alaya` 网络生态系统的正常运行. 通
 常使用 `Gas` 来衡量执行某些动作需要多少"工作量", 这些工作量就是为了执行该动作所
-需要支付给 `PlatON` 网络的费用额度. 简单理解, `Gas` 是网络旷工的佣金, 并通过
-`LAT` 的方式支付, 在网络上的任何交易, 合约执行, 数据存储, 都需要使用到 `Gas`.
+需要支付给 `Alaya` 网络的费用额度. 简单理解, `Gas` 是网络旷工的佣金, 并通过
+`ATP` 的方式支付, 在网络上的任何交易, 合约执行, 数据存储, 都需要使用到 `Gas`.
 
-PlatON 与以太坊区块链系统类似, 使用 `LAT` 进行支付和维护网络, 一枚 `LAT` 分为:
-`mLAT/uLAT/gVON/mVON/kVON/VON`, 其中VON是最小单位.
+Alaya 与以太坊区块链系统类似, 使用 `ATP` 进行支付和维护网络, 一枚 `ATP` 分为:
+`mATP/uATP/gVON/mVON/kVON/VON`, 其中VON是最小单位.
 
 `Gas` 主要由两个部分组成: GasLimit(限制)和GasPrice(单价). 其中 `GasLimit` 是用户
 愿意为执行某个操作或确认交易支付的最大 `Gas` 消耗量(最少21,000). GasPrice是
@@ -860,12 +859,12 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 `GasLimit` 设置过低导致交易执行失败, 此时的 `Gas` 不会被回退到用户地址, 用户依然
 需要为这次失败的交易支付能量成本. 因此, 无论交易是否执行成功, 交易发送者都需要向旷工支付一定的计算费用.
 
-在 `PlatON` 网络中, 默认最高 `Gas` 的限制为 `100,800,000`, 最低为 `22,000`, 过低或者过高都会导
+在 `Alaya` 网络中, 默认最高 `Gas` 的限制为 `100,800,000`, 最低为 `22,000`, 过低或者过高都会导
 致交易失败. 在部署大型合约或者运行复杂功能时, 可以将Gas的限制调高, 例如:
 `1,000,000`. 如果是普通转账则设置为最低值即可. 具体的值需要根据合约的规模及复杂度
 进行估算, 在合约发布前可以调用接口 `platon_estimateGas` 进行大概估算, 避免因不足而导致失败.
 
-**LAT 单位转换**
+**ATP 单位转换**
 
 | 单位     | VON值    | VON                                   |
 | -------- | -------- | ------------------------------------- |
@@ -873,17 +872,17 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 | kVON     | 1e3 VON  | 1,000                                 |
 | mVON     | 1e6 VON  | 1,000,000                             |
 | gVON     | 1e9 VON  | 1,000,000,000                         |
-| microLAT | 1e12 VON | 1,000,000,000,000                     |
-| milliLAT | 1e15 VON | 1,000,000,000,000,000                 |
-| LAT      | 1e18 VON | 1,000,000,000,000,000,000             |
-| kLAT     | 1e21 VON | 1,000,000,000,000,000,000,000         |
-| mLAT     | 1e24 VON | 1,000,000,000,000,000,000,000,000     |
-| gLAT     | 1e27 VON | 1,000,000,000,000,000,000,000,000,000 |
+| microATP | 1e12 VON | 1,000,000,000,000                     |
+| milliATP | 1e15 VON | 1,000,000,000,000,000                 |
+| ATP      | 1e18 VON | 1,000,000,000,000,000,000             |
+| kATP     | 1e21 VON | 1,000,000,000,000,000,000,000         |
+| mATP     | 1e24 VON | 1,000,000,000,000,000,000,000,000     |
+| gATP     | 1e27 VON | 1,000,000,000,000,000,000,000,000,000 |
 
 
 ### 避免超时
 
-在 `PlatON` 网络上发送交易, 没有超时的概念, 但是最终会根据所设置的 Gas 限制值停
+在 `Alaya` 网络上发送交易, 没有超时的概念, 但是最终会根据所设置的 Gas 限制值停
 止, 如果限制值低于合约部署所需要的消耗, 则交易发送失败, 同时会扣除对应的手续费.
 手续费的设定不可能无限大, 因为在网络中, 区块本身有一个最大的 Gas 上限, 当交易的
 `GasLimit` 超过该值时, 交易将无法被接收.
@@ -907,9 +906,9 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 2. 合约编译器版本与网络锁支持的合约版本不一致
 3. 使用浮点数运算
 
-在 `PlatON` 网络中操作合约时, 请务必先确认当前网络所支持的智能合约版本, 然后选择对应版本对的编译器.
+在 `Alaya` 网络中操作合约时, 请务必先确认当前网络所支持的智能合约版本, 然后选择对应版本对的编译器.
 
-常规操作是使用 `PlatON` 官方提供的最新的Truffle/PlatON-CDT来编译/部署/执行合约,
+常规操作是使用 `Alaya` 官方提供的最新的Truffle/PlatON-CDT来编译/部署/执行合约,
 同时在切换到主网操作前, 务必在测试网进行有效的验证.
 
 ### C/C++语言限制
@@ -1195,7 +1194,7 @@ Address platon::platon_address()
 ```cpp
 template <size_t M> std::pair<Address, bool> make_address(const char (&str)[M])
 ```
-CDT 默认识别的地址是主网地址也就是地址前缀为lat，如果要识别测试网地址前缀为lax，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。
+CDT 默认识别的地址是主网地址也就是地址前缀为atp，如果要识别测试网地址前缀为atx，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。
 
 将C风格字符串转换为地址对象。
 
@@ -1209,7 +1208,7 @@ CDT 默认识别的地址是主网地址也就是地址前缀为lat，如果要�
 ```cpp
 std::pair<Address, bool> make_address(const std::string &str_address)
 ```
-CDT 默认识别的地址是主网地址也就是地址前缀为lat，如果要识别测试网地址前缀为lax，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。
+CDT 默认识别的地址是主网地址也就是地址前缀为atp，如果要识别测试网地址前缀为atx，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。
 
 将字符串转换为地址对象。
 
@@ -2347,7 +2346,7 @@ Sh3算法。
  //...
  ```
 
- - `platon` 启动命令指定日志级别4, 打开 `debug` 标志
+ - `Alaya` 启动命令指定日志级别4, 打开 `debug` 标志
 
  ```shell
  ./platon --debug --verbosity 4 ...
