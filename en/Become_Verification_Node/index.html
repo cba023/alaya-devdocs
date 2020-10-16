@@ -188,13 +188,13 @@
 </ul></li>
 <li>nodeName: Node name.</li>
 <li>details: Node description.</li>
-<li>externalId:  Corresponding to the PGP key value of keybase, PlatScan uses this value to display the corresponding avatar; if the user needs to display the specified avatar on PlatScan, you can refer to the <a href="#custom-platscan-avatar">Custom PlatScan avatar</a> to set it.</li>
+<li>externalId:  Corresponding to the PGP key value of keybase, AlayaScan uses this value to display the corresponding avatar; if the user needs to display the specified avatar on AlayaScan, you can refer to the <a href="#custom-AlayaScan-avatar">Custom AlayaScan avatar</a> to set it.</li>
 <li>webSite: Company website.</li>
 <li>certificate: ca certificate address, which can be deleted if Nginx reverse proxy is not used.</li>
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="custom-allayscan-avatar"></a><a href="#custom-allayscan-avatar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom AllayScan avatar</h4>
-<p>If users do not need to display their specified avatar on PlatScan, they can skip this step. Otherwise, the following operations are required:</p>
+<p>If users do not need to display their specified avatar on AlayaScan, they can skip this step. Otherwise, the following operations are required:</p>
 <ul>
 <li><p><strong>Register a keybase account</strong></p>
 <p>Users first need to register on the official website of  <a href="https://keybase.io/">keybase.io</a> . If they have already registered, they can log on the official website of keybase.</p></li>
@@ -206,7 +206,7 @@
 <p>Modify the <code>externalId</code> field of the verification node information file <code>validator_config.json</code> to the <code>PGP key</code> generated in the previous step.</p></li>
 </ul>
 <blockquote>
-<p>Note: After the user completes the staking operation, the avatar customized by the user can be displayed on PlatScan.</p>
+<p>Note: After the user completes the staking operation, the avatar customized by the user can be displayed on AlayaScan.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="initiate-a-staking-operation"></a><a href="#initiate-a-staking-operation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initiate a staking operation</h2>
 <p>If the consensus node deployment is complete and is catching up the blocknumber of <a href="https://scan.alaya.network/">AlayaScan</a>, you can use MTool for staking operations. Please ensure that the balance of the staking account is sufficient before staking. The minimum threshold for staking is ten thousand ATP.</p>
