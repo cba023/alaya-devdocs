@@ -13,8 +13,8 @@ sidebar_label: JS SDK
 
 然后你就可以通过 npm 包管理工具或者 yarn 包管理工具将client-sdk-js引入到项目工程中，通过如下步骤：
 
-- npm: `npm i PlatONnetwork/client-sdk-js`
-- yarn: `yarn add PlatONnetwork/client-sdk-js`
+- npm: `npm i PlatONnetwork/client-sdk-js#alaya-dev`
+- yarn: `yarn add PlatONnetwork/client-sdk-js#alaya-dev`
 
 然后需要创建web3的实例，设置一个provider。可参考如下代码：
 
