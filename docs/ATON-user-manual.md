@@ -207,8 +207,9 @@ If you have set up observed wallets and cold wallets, you can initiate transfers
 <div style="margin-top:40px;"></div>
 </div>
 
+
 ## Change Password
 
 <div>
-<div style = "float: left;"> <img src = "/alaya-devdocs/img/en/ATON-user-manual.assets/aton50.jpg "width =" 250 " style="zoom:80%;" /><img src = "/alaya-devdocs/img/en/ATON-user-manual.assets/aton51.jpg "width =" 250 " style="zoom:80%;" /> </div><div><br> 1. Click [Wallet Management-Change Password].<br> 2. Input wallet password to confirm.<br> 3. Set the wallet password and confirm password.<br> 4. Click the [Confirm] button,the wallet's password is successfully changed.<br><br> <b> Note </b> <br> 1. Password is your credentials to operate the wallet. PlatON does not store your password, make sure you keep it in mind.
+<div style = "float: left;"> <img src = "/alaya-devdocs/img/en/ATON-user-manual.assets/aton50.jpg "width =" 250 " style="zoom:80%;" /><img src = "/alaya-devdocs/img/en/ATON-user-manual.assets/aton51.jpg "width =" 250 " style="zoom:80%;" /> </div></div><br> 1. Click [Wallet Management-Change Password].<br> 2. Input wallet password to confirm.<br> 3. Set the wallet password and confirm password.<br> 4. Click the [Confirm] button,the wallet's password is successfully changed.<br><br> <b> Note </b> <br> 1. Password is your credentials to operate the wallet. PlatON does not store your password, make sure you keep it in mind.
 

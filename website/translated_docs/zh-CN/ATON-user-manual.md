@@ -204,7 +204,8 @@ title: ATON钱包用户使用手册
 
 ## 修改密码
 <div>
-<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton50.jpg" width="250" style="zoom:80%;" /><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton51.jpg" width="250" style="zoom:80%;" /></div><div><br>1. 点击【钱包管理-修改密码】。<br>2. 输入原密码进行确认。<br>3. 设置新的钱包密码、确认钱包密码。<br>4. 点击【确认】按钮，修改密码成功。<br><br><b>注意</b><br>1. 钱包密码是您操作此钱包的凭证，服务器不会存储您的钱包密码，请务必牢记。
+<div style="float:left;"><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton50.jpg" width="250" style="zoom:80%;" /><img src="/alaya-devdocs/img/zh-CN/ATON-manual-cn.assets/aton51.jpg" width="250" style="zoom:80%;" /></div></div><br>1. 点击【钱包管理-修改密码】。<br>2. 输入原密码进行确认。<br>3. 设置新的钱包密码、确认钱包密码。<br>4. 点击【确认】按钮，修改密码成功。<br><br><b>注意</b><br>1. 钱包密码是您操作此钱包的凭证，服务器不会存储您的钱包密码，请务必牢记。
+
 
 
 
