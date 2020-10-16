@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>EVM智能合约 · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在PlatON网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解："/><meta name="docsearch:language" content="zh-CN"/><meta property="og:title" content="EVM智能合约 · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在PlatON网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解："/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=zh"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/en/EVM_Smart_Contract">English</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>EVM智能合约 · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在Alaya网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解："/><meta name="docsearch:language" content="zh-CN"/><meta property="og:title" content="EVM智能合约 · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在Alaya网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解："/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=zh"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/en/EVM_Smart_Contract">English</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,7 +66,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">EVM智能合约</h1></header><article><div><span><p>本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在PlatON网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解：</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">EVM智能合约</h1></header><article><div><span><p>本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题。引导开发者可以在Alaya网络快速开发出高质量的智能合约。主要从以下几个方面进行讲解：</p>
 <ul>
 <li><a href="#合约开发入门手册">合约开发入门手册</a></li>
 <li><a href="#合约迁移">合约迁移</a></li>
@@ -78,10 +78,10 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="合约开发入门手册"></a><a href="#合约开发入门手册" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约开发入门手册</h2>
 <h3><a class="anchor" aria-hidden="true" id="简介"></a><a href="#简介" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>简介</h3>
-<p>本教程主要是指导用户在PlatON上使用solidity语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。如果您想使用更加丰富的API可以参考<a href="/alaya-devdocs/zh-CN/Java_SDK">Java SDK开发指南</a> 或者 <a href="/alaya-devdocs/zh-CN/JS_SDK">JS SDK开发指南</a></p>
+<p>本教程主要是指导用户在Alaya上使用solidity语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。如果您想使用更加丰富的API可以参考<a href="/alaya-devdocs/zh-CN/Java_SDK">Java SDK开发指南</a> 或者 <a href="/alaya-devdocs/zh-CN/JS_SDK">JS SDK开发指南</a></p>
 <ul>
 <li>solidity智能合约语法请参考<a href="https://solidity.readthedocs.io/en/develop/">Solidity官方文档</a></li>
-<li>在开发合约前，如果需要搭建节点连接到PlatON网络或者创建私有网络请参考：<a href="/alaya-devdocs/zh-CN/Join_PlatON_NetWork">连接 PlatON 网络</a></li>
+<li>在开发合约前，如果需要搭建节点连接到Alaya网络或者创建私有网络请参考：<a href="/alaya-devdocs/zh-CN/Join_Alaya_NetWork">连接 Alaya 网络</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="platon-truffle开发工具介绍"></a><a href="#platon-truffle开发工具介绍" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>platon-truffle开发工具介绍</h3>
 <p>platon-truffle是PlatON提供的一款能够在本地编译、部署、调用智能合约的工具，具体的安装及使用手册参见</p>
@@ -198,7 +198,7 @@ name = _name：此操作将外部传进来的局部变量赋值给状态变量</
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// 区块链所在服务器主机</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// 链端口号</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">//部署合约账号的钱包地址</span>
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">//部署合约账号的钱包地址</span>
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">50000000004</span>,
     },
@@ -212,7 +212,7 @@ name = _name：此操作将外部传进来的局部变量赋值给状态变量</
 <pre><code class="hljs"><span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.importRawKey</span>("您的钱包私钥","您的钱包密码");
 </code></pre>
 <p>导入成功将看到私钥对应的地址：</p>
-<pre><code class="hljs"><span class="hljs-symbol">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>'
+<pre><code class="hljs">'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp'
 </code></pre>
 <p>解锁钱包账户</p>
 <pre><code class="hljs"> <span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.unlockAccount</span>(<span class="hljs-string">'您的钱包地址'</span>,<span class="hljs-string">'您的钱包密码'</span>,<span class="hljs-number">999999</span>);
@@ -231,26 +231,26 @@ name = _name：此操作将外部传进来的局部变量赋值给状态变量</
    <span class="hljs-string">----------------------</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0x87cd48cc467f9bc943fd096c57c8a7e7b7fa941380538d9e59797800c6c4292c</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block number:</span>        <span class="hljs-number">282520</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1585535169200</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">balance:</span>             <span class="hljs-number">16447231233352977496646259638377769924557918764752765436645.336513079692286014</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas used:</span>            <span class="hljs-number">145569</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas price:</span>           <span class="hljs-number">1</span> <span class="hljs-string">gvon</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">ATP</span>
 
 
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
    <span class="hljs-string">-------------------------------------</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">ATP</span>
 
 <span class="hljs-string">Summary</span>
 <span class="hljs-string">=======</span>
 <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total deployments:</span>   <span class="hljs-number">2</span>
-<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000259892</span> <span class="hljs-string">LAT</span>
+<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000259892</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="调用helloworld合约"></a><a href="#调用helloworld合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>调用HelloWorld合约</h3>
 <p><strong>step1.</strong>  进入platon-truffle控制台</p>
@@ -262,7 +262,7 @@ name = _name：此操作将外部传进来的局部变量赋值给状态变量</
 <p><strong>step2.</strong>  构建合约对象</p>
 <pre><code class="hljs css language-json">var abi = [{"constant":false,"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"setName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]; //可以从HelloWorld/build/contracts/HelloWorld.json文件中获取到
 
-var contractAddr = 'lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07';//部署合约时的获取的地址
+var contractAddr = 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la';//部署合约时的获取的地址
 var helloWorld = new web3.platon.Contract(abi,contractAddr); 
 </code></pre>
 <p>说明：</p>
@@ -272,7 +272,7 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
 <li><code>helloWorld</code> 就是构建出来与链上合约交互的合约对象抽象</li>
 </ul>
 <p><strong>step3.</strong>  调用合约</p>
-<pre><code class="hljs css language-javascript">helloWorld.methods.setName(<span class="hljs-string">"hello world"</span>).send({<span class="hljs-attr">from</span>: <span class="hljs-string">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'</span>}).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{<span class="hljs-built_in">console</span>.log(receipt);}).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
+<pre><code class="hljs css language-javascript">helloWorld.methods.setName(<span class="hljs-string">"hello world"</span>).send({<span class="hljs-attr">from</span>: <span class="hljs-string">'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'</span>}).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{<span class="hljs-built_in">console</span>.log(receipt);}).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
  
 </code></pre>
 <p>调用合约命令说明：</p>
@@ -289,12 +289,12 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
   blockNumber: <span class="hljs-number">283911</span>,
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">44820</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">44820</span>,
   logsBloom:
 '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: '0x<span class="hljs-number">0680</span>df2d6e38e5a6c89e<span class="hljs-number">385683</span>6e017c<span class="hljs-number">6572</span>dab2',<span class="hljs-comment">//交易调用的合约地址</span>
+  to: 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la',<span class="hljs-comment">//交易调用的合约地址</span>
   transactionHash:
    '0x2b381a8efab<span class="hljs-number">4774</span>ae029fdf2e<span class="hljs-number">2585</span>b48c03c033c64d543c9c606c<span class="hljs-number">925689</span>fca31',<span class="hljs-comment">//交易hash</span>
   transactionIndex: <span class="hljs-number">0</span>,
@@ -314,9 +314,9 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="合约迁移"></a><a href="#合约迁移" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约迁移</h2>
 <h3><a class="anchor" aria-hidden="true" id="简介-1"></a><a href="#简介-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>简介</h3>
-<p>PlatON支持的solidity最高版本号是0.5.13，如果迁移0.5.13以上版本的合约，需要降低版本号，去除高版本相关语法。</p>
-<p>如果您希望将以太坊的智能合约迁移到PlatON上，可以通过platon-truffle开发工具来进行。首先确保您正确安装了platon-truffle,只需按照以下步骤操作即可。</p>
-<p>以下将演示将以太坊的ERC200513Token合约迁移至PlatON上，ERC200513Token.sol合约文件如下</p>
+<p>Alaya支持的solidity是0.4.26、0.5.17、0.6.12、0.7.1 四个版本，如果迁移0.7.1以上版本的合约，需要降低版本号，去除高版本相关语法。</p>
+<p>如果您希望将以太坊的智能合约迁移到Alaya上，可以通过platon-truffle开发工具来进行。首先确保您正确安装了platon-truffle,只需按照以下步骤操作即可。</p>
+<p>以下将演示将以太坊的ERC200513Token合约迁移至Alaya上，ERC200513Token.sol合约文件如下</p>
 <pre><code class="hljs">pragma solidity <span class="hljs-number">0.5</span><span class="hljs-number">.13</span>;
 
 contract ERC200513Token {
@@ -512,8 +512,8 @@ contract ERC200513Token {
 </code></pre>
 <ul>
 <li>将看到 ERC200513Token.sol</li>
-<li>PlatON智能合约中的货币单位为LAT和VON。要将以太坊智能合约迁移至PlatON，请将以太币面额更改为PlatON面额。同时注意以太/LAT市场汇率（此合约我们假设市场汇率1:1，将uint256 public totalSupply = 10000000000000000000 ether; 修改成uint256 public totalSupply = 10000000000000000000 LAT; ）</li>
-<li>PlatON智能合约中block.timestamp表示的是当前区块以毫秒为单位的时间戳，以太坊是以秒为单位。</li>
+<li>Alaya智能合约中的货币单位为ATP和VON。要将以太坊智能合约迁移至Alaya，请将以太币面额更改为Alaya面额。同时注意以太/ATP市场汇率（此合约我们假设市场汇率1:1，将uint256 public totalSupply = 10000000000000000000 ether; 修改成uint256 public totalSupply = 10000000000000000000 ATP; ）</li>
+<li>Alaya智能合约中block.timestamp表示的是当前区块以毫秒为单位的时间戳，以太坊是以秒为单位。</li>
 </ul>
 <p><strong>step4.</strong> 修改truffle-config.js中的编译版本号及链相关配置</p>
 <pre><code class="hljs">module.exports = {
@@ -522,7 +522,7 @@ contract ERC200513Token {
 <span class="hljs-symbol">      host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// 链地址</span>
 <span class="hljs-symbol">      port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// 链使用的rpc端口</span>
 <span class="hljs-symbol">      network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">      from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">//部署合约所使用的钱包地址</span>
+<span class="hljs-symbol">      from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">//部署合约所使用的钱包地址</span>
 <span class="hljs-symbol">      gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">      gasPrice:</span> <span class="hljs-number">50000000004</span>,         
      },
@@ -572,25 +572,25 @@ Compiled successfully using: <span class="hljs-comment">//表示编译成功</sp
    <span class="hljs-string">--------------------------</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0x5667101234fcd3b9dadf96a19bce20d1b94d742e0fd8f3528c641fa587b17eb3</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1uetshtp4tp6l067tl02e4x435py9ajrfdhsrd4</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1kekwl4v2q0qc0g9cr6c8adsx0p2n7c90ygp5tv</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block number:</span>        <span class="hljs-number">2153</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1585538899787</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">balance:</span>             <span class="hljs-number">4499992.02433</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas used:</span>            <span class="hljs-number">641243</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas price:</span>           <span class="hljs-number">1</span> <span class="hljs-string">gvon</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000641243</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000641243</span> <span class="hljs-string">ATP</span>
 
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
    <span class="hljs-string">-------------------------------------</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000641243</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000641243</span> <span class="hljs-string">ATP</span>
 
 <span class="hljs-string">Summary</span>
 <span class="hljs-string">=======</span>
 <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total deployments:</span>   <span class="hljs-number">2</span>
-<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000755566</span> <span class="hljs-string">LAT</span>
+<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000755566</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="众筹合约"></a><a href="#众筹合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>众筹合约</h2>
@@ -616,7 +616,7 @@ Compiled successfully using: <span class="hljs-comment">//表示编译成功</sp
 
 contract CrowdFunding {
     address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(<span class="hljs-number">0x0</span>); <span class="hljs-comment">//受益人地址，设置为合约创建者</span>
-    uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> LAT;  <span class="hljs-comment">//众筹目标，单位是LAT</span>
+    uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> ATP;  <span class="hljs-comment">//众筹目标，单位是ATP</span>
     uint256 <span class="hljs-keyword">public</span> amountRaised = <span class="hljs-number">0</span>; <span class="hljs-comment">//已筹集金额数量， 单位是VON</span>
     uint256 <span class="hljs-keyword">public</span> deadline; <span class="hljs-comment">//截止时间</span>
     uint256 <span class="hljs-keyword">public</span> price;  <span class="hljs-comment">//代币价格</span>
@@ -627,7 +627,7 @@ contract CrowdFunding {
     
     mapping(address =&gt; uint256) <span class="hljs-keyword">public</span> tokenMap; <span class="hljs-comment">//保存众筹者所拥有的代币数量</span>
 
-    <span class="hljs-comment">//记录已接收的LAT通知</span>
+    <span class="hljs-comment">//记录已接收的ATP通知</span>
     <span class="hljs-function"><span class="hljs-keyword">event</span> <span class="hljs-title">GoalReached</span>(<span class="hljs-params">address _beneficiaryAddress, <span class="hljs-keyword">uint</span> _amountRaised</span>)</span>;
 
     <span class="hljs-comment">//转帐通知</span>
@@ -642,7 +642,7 @@ contract CrowdFunding {
     <span class="hljs-comment">/**
      * 初始化构造函数
      *
-     * @param _fundingGoalInlats 众筹LAT币总量
+     * @param _fundingGoalInlats 众筹ATP币总量
      * @param _durationInMinutes 众筹截止,单位是分钟
      */</span>
     constructor (
@@ -650,9 +650,9 @@ contract CrowdFunding {
         <span class="hljs-keyword">uint</span> _durationInMinutes
     )<span class="hljs-keyword">public</span> {
         beneficiaryAddress = msg.sender;
-        fundingGoal = _fundingGoalInlats * <span class="hljs-number">1</span> LAT;
+        fundingGoal = _fundingGoalInlats * <span class="hljs-number">1</span> ATP;
         deadline = now + _durationInMinutes * <span class="hljs-number">1</span> minutes;
-        price = <span class="hljs-number">500</span> finney; <span class="hljs-comment">//1个LAT币可以买 2 个代币</span>
+        price = <span class="hljs-number">500</span> finney; <span class="hljs-comment">//1个ATP币可以买 2 个代币</span>
     }
 
 
@@ -792,7 +792,7 @@ contract CrowdFunding {
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// 区块链所在服务器主机</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// 链端口号</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">//部署合约账号的钱包地址</span>
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">//部署合约账号的钱包地址</span>
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">50000000004</span>,
     },
@@ -809,19 +809,19 @@ contract CrowdFunding {
     <span class="hljs-string">Deploying</span> <span class="hljs-string">'CrowdFunding'</span>
      <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0x3a6419cd4169d7cfb430a1fc5632239ac4a01845827f20df9b3229a334c5488b</span>
      <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt</span> <span class="hljs-string">//部署后的合约地址</span>
+     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya</span> <span class="hljs-string">//部署后的合约地址</span>
      <span class="hljs-attr">block number:</span>        <span class="hljs-number">280532</span>
      <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1581751224032</span>
-     <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+     <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
      <span class="hljs-attr">balance:</span>             <span class="hljs-number">90000000.806077629992489796</span>
      <span class="hljs-attr">gas used:</span>            <span class="hljs-number">379154</span>
      <span class="hljs-attr">gas price:</span>           <span class="hljs-number">50.000000004</span> <span class="hljs-string">gVON</span>
-     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">ATP</span>
  
      <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
      <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
-     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <p><strong>众筹者查询众筹情况：</strong></p>
 <p><strong>step1.</strong>  进入platon-truffle控制台</p>
@@ -832,14 +832,14 @@ contract CrowdFunding {
 </ul>
 <p><strong>step2.</strong>  构建的众筹合约对象</p>
 <pre><code class="hljs"><span class="hljs-keyword">var</span> abi = [...]; <span class="hljs-comment">//众筹合约的ABI，从编译后的文件获取</span>
-<span class="hljs-keyword">var</span> contractAddr = <span class="hljs-string">'lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt'</span>; <span class="hljs-comment">//众筹合约地址</span>
+<span class="hljs-keyword">var</span> contractAddr = <span class="hljs-string">'atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya'</span>; <span class="hljs-comment">//众筹合约地址</span>
 <span class="hljs-keyword">var</span> crowdFunding = <span class="hljs-keyword">new</span> <span class="hljs-type">web3</span>.platon.Contract(abi,contractAddr);  
 </code></pre>
 <p><strong>step3.</strong>  查询已筹集金额</p>
 <pre><code class="hljs">crowdFunding.methods.amountRaised().call(<span class="hljs-literal">null</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error,result</span>)</span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"result:"</span> + result);}); <span class="hljs-comment">//查询已筹集金额</span>
 </code></pre>
 <p><strong>step4.</strong>  众筹者判断众筹是否成功</p>
-<pre><code class="hljs">crowdFunding.methods.safeWithdrawal().send({<span class="hljs-keyword">from</span>:'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'}).<span class="hljs-keyword">on</span><span class="hljs-params">('data', function<span class="hljs-params">(event)</span>{ console.log<span class="hljs-params">(event)</span>;})</span>.<span class="hljs-keyword">on</span><span class="hljs-params">('error', console.error)</span>; 
+<pre><code class="hljs">crowdFunding.methods.safeWithdrawal().send({<span class="hljs-keyword">from</span>:'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'}).<span class="hljs-keyword">on</span><span class="hljs-params">('data', function<span class="hljs-params">(event)</span>{ console.log<span class="hljs-params">(event)</span>;})</span>.<span class="hljs-keyword">on</span><span class="hljs-params">('error', console.error)</span>; 
 </code></pre>
 <p>调用合约命令说明：</p>
 <ul>
@@ -852,9 +852,9 @@ contract CrowdFunding {
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="合约开发成本"></a><a href="#合约开发成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约开发成本</h2>
 <h3><a class="anchor" aria-hidden="true" id="介绍"></a><a href="#介绍" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>介绍</h3>
-<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如在网络上部署/调用智能合约，进行能量转换，质押/委托等操作都是需要花费一定的成本，不同区块链网络开发成本各不相同，在 <code>PlatON</code> 网络上开发智能合约的成本与以太坊及类似协议相近。本手册将以直观的格式进行分析比较，让用户对开发成本有一个比较清晰的认识。</p>
+<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如在网络上部署/调用智能合约，进行能量转换，质押/委托等操作都是需要花费一定的成本，不同区块链网络开发成本各不相同，在 <code>Alaya</code> 网络上开发智能合约的成本与以太坊及类似协议相近。本手册将以直观的格式进行分析比较，让用户对开发成本有一个比较清晰的认识。</p>
 <h3><a class="anchor" aria-hidden="true" id="概要"></a><a href="#概要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
-<p>本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时对 <code>PlatON</code> 与以太坊之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ERC20</code> 标准的智能合约。</p>
+<p>本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时对 <code>Alaya</code> 与以太坊之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ERC20</code> 标准的智能合约。</p>
 <h4><a class="anchor" aria-hidden="true" id="资源消耗"></a><a href="#资源消耗" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>资源消耗</h4>
 <p><strong>简单set/get合约</strong></p>
 <table>
@@ -862,7 +862,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">127173</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">635865 <code>Gwei</code></td><td style="text-align:left">0.000635865 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -872,7 +872,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">621385</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">3106925 <code>Gwei</code></td><td style="text-align:left">0.003106925 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -882,7 +882,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">1282171</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">6410855  <code>Gwei</code></td><td style="text-align:left">0.006410855 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -911,11 +911,11 @@ contract SimpleTest {
 <ul>
 <li>创建&amp;部署合约成本</li>
 </ul>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>Gas消耗: 76953</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  384765 <code>gVON</code>（0.000384765 <code>LAT</code>）</li>
+<li>总成本:  384765 <code>gVON</code>（0.000384765 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
@@ -933,11 +933,11 @@ contract SimpleTest {
 </code></pre>
 <p>字节大小： <code>2130.5 byte =&gt; 2.08 kb</code></p>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本"></a><a href="#创建部署合约成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>Gas消耗: 257065</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  1285325 <code>gVON</code>（0.001285325 <code>LAT</code>）</li>
+<li>总成本:  1285325 <code>gVON</code>（0.001285325 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
@@ -957,11 +957,11 @@ contract SimpleTest {
 <ul>
 <li>创建&amp;部署合约成本</li>
 </ul>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>Gas消耗: 552823</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  2764115 <code>gVON</code>（0.002764115 <code>LAT</code>）</li>
+<li>总成本:  2764115 <code>gVON</code>（0.002764115 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
@@ -974,13 +974,13 @@ contract SimpleTest {
 <h3><a class="anchor" aria-hidden="true" id="介绍-1"></a><a href="#介绍-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>介绍</h3>
 <p>本指南向用户介绍智能合约开发中需要关注的一些关键点，主要偏向于在实际开发中的实践。用户可以通过本指南快速了解针对一笔交易如何合理的设置手续费、如何避免被因交易失败的同时损失手续费以及如何编码更加规范的智能合约。</p>
 <h3><a class="anchor" aria-hidden="true" id="费用合理设置"></a><a href="#费用合理设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>费用合理设置</h3>
-<p>当需要在<code>PlatON</code>的主网上部署合约时，需要设置一个合理的费用限制。费用限制是指 <code>PlatON</code> 中智能合约部署/执行的能源消耗成本的上限。该限制主要通过 <code>Gas</code> 完成，<code>Gas</code> 是 PlatON 网络世界的燃料值，它决定了 PlatON 网络生态系统的正常运行。通常使用 Gas 来衡量执行某些动作需要多少&quot;工作量&quot;，这些工作量就是为了执行该动作所需要支付给 PlatON 网络的费用额度。简单理解， Gas 是网络旷工的佣金，并通过 <code>LAT</code> 的方式支付，在网络上的任何交易、合约执行，数据存储，都需要使用到 Gas。</p>
-<p>PlatON与以太坊区块链系统类似，使用 <code>LAT</code> 进行支付和维护网络，一枚 LAT 分为：<code>mLAT/uLAT/gVON/mVON/kVON/VON</code>，其中<code>VON</code>是最小单位。</p>
+<p>当需要在<code>Alaya</code>上部署合约时，需要设置一个合理的费用限制。费用限制是指 <code>Alaya</code> 中智能合约部署/执行的能源消耗成本的上限。该限制主要通过 <code>Gas</code> 完成，<code>Gas</code> 是 Alaya 网络世界的燃料值，它决定了 Alaya 网络生态系统的正常运行。通常使用 Gas 来衡量执行某些动作需要多少&quot;工作量&quot;，这些工作量就是为了执行该动作所需要支付给 Alaya 网络的费用额度。简单理解， Gas 是网络旷工的佣金，并通过 <code>ATP</code> 的方式支付，在网络上的任何交易、合约执行，数据存储，都需要使用到 Gas。</p>
+<p>Alaya与以太坊区块链系统类似，使用 <code>ATP</code> 进行支付和维护网络，一枚 ATP 分为：<code>mATP/uATP/gVON/mVON/kVON/VON</code>，其中<code>VON</code>是最小单位。</p>
 <p>Gas 主要由两个部分组成：GasLimit(限制)和GasPrice(单价)。其中 <code>GasLimit</code> 是用户愿意为执行某个操作或确认交易支付的最大 <code>Gas</code> 消耗量（最少21,000）。GasPrice是 <code>gVON</code> 的数量，用于愿意为每个 <code>Gas</code> 所支付的单价。</p>
 <p>用户发送一笔交易时，会设定 <code>GasLimit</code> 和 <code>GasPrice</code>，二者的乘积（<code>GasLimit * GasPrice</code>）是用户的交易成本，同时该成本会作为佣金奖励给旷工。</p>
 <p>交易设置的 <code>GasPrice</code> 越高，则交易的执行优先级更高，交易成本也会更大。每笔交易在完成后，剩余未使用的Gas都会退回到发送者的地址账户中。有一点要特别注意，如果因为 <code>GasLimit</code> 设置过低导致交易执行失败，此时的 Gas 不会被回退到用户地址，用户依然需要为这次失败的交易支付能量成本。因此，无论交易是否执行成功，交易发送者都需要向旷工支付一定的计算费用。</p>
-<p>在 <code>PlatON</code> 网络中，最高 Gas 的限制为 <code>4,700,000</code>，最低为 <code>22,000</code>，过低或者过高都会导致交易失败。在部署大型合约或者运行复杂功能时，可以将Gas的限制调高，例如：<code>1,000,000</code>。如果是普通转账则设置为最低值即可。具体的值需要根据合约的规模及复杂度进行估算，在合约发布前可以调用接口 <code>platon_estimateGas</code> 进行大概估算，避免因不足而导致失败。 <a href="/alaya-devdocs/zh-CN/Json_Rpc">点击查看JSON-RPC参考文档</a>。</p>
-<p><strong>LAT 单位转换</strong></p>
+<p>在 <code>Alaya</code> 网络中，最高 Gas 的限制为 <code>4,700,000</code>，最低为 <code>22,000</code>，过低或者过高都会导致交易失败。在部署大型合约或者运行复杂功能时，可以将Gas的限制调高，例如：<code>1,000,000</code>。如果是普通转账则设置为最低值即可。具体的值需要根据合约的规模及复杂度进行估算，在合约发布前可以调用接口 <code>platon_estimateGas</code> 进行大概估算，避免因不足而导致失败。 <a href="/alaya-devdocs/zh-CN/Json_Rpc">点击查看JSON-RPC参考文档</a>。</p>
+<p><strong>ATP 单位转换</strong></p>
 <table>
 <thead>
 <tr><th style="text-align:left">单位</th><th style="text-align:left">VON值</th><th style="text-align:left">VON</th></tr>
@@ -990,13 +990,13 @@ contract SimpleTest {
 <tr><td style="text-align:left">kVON</td><td style="text-align:left">1e3 VON</td><td style="text-align:left">1,000</td></tr>
 <tr><td style="text-align:left">mVON</td><td style="text-align:left">1e6 VON</td><td style="text-align:left">1,000,000</td></tr>
 <tr><td style="text-align:left">gVON</td><td style="text-align:left">1e9 VON</td><td style="text-align:left">1,000,000,000</td></tr>
-<tr><td style="text-align:left">LAT</td><td style="text-align:left">1e18 VON</td><td style="text-align:left">1,000,000,000,000,000,000</td></tr>
-<tr><td style="text-align:left">mLAT</td><td style="text-align:left">1e24 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000</td></tr>
-<tr><td style="text-align:left">gLAT</td><td style="text-align:left">1e27 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">ATP</td><td style="text-align:left">1e18 VON</td><td style="text-align:left">1,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">mATP</td><td style="text-align:left">1e24 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">gATP</td><td style="text-align:left">1e27 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000,000</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="避免超时"></a><a href="#避免超时" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>避免超时</h3>
-<p>在 <code>PlatON</code> 网络上发送交易，没有超时的概念，但是最终会根据所设置的 Gas 限制值停止，如果限制值低于合约部署所需要的消耗，则交易发送失败，同时会扣除对应的手续费。手续费的设定不可能无限大，因为在网络中，区块本身有一个最大的Gas上限，当交易的 <code>GasLimit</code> 超过该值时，交易将无法被接收。</p>
+<p>在 <code>Alaya</code> 网络上发送交易，没有超时的概念，但是最终会根据所设置的 Gas 限制值停止，如果限制值低于合约部署所需要的消耗，则交易发送失败，同时会扣除对应的手续费。手续费的设定不可能无限大，因为在网络中，区块本身有一个最大的Gas上限，当交易的 <code>GasLimit</code> 超过该值时，交易将无法被接收。</p>
 <p>如果是针对已发布的合约执行 <code>call</code> 调用（call调用指合约逻辑内无状态变更操作），存在 5s 超时的限制，如果在 <code>5s</code> 内合约逻辑没有执行完成，虚拟机会超时强制退出，导致查询失败。</p>
 <p>为避免部署合约交易失败，请尝试将大型合约分成较小的块，并根据需要相互引用。 为了避免无限循环，请注意常见的陷阱和递归调用。</p>
 <h3><a class="anchor" aria-hidden="true" id="非法操作处罚"></a><a href="#非法操作处罚" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>非法操作处罚</h3>
@@ -1004,8 +1004,8 @@ contract SimpleTest {
 <p>一般产生无效操作码有以下情况：</p>
 <p>1.对正常已编译出的合约手动更改了指令码；<br>
 2.合约编译器版本与网络锁支持的合约版本不一致；</p>
-<p>在 <code>PlatON</code> 网络中操作合约时，请务必先确认当前网络所支持的智能合约版本，然后选择对应版本对的编译器。</p>
-<p>常规操作是使用 <code>PlatON</code> 官方提供的最新的<code>Truffle</code>/<code>PlatON-CDT</code>来编译/部署/执行合约，同时在切换到主网操作前，务必在测试网进行有效的验证。</p>
+<p>在 <code>Alaya</code> 网络中操作合约时，请务必先确认当前网络所支持的智能合约版本，然后选择对应版本对的编译器。</p>
+<p>常规操作是使用 <code>Alaya</code> 官方提供的最新的<code>Truffle</code>/<code>PlatON-CDT</code>来编译/部署/执行合约，同时在切换到主网操作前，务必在测试网进行有效的验证。</p>
 <h3><a class="anchor" aria-hidden="true" id="编码规范"></a><a href="#编码规范" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>编码规范</h3>
 <h4><a class="anchor" aria-hidden="true" id="命名规范"></a><a href="#命名规范" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>命名规范</h4>
 <p>基本规则：</p>
@@ -1035,7 +1035,7 @@ contract SimpleTest {
 <h4><a class="anchor" aria-hidden="true" id="几点建议"></a><a href="#几点建议" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>几点建议</h4>
 <ul>
 <li>在智能合约中，获取 public 修饰的状态变量的值，不需要编写 <code>get</code> 函数；</li>
-<li>在智能合约中，在合约中加入 <code>payable</code> 修饰的匿名函数，则合约地址可接受 LAT 转账；</li>
+<li>在智能合约中，在合约中加入 <code>payable</code> 修饰的匿名函数，则合约地址可接受 ATP 转账；</li>
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="合约安全开发指南"></a><a href="#合约安全开发指南" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约安全开发指南</h2>

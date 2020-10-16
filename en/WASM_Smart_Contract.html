@@ -67,7 +67,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">WASM Smart Contract</h1></header><article><div><span><p>WebAssembly (wasm for short) is a binary instruction set designed for stacked virtual machines. Wasm was designed to be a compile target for platforms such as C / C ++ / Rust, and was originally designed to solve JavaScript performance issues. Wasm is a web standard being led by the W3C and supported by browser vendors such as Google, Microsoft, and Mozilla.</p>
-<p>This tutorial is mainly to guide users to create a WASM smart contract using wasm language on PlatON.</p>
+<p>This tutorial is mainly to guide users to create a WASM smart contract using wasm language on Alaya.</p>
 <p>It is mainly explained from the following aspects：</p>
 <ul>
 <li><a href="#getting-started">Getting Started</a></li>
@@ -78,9 +78,9 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="getting-started"></a><a href="#getting-started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Started</h2>
 <h3><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
-<p>This tutorial is mainly to guide users to create a simple HelloWorld smart contract using wasm language on PlatON, compile, deploy, and call this contract through platon-truffle.If you want to use a richer API.</p>
+<p>This tutorial is mainly to guide users to create a simple HelloWorld smart contract using wasm language on Alaya, compile, deploy, and call this contract through platon-truffle.If you want to use a richer API.</p>
 <h3><a class="anchor" aria-hidden="true" id="platon-truffle-introduction"></a><a href="#platon-truffle-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platon-truffle Introduction</h3>
-<p>Platon-truffle is a tool provided by PlatON that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:</p>
+<p>Platon-truffle is a tool provided by Alaya that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:</p>
 <ul>
 <li>Platon-truffle develop tools<a href="https://platon-truffle.readthedocs.io/en/v0.13.1/getting-started/installation.html">specific installation</a></li>
 <li>Platon-truffle develop tools<a href="https://platon-truffle.readthedocs.io/en/v0.13.1/">usage manuals</a></li>
@@ -189,7 +189,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// blockchain server address</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// server port</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>,
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>,
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">1000000000</span>,
     },
@@ -203,7 +203,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <pre><code class="hljs"><span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.importRawKey</span>("<span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">wallet</span> <span class="hljs-selector-tag">private</span> <span class="hljs-selector-tag">key</span>","<span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">wallet</span> <span class="hljs-selector-tag">password</span>");
 </code></pre>
 <p>Successful import will see the address corresponding to the private key as follows：</p>
-<pre><code class="hljs"><span class="hljs-symbol">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>'
+<pre><code class="hljs">'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp'
 </code></pre>
 <p>Unlock wallet account</p>
 <pre><code class="hljs"> web3.platon.personal.unlock<span class="hljs-constructor">Account('Your <span class="hljs-params">wallet</span> <span class="hljs-params">address</span>','Your <span class="hljs-params">wallet</span> <span class="hljs-params">password</span>',999999)</span>;
@@ -222,9 +222,9 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <pre><code class="hljs">receipt:  { blockHash:
    '0x<span class="hljs-number">266733</span>b693ba<span class="hljs-number">650315</span>a59c34e<span class="hljs-number">7280</span>4c06ca3e27fab<span class="hljs-number">14562579</span>7bd<span class="hljs-number">4225</span>9b572c5',
   blockNumber: <span class="hljs-number">70441</span>,
-  contractAddress: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  contractAddress: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   cumulativeGasUsed: <span class="hljs-number">291314</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">291314</span>,
   logs: [],
   logsBloom:
@@ -238,15 +238,15 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 ======================
 
    &gt; transactionHash:     <span class="hljs-number">0</span>x60946ebf0ccddc76a0234353435de73e7901888227fb2f03922fb0ce265a4e9d
-   &gt; contract address:    lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np
+   &gt; contract address:    atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx
    &gt; block number:        <span class="hljs-number">70441</span>
    &gt; block timestamp:     <span class="hljs-number">1583247148341</span>
-   &gt; account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   &gt; account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    &gt; balance:             <span class="hljs-number">3533694129556768659166595001485837031654967793751237866225582808584074296</span>
    &gt; gas limit:           <span class="hljs-number">100000000</span>
    &gt; gas used:            <span class="hljs-number">291314</span>
-   &gt; gas price:           <span class="hljs-number">0.000000050000000004</span> LAT
-   &gt; total cost:          <span class="hljs-number">0.014565700001165256</span> LAT
+   &gt; gas price:           <span class="hljs-number">0.000000050000000004</span> ATP
+   &gt; total cost:          <span class="hljs-number">0.014565700001165256</span> ATP
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="call-helloworld-contract"></a><a href="#call-helloworld-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Call HelloWorld Contract</h3>
 <p><strong>Step1.</strong>  Enter the platon-truffle console</p>
@@ -257,7 +257,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 </ul>
 <p><strong>Step2.</strong>  Create contract object</p>
 <pre><code class="hljs css language-json">var abi = [{"baseclass":[],"fields":[{"name":"head","type":"string"}],"name":"message","type":"struct"},{"baseclass":["message"],"fields":[{"name":"body","type":"string"},{"name":"end","type":"string"}],"name":"my_message","type":"struct"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"init","output":"void","type":"Action"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"add_message","output":"void","type":"Action"},{"constant":true,"input":[],"name":"get_message_size","output":"uint8","type":"Action"},{"constant":true,"input":[{"name":"index","type":"uint8"}],"name":"get_message_body","output":"string","type":"Action"}];
-var contractAddr = 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np';
+var contractAddr = 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx';
 
 var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 }); 
 </code></pre>
@@ -269,7 +269,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 </ul>
 <p><strong>Step3.</strong>  Call contract</p>
 <pre><code class="hljs css language-javascript">helloworld.methods.add_message(<span class="hljs-string">'[[["5"], "6", "7"]]'</span>).send({
-    <span class="hljs-attr">from</span>: <span class="hljs-string">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'</span>,<span class="hljs-attr">gas</span>: <span class="hljs-number">999999</span>
+    <span class="hljs-attr">from</span>: <span class="hljs-string">'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'</span>,<span class="hljs-attr">gas</span>: <span class="hljs-number">999999</span>
 }).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{
     <span class="hljs-built_in">console</span>.log(receipt);
 }).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
@@ -287,12 +287,12 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
   blockNumber: <span class="hljs-number">74665</span>,
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">108549</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">108549</span>,
   logsBloom:
    '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d<span class="hljs-number">0000</span>a',
   transactionIndex: <span class="hljs-number">0</span>,
@@ -302,12 +302,12 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
   blockNumber: <span class="hljs-number">74665</span>,
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">108549</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">108549</span>,
   logsBloom:
    '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d<span class="hljs-number">0000</span>a',
   transactionIndex: <span class="hljs-number">0</span>,
@@ -326,7 +326,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="development-costs"></a><a href="#development-costs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development Costs</h2>
 <h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
-<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the PlatON network. <code>EVM</code> and <code>WASM</code>, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the <code>EVM</code>/<code>WASM</code> virtual machine of <code>PlatON</code> with the Ethereum virtual machine. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source <a href="https://github.com/yep/eth-tweet">Tweet</a> contract The large contract is a smart contract that implements the <code>ERC20</code> standard.</p>
+<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. <code>EVM</code> and <code>WASM</code>, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the <code>EVM</code>/<code>WASM</code> virtual machine of <code>Alaya</code> with the Ethereum virtual machine. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source <a href="https://github.com/yep/eth-tweet">Tweet</a> contract The large contract is a smart contract that implements the <code>ERC20</code> standard.</p>
 <h4><a class="anchor" aria-hidden="true" id="data-overview"></a><a href="#data-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Overview</h4>
 <p><strong>Simple Storage Contract</strong></p>
 <table>
@@ -334,9 +334,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">127173</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">635865 <code>Gwei</code></td><td style="text-align:left">0.000635865 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">Small-sized</td><td style="text-align:left">13.55 kb</td><td style="text-align:left">184043</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">920215 <code>gVON</code></td><td style="text-align:left">0.000920215 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">Small-sized</td><td style="text-align:left">13.55 kb</td><td style="text-align:left">184043</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">920215 <code>gVON</code></td><td style="text-align:left">0.000920215 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <p><strong>eth-tweet Contract</strong></p>
@@ -345,9 +345,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">621385</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">3106925 <code>Gwei</code></td><td style="text-align:left">0.003106925 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <p><strong>ERC20 Token Contract</strong></p>
@@ -356,9 +356,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">1282171</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">6410855  <code>Gwei</code></td><td style="text-align:left">0.006410855 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">Large-sized</td><td style="text-align:left">35.9 kb</td><td style="text-align:left">486274</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2431370  <code>gVON</code></td><td style="text-align:left">0.00243137 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">Large-sized</td><td style="text-align:left">35.9 kb</td><td style="text-align:left">486274</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2431370  <code>gVON</code></td><td style="text-align:left">0.00243137 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="small-sized-contract"></a><a href="#small-sized-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Small-sized Contract</h3>
@@ -415,11 +415,11 @@ PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<sp
 <p>ByteSize: <code>13882 byte =&gt; 13.55 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="cost"></a><a href="#cost" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cost</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>GasUsed: 76953</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  384765 <code>gVON</code>（0.000384765 <code>LAT</code>）</li>
+<li>Costs:  384765 <code>gVON</code>（0.000384765 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -427,11 +427,11 @@ PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<sp
 <li>GasPrice: 5,000,000,000 (5 <code>Gwei</code>)</li>
 <li>Costs:  635865 <code>Gwei</code>（0.000635865 <code>ETH</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>GasUsed: 184043</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  920215 <code>gVON</code>（0.000920215 <code>LAT</code>）</li>
+<li>Costs:  920215 <code>gVON</code>（0.000920215 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="medium-sized-contract"></a><a href="#medium-sized-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Medium-sized Contract</h3>
@@ -563,11 +563,11 @@ CONTRACT TweetAccount: public platon::Contract
 <p>ByteSize: <code>30788</code> byte =&gt; 30.07 kb`</p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="costs"></a><a href="#costs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Costs</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>GasUsed: 257065</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  1285325 <code>gVON</code>（0.001285325 <code>LAT</code>）</li>
+<li>Costs:  1285325 <code>gVON</code>（0.001285325 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -575,11 +575,11 @@ CONTRACT TweetAccount: public platon::Contract
 <li>GasPrice: 5,000,000,000 (5 <code>Gwei</code>)</li>
 <li>Costs:  3106925 <code>Gwei</code>（0.003106925 <code>ETH</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>GasUsed: 349713</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  1748565 <code>gVON</code>（0.001748565 <code>LAT</code>）</li>
+<li>Costs:  1748565 <code>gVON</code>（0.001748565 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="large-sized-contract"></a><a href="#large-sized-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Large-sized Contract</h3>
@@ -699,7 +699,7 @@ CONTRACT LATToken: <span class="hljs-keyword">public</span> platon::Contract, <s
 {
     
     <span class="hljs-keyword">public</span>:
-        platon::StorageType&lt;<span class="hljs-string">"name"</span>_n, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&gt; name;        <span class="hljs-comment">// fancy name: eg PlatON Token</span>
+        platon::StorageType&lt;<span class="hljs-string">"name"</span>_n, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&gt; name;        <span class="hljs-comment">// fancy name: eg Alaya Token</span>
         platon::StorageType&lt;<span class="hljs-string">"decimals"</span>_n, <span class="hljs-keyword">uint8_t</span>&gt; decimals;    <span class="hljs-comment">// HOw many decimals to show.</span>
         platon::StorageType&lt;<span class="hljs-string">"symbol"</span>_n, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&gt; symbol;    <span class="hljs-comment">// An identifier: eg LTT</span>
         platon::StorageType&lt;<span class="hljs-string">"version"</span>_n, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>&gt; version;  <span class="hljs-comment">// 0.1 standard. Just an arbitrary versioning scheme.</span>
@@ -754,11 +754,11 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 <p>ByteSize: <code>36764 byte =&gt; 35.9 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="costs-1"></a><a href="#costs-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Costs</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>GasUsed: 552823</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  2764115 <code>gVON</code>（0.002764115 <code>LAT</code>）</li>
+<li>Costs:  2764115 <code>gVON</code>（0.002764115 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -766,11 +766,11 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 <li>GasPrice: 5,000,000,000 (5 <code>Gwei</code>)</li>
 <li>Costs:  6410855 <code>Gwei</code>（0.006410855 <code>ETH</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>GasUsed: 486274</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  2431370 <code>gVON</code>（0.00243137 <code>LAT</code>）</li>
+<li>Costs:  2431370 <code>gVON</code>（0.00243137 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="best-practice"></a><a href="#best-practice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Best Practice</h2>
@@ -781,14 +781,14 @@ development. Users can use this guide to quickly understand how to set a
 reasonable fee for a transaction, how to avoid losing the fee due to transaction
 failure, and how to encode a more standardized smart contract.</p>
 <h3><a class="anchor" aria-hidden="true" id="reasonable-cost-setting"></a><a href="#reasonable-cost-setting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reasonable Cost Setting</h3>
-<p>When you need to deploy a contract on the main network of PlatON, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in PlatON. This restriction is mainly accomplished through Gas. Gas is the fuel value of the PlatON network world, which determines the normal operation of the PlatON network ecosystem. Gas is usually used to measure how much “work” is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the PlatON network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by LAT. Any transaction, contract execution, and data storage on the network need to use Gas.</p>
-<p>PlatON is similar to Ethereum’s blockchain system. It uses <code>LAT</code> for payment and
-maintenance networks. One <code>LAT</code> is divided into: <code>mLAT/uLAT/gVON/mVON/kVON/VON</code>, and <code>VON</code> is the smallest unit.</p>
+<p>When you need to deploy a contract on the main network of Alaya, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in Alaya. This restriction is mainly accomplished through Gas. Gas is the fuel value of the Alaya network world, which determines the normal operation of the Alaya network ecosystem. Gas is usually used to measure how much “work” is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the Alaya network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by ATP. Any transaction, contract execution, and data storage on the network need to use Gas.</p>
+<p>Alaya is similar to Ethereum’s blockchain system. It uses <code>ATP</code> for payment and
+maintenance networks. One <code>ATP</code> is divided into: <code>mATP/uATP/gVON/mVON/kVON/VON</code>, and <code>VON</code> is the smallest unit.</p>
 <p>Gas consists of two parts: GasLimit and GasPrice. GasLimit is the maximum Gas consumption (minimum 21,000) that a user is willing to pay to perform an operation or confirm a transaction. GasPrice is the unit price of each Gas.</p>
 <p>When a user sends a transaction, GasLimit and GasPrice are set. GasLimit * GasPrice is the user’s transaction cost, and the cost is rewarded to the miner as a commission.</p>
 <p>The higher the GasPrice of the transaction, the higher the execution priority of the transaction and the greater the transaction cost. After each transaction is completed, the remaining unused Gas will be returned to the sender’s address account. It is important to note that if the execution of the transaction fails because the GasLimit is set too low, the Gas will not be returned to the user’s address at this time, and the user still needs to pay the energy cost for the failed transaction. Therefore, regardless of whether the transaction is executed successfully, the transaction sender needs to pay a certain calculation fee to the miner.</p>
-<p>In the PlatON network, the maximum gas limit is <code>100,800,000</code> and the minimum is 22,000. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: 1,000,000. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface platon_estimateGas can be called for approximate estimation to avoid failure due to insufficient Gas.</p>
-<p><strong>LAT Unit Conversion</strong></p>
+<p>In the Alaya network, the maximum gas limit is <code>100,800,000</code> and the minimum is 22,000. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: 1,000,000. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface platon_estimateGas can be called for approximate estimation to avoid failure due to insufficient Gas.</p>
+<p><strong>ATP Unit Conversion</strong></p>
 <table>
 <thead>
 <tr><th>Unit</th><th>VON Value</th><th>VON</th></tr>
@@ -798,16 +798,16 @@ maintenance networks. One <code>LAT</code> is divided into: <code>mLAT/uLAT/gVON
 <tr><td>kVON</td><td>1e3 VON</td><td>1,000</td></tr>
 <tr><td>mVON</td><td>1e6 VON</td><td>1,000,000</td></tr>
 <tr><td>gVON</td><td>1e9 VON</td><td>1,000,000,000</td></tr>
-<tr><td>microLAT</td><td>1e12 VON</td><td>1,000,000,000,000</td></tr>
-<tr><td>milliLAT</td><td>1e15 VON</td><td>1,000,000,000,000,000</td></tr>
-<tr><td>LAT</td><td>1e18 VON</td><td>1,000,000,000,000,000,000</td></tr>
-<tr><td>kLAT</td><td>1e21 VON</td><td>1,000,000,000,000,000,000,000</td></tr>
-<tr><td>mLAT</td><td>1e24 VON</td><td>1,000,000,000,000,000,000,000,000</td></tr>
-<tr><td>gLAT</td><td>1e27 VON</td><td>1,000,000,000,000,000,000,000,000,000</td></tr>
+<tr><td>microATP</td><td>1e12 VON</td><td>1,000,000,000,000</td></tr>
+<tr><td>milliATP</td><td>1e15 VON</td><td>1,000,000,000,000,000</td></tr>
+<tr><td>ATP</td><td>1e18 VON</td><td>1,000,000,000,000,000,000</td></tr>
+<tr><td>kATP</td><td>1e21 VON</td><td>1,000,000,000,000,000,000,000</td></tr>
+<tr><td>mATP</td><td>1e24 VON</td><td>1,000,000,000,000,000,000,000,000</td></tr>
+<tr><td>gATP</td><td>1e27 VON</td><td>1,000,000,000,000,000,000,000,000,000</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="avoid-timeouts"></a><a href="#avoid-timeouts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Timeouts</h3>
-<p>Sending transactions on the PlatON network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum GasLimit value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.</p>
+<p>Sending transactions on the Alaya network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum GasLimit value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.</p>
 <p>If the call function of a published contract is called (a call is a stateless operation in the contract logic), there is a 5s timeout limit. If the contract logic is not executed within 5s, a timeout will occur and the virtual machine will forcely exit , causing the query to fail.</p>
 <p>To avoid contract-related transaction failures, try breaking large contracts into smaller pieces and referencing each other as needed. To avoid infinite loops, be aware of common pitfalls and recursive calls.</p>
 <h3><a class="anchor" aria-hidden="true" id="punishment-for-illegal-operations"></a><a href="#punishment-for-illegal-operations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Punishment For Illegal Operations</h3>
@@ -819,8 +819,8 @@ maintenance networks. One <code>LAT</code> is divided into: <code>mLAT/uLAT/gVON
 supported by the network lock</li>
 <li>Use float type to do operation</li>
 </ul>
-<p>When operating a contract in the PlatON network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.</p>
-<p>The normal operation is to use the latest Truffle/PlatON-CDT officially provided by PlatON to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.</p>
+<p>When operating a contract in the Alaya network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.</p>
+<p>The normal operation is to use the latest Truffle/PlatON-CDT officially provided by Alaya to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.</p>
 <h3><a class="anchor" aria-hidden="true" id="cc-language-limit"></a><a href="#cc-language-limit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>C/C++ Language Limit</h3>
 <p><strong>C/C++ features not supported</strong></p>
 <ul>
@@ -1088,7 +1088,7 @@ WASM virtual machines, memory allocation is an expensive operation.</p>
 <h4><a class="anchor" aria-hidden="true" id="make_address-12"></a><a href="#make_address-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>make_address() 1/2</h4>
 <pre><code class="hljs css language-cpp">template &lt;size_t M&gt; std::pair&lt;Address, bool&gt; make_address(const char (&amp;str)[M])
 </code></pre>
-<p>The default address recognized by CDT is the main network address, that is, the address prefix is lat. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.</p>
+<p>The default address recognized by CDT is the main network address, that is, the address prefix is atp. If you want to recognize the test network address prefix is atx, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.</p>
 <p>Converts a c-style string to an address object.</p>
 <ul>
 <li><strong>Parameters</strong>
@@ -1103,7 +1103,7 @@ WASM virtual machines, memory allocation is an expensive operation.</p>
 <h4><a class="anchor" aria-hidden="true" id="make_address-22"></a><a href="#make_address-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>make_address() 2/2</h4>
 <pre><code class="hljs css language-cpp">std::pair&lt;Address, bool&gt; make_address(const std::string &amp;str_address)
 </code></pre>
-<p>The default address recognized by CDT is the main network address, that is, the address prefix is lat. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.</p>
+<p>The default address recognized by CDT is the main network address, that is, the address prefix is atp. If you want to recognize the test network address prefix is lax, you need to define the macro TESTNET, and you can put #define TESTNET on the first line of the contract.</p>
 <p>Converts a string to an address object.</p>
 <ul>
 <li><strong>Parameters</strong>

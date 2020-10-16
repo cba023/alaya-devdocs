@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>EVM Smart Contract · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the PlatON network. Mainly from the following aspects to explain："/><meta name="docsearch:language" content="en"/><meta property="og:title" content="EVM Smart Contract · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the PlatON network. Mainly from the following aspects to explain："/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=en"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/zh-CN/EVM_Smart_Contract">中文</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>EVM Smart Contract · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the Alaya network. Mainly from the following aspects to explain："/><meta name="docsearch:language" content="en"/><meta property="og:title" content="EVM Smart Contract · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the Alaya network. Mainly from the following aspects to explain："/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=en"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/zh-CN/EVM_Smart_Contract">中文</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,7 +66,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">EVM Smart Contract</h1></header><article><div><span><p>This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the PlatON network. Mainly from the following aspects to explain：</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">EVM Smart Contract</h1></header><article><div><span><p>This guide introduces the development process of smart contracts and issues should be noticed during development process from the perspective of the developer. It guides developers to quickly develop high-quality smart contracts on the Alaya network. Mainly from the following aspects to explain：</p>
 <ul>
 <li><a href="#development-manual">Development Manual</a></li>
 <li><a href="#migrate-contract">Migrate Contract</a></li>
@@ -78,9 +78,9 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="development-manual"></a><a href="#development-manual" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development Manual</h2>
 <h3><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
-<p>This tutorial is mainly to guide users to create a simple HelloWorld smart contract using solidity language on PlatON, compile, deploy, and call this contract through platon-truffle. If you want to use a richer API you can refer to <a href="/alaya-devdocs/en/Java_SDK">Java SDK</a> and  <a href="/alaya-devdocs/en/JS_SDK">JS SDK</a></p>
+<p>This tutorial is mainly to guide users to create a simple HelloWorld smart contract using solidity language on Alaya, compile, deploy, and call this contract through platon-truffle. If you want to use a richer API you can refer to <a href="/alaya-devdocs/en/Java_SDK">Java SDK</a> and  <a href="/alaya-devdocs/en/JS_SDK">JS SDK</a></p>
 <h3><a class="anchor" aria-hidden="true" id="platon-truffle-introduction"></a><a href="#platon-truffle-introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platon-truffle Introduction</h3>
-<p>Platon-truffle is a tool provided by PlatON that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:</p>
+<p>Platon-truffle is a tool provided by Alaya that can compile, deploy, and invoke smart contracts locally. For specific installation and usage manuals, refer to:</p>
 <ul>
 <li>Platon-truffle develop tools <a href="https://platon-truffle.readthedocs.io/en/v0.13.1/getting-started/installation.html">specific installation</a></li>
 <li>Platon-truffle develop tools <a href="https://platon-truffle.readthedocs.io/en/v0.13.1/">usage manuals</a></li>
@@ -191,7 +191,7 @@ contract HelloWorld {
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// blockchain server address</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// server port</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">//the accout address of deploying contract</span>
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">//the accout address of deploying contract</span>
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">50000000004</span>,
     },
@@ -205,7 +205,7 @@ contract HelloWorld {
 <pre><code class="hljs"><span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.importRawKey</span>("<span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">wallet</span> <span class="hljs-selector-tag">private</span> <span class="hljs-selector-tag">key</span>","<span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">wallet</span> <span class="hljs-selector-tag">password</span>");
 </code></pre>
 <p>After importing successfully, you will see the address corresponding to the private key as follows：</p>
-<pre><code class="hljs"><span class="hljs-symbol">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>'
+<pre><code class="hljs">'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp'
 </code></pre>
 <p>Unlock wallet account</p>
 <pre><code class="hljs"> web3.platon.personal.unlock<span class="hljs-constructor">Account('Your <span class="hljs-params">wallet</span> <span class="hljs-params">address</span>','Your <span class="hljs-params">wallet</span> <span class="hljs-params">password</span>',999999)</span>;
@@ -224,26 +224,26 @@ contract HelloWorld {
    <span class="hljs-string">----------------------</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0x87cd48cc467f9bc943fd096c57c8a7e7b7fa941380538d9e59797800c6c4292c</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block number:</span>        <span class="hljs-number">282520</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1585535169200</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">balance:</span>             <span class="hljs-number">16447231233352977496646259638377769924557918764752765436645.336513079692286014</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas used:</span>            <span class="hljs-number">145569</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-attr">gas price:</span>           <span class="hljs-number">1</span> <span class="hljs-string">gvon</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">ATP</span>
 
 
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
    <span class="hljs-string">&gt;</span> <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
    <span class="hljs-string">-------------------------------------</span>
-   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">LAT</span>
+   <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total cost:</span>          <span class="hljs-number">0.000145569</span> <span class="hljs-string">ATP</span>
 
 <span class="hljs-string">Summary</span>
 <span class="hljs-string">=======</span>
 <span class="hljs-string">&gt;</span> <span class="hljs-attr">Total deployments:</span>   <span class="hljs-number">2</span>
-<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000259892</span> <span class="hljs-string">LAT</span>
+<span class="hljs-string">&gt;</span> <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.000259892</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="call-helloworld-contract"></a><a href="#call-helloworld-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Call HelloWorld Contract</h3>
 <p><strong>Step1.</strong>  Enter the platon-truffle console</p>
@@ -255,7 +255,7 @@ contract HelloWorld {
 <p><strong>Step2.</strong>  Create contract object</p>
 <pre><code class="hljs css language-json">var abi = [{"constant":false,"inputs":[{"internalType":"string","name":"_name","type":"string"}],"name":"setName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]; //you can refet to HelloWorld/build/contracts/HelloWorld.json
 
-var contractAddr = 'lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07';//contract address
+var contractAddr = 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la';//contract address
 var helloWorld = new web3.platon.Contract(abi,contractAddr);  
 </code></pre>
 <p>Description：</p>
@@ -265,7 +265,7 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
 <li><code>helloWorld</code>  contract object created</li>
 </ul>
 <p><strong>Step3.</strong>  Call contract</p>
-<pre><code class="hljs css language-javascript">helloWorld.methods.setName(<span class="hljs-string">"hello world"</span>).send({<span class="hljs-attr">from</span>: <span class="hljs-string">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'</span>}).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{<span class="hljs-built_in">console</span>.log(receipt);}).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
+<pre><code class="hljs css language-javascript">helloWorld.methods.setName(<span class="hljs-string">"hello world"</span>).send({<span class="hljs-attr">from</span>: <span class="hljs-string">'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'</span>}).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{<span class="hljs-built_in">console</span>.log(receipt);}).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
 
 </code></pre>
 <p>Description：</p>
@@ -281,12 +281,12 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
   blockNumber: <span class="hljs-number">159726</span>, 
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">44820</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl', <span class="hljs-comment">//the address of caller</span>
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp', <span class="hljs-comment">//the address of caller</span>
   gasUsed: <span class="hljs-number">44820</span>, <span class="hljs-comment">//gas cost</span>
   logsBloom:
    '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: 'lax1h95ywjy3jwt047ph697cuuqqn4d6jyrah7fw07', <span class="hljs-comment">//contract address</span>
+  to: 'atp1c5xxup4au4pqkgkm6a3p6hj3x0vvekdj52z2la', <span class="hljs-comment">//contract address</span>
   transactionHash:'0xb7a41f72d555d4a2d9f<span class="hljs-number">2954</span>fbdc5bbbb4c5ce89c836f<span class="hljs-number">8704276419</span>ed416b<span class="hljs-number">3866</span>', 
   transactionIndex: <span class="hljs-number">0</span>,
   events: {} 
@@ -306,9 +306,9 @@ var helloWorld = new web3.platon.Contract(abi,contractAddr);
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="migrate-contract"></a><a href="#migrate-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Migrate Contract</h2>
 <h3><a class="anchor" aria-hidden="true" id="introduction-1"></a><a href="#introduction-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
-<p>The highest solidity version number supported by PlatON is 0.5.13. If you migrate contracts with versions above 0.5.13, you need to lower the version number and remove the syntax related to the higher version.</p>
-<p>If you want to migrate Ethereum's smart contract to PlatON, you can do this with the <code>platon-truffle</code> development tool. First, to make sure have <code>platon-truffle</code> installed correctly, just follow these steps.</p>
-<p>The migration of Ethereum's ERC200513Token contract to PlatON is demonstrated below，<code>ERC200513Token.sol</code> contract are as follows:</p>
+<p>The highest solidity version number supported by Alaya is 0.5.13. If you migrate contracts with versions above 0.5.13, you need to lower the version number and remove the syntax related to the higher version.</p>
+<p>If you want to migrate Ethereum's smart contract to Alaya, you can do this with the <code>platon-truffle</code> development tool. First, to make sure have <code>platon-truffle</code> installed correctly, just follow these steps.</p>
+<p>The migration of Ethereum's ERC200513Token contract to Alaya is demonstrated below，<code>ERC200513Token.sol</code> contract are as follows:</p>
 <pre><code class="hljs">pragma solidity <span class="hljs-number">0.5</span><span class="hljs-number">.13</span>;
 
 contract ERC200513Token {
@@ -497,8 +497,8 @@ contract ERC200513Token {
 </code></pre>
 <ul>
 <li>ERC200513Token.sol</li>
-<li>PlatON's smart contract unit is LAT,VON. To migrate the Ethereum smart contract to PlatON,please change the Ethereum denomination to PlatON denomination.also note the ether /LAT market rate（for this contract, we assume the market exchange rate1:1,uint256 public totalSupply = 10000000000000000000 ether; change to uint256 public totalSupply = 10000000000000000000 LAT; ）</li>
-<li>PlatON's smart contract block.timestamp is current block timestamp as milliseconds since unix epoch, and Ethereum smart contract is seconds.</li>
+<li>Alaya's smart contract unit is ATP,VON. To migrate the Ethereum smart contract to Alaya,please change the Ethereum denomination to Alaya denomination.also note the ether /ATP market rate（for this contract, we assume the market exchange rate1:1,uint256 public totalSupply = 10000000000000000000 ether; change to uint256 public totalSupply = 10000000000000000000 ATP; ）</li>
+<li>Alaya's smart contract block.timestamp is current block timestamp as milliseconds since unix epoch, and Ethereum smart contract is seconds.</li>
 </ul>
 <p><strong>Step4.</strong> Modify the compilation version number and chain-dependent configuration in truffle-config.js</p>
 <pre><code class="hljs">module.exports = {
@@ -507,7 +507,7 @@ contract ERC200513Token {
 <span class="hljs-symbol">      host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// chain address</span>
 <span class="hljs-symbol">      port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// chain rpc port</span>
 <span class="hljs-symbol">      network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">      from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">// the wallet address of deployment contract </span>
+<span class="hljs-symbol">      from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">// the wallet address of deployment contract </span>
 <span class="hljs-symbol">      gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">      gasPrice:</span> <span class="hljs-number">50000000004</span>,         
      },
@@ -554,21 +554,21 @@ Compiled successfully using:
    <span class="hljs-string">Deploying</span> <span class="hljs-string">'ERC200513Token'</span>
      <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0xa1770aecf4cffb0e75a172e06e75a9e9cb2d36bf89291b57d504e8c054985e99</span>
      <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1uetshtp4tp6l067tl02e4x435py9ajrfdhsrd4//new</span> <span class="hljs-string">contract</span> <span class="hljs-string">address</span>
+     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1kekwl4v2q0qc0g9cr6c8adsx0p2n7c90ygp5tv//new</span> <span class="hljs-string">contract</span> <span class="hljs-string">address</span>
      <span class="hljs-attr">block number:</span>        <span class="hljs-number">265657</span>
      <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1581742216965</span>
-     <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+     <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
      <span class="hljs-attr">balance:</span>             <span class="hljs-number">90000000.826385379994114416</span>
      <span class="hljs-attr">gas used:</span>            <span class="hljs-number">638876</span>
      <span class="hljs-attr">gas price:</span>           <span class="hljs-number">50.000000004</span> <span class="hljs-string">gVON</span>
-     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.031943800002555504</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.031943800002555504</span> <span class="hljs-string">ATP</span>
      <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
      <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
-     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.031943800002555504</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.031943800002555504</span> <span class="hljs-string">ATP</span>
 <span class="hljs-string">Summary</span>
  <span class="hljs-attr">Total deployments:</span>   <span class="hljs-number">2</span>
- <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.037844150003027532</span> <span class="hljs-string">LAT</span>
+ <span class="hljs-attr">Final cost:</span>          <span class="hljs-number">0.037844150003027532</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crowdfunding-contract"></a><a href="#crowdfunding-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Crowdfunding Contract</h2>
@@ -596,7 +596,7 @@ Compiled successfully using:
 
 contract CrowdFunding {
     address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(<span class="hljs-number">0x0</span>); <span class="hljs-comment">//Beneficiary address, set as contract creator</span>
-    uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> LAT;  <span class="hljs-comment">//Crowdfunding target, unit is LAT</span>
+    uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> ATP;  <span class="hljs-comment">//Crowdfunding target, unit is ATP</span>
     uint256 <span class="hljs-keyword">public</span> amountRaised = <span class="hljs-number">0</span>; <span class="hljs-comment">//The amount of money raised,the unit is VON</span>
     uint256 <span class="hljs-keyword">public</span> deadline; 
     uint256 <span class="hljs-keyword">public</span> price;  <span class="hljs-comment">//token price</span>
@@ -607,7 +607,7 @@ contract CrowdFunding {
     
     mapping(address =&gt; uint256) <span class="hljs-keyword">public</span> tokenMap; <span class="hljs-comment">//Save the number of tokens owned by the investor</span>
 
-    <span class="hljs-comment">//Record received LAT notifications</span>
+    <span class="hljs-comment">//Record received ATP notifications</span>
     event GoalReached(address _beneficiaryAddress, <span class="hljs-keyword">uint</span> _amountRaised);
 
     <span class="hljs-comment">//Transfer notice</span>
@@ -622,7 +622,7 @@ contract CrowdFunding {
     <span class="hljs-comment">/**
      * Initialization constructor
      *
-     * <span class="hljs-doctag">@param</span> _fundingGoalInlats: Total crowdfunding LAT coin
+     * <span class="hljs-doctag">@param</span> _fundingGoalInlats: Total crowdfunding ATP coin
      * <span class="hljs-doctag">@param</span> _durationInMinutes: Crowdfunding deadline, unit is minute
      */</span>
     constructor (
@@ -630,9 +630,9 @@ contract CrowdFunding {
         <span class="hljs-keyword">uint</span> _durationInMinutes
     )<span class="hljs-keyword">public</span> {
         beneficiaryAddress = msg.sender;
-        fundingGoal = _fundingGoalInlats * <span class="hljs-number">1</span> LAT;
+        fundingGoal = _fundingGoalInlats * <span class="hljs-number">1</span> ATP;
         deadline = now + _durationInMinutes * <span class="hljs-number">1</span> minutes;
-        price = <span class="hljs-number">500</span> finney; <span class="hljs-comment">//1个LAT币可以买 2 个代币</span>
+        price = <span class="hljs-number">500</span> finney; <span class="hljs-comment">//1个ATP币可以买 2 个代币</span>
     }
 
 
@@ -771,7 +771,7 @@ contract CrowdFunding {
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// blockchain server address</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// server port</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>, <span class="hljs-comment">//the accout address of deploying contract</span>
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>, <span class="hljs-comment">//the accout address of deploying contract</span>
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">50000000004</span>,
     },
@@ -788,19 +788,19 @@ contract CrowdFunding {
     <span class="hljs-string">Deploying</span> <span class="hljs-string">'CrowdFunding'</span>
      <span class="hljs-attr">transaction hash:</span>    <span class="hljs-number">0x3a6419cd4169d7cfb430a1fc5632239ac4a01845827f20df9b3229a334c5488b</span>
      <span class="hljs-attr">Blocks: 0            Seconds:</span> <span class="hljs-number">0</span>
-     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt</span> <span class="hljs-string">//contract</span> <span class="hljs-string">address</span>
+     <span class="hljs-attr">contract address:</span>    <span class="hljs-string">atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya</span> <span class="hljs-string">//contract</span> <span class="hljs-string">address</span>
      <span class="hljs-attr">block number:</span>        <span class="hljs-number">280532</span>
      <span class="hljs-attr">block timestamp:</span>     <span class="hljs-number">1581751224032</span>
-     <span class="hljs-attr">account:</span>             <span class="hljs-string">lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>
+     <span class="hljs-attr">account:</span>             <span class="hljs-string">atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp</span>
      <span class="hljs-attr">balance:</span>             <span class="hljs-number">90000000.806077629992489796</span>
      <span class="hljs-attr">gas used:</span>            <span class="hljs-number">379154</span>
      <span class="hljs-attr">gas price:</span>           <span class="hljs-number">50.000000004</span> <span class="hljs-string">gVON</span>
-     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">LAT</span>
-     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">value sent:</span>          <span class="hljs-number">0</span> <span class="hljs-string">ATP</span>
+     <span class="hljs-attr">total cost:</span>          <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">ATP</span>
  
      <span class="hljs-string">Saving</span> <span class="hljs-string">migration</span> <span class="hljs-string">to</span> <span class="hljs-string">chain.</span>
      <span class="hljs-string">Saving</span> <span class="hljs-string">artifacts</span>
-     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">LAT</span>
+     <span class="hljs-attr">Total cost:</span>     <span class="hljs-number">0.018957700001516616</span> <span class="hljs-string">ATP</span>
 </code></pre>
 <p><strong>Crowdfounding Query：</strong></p>
 <p><strong>Step1.</strong>  Enter the platon-truffle console</p>
@@ -811,14 +811,14 @@ contract CrowdFunding {
 </blockquote>
 <p><strong>Step2.</strong>  Create contract object</p>
 <pre><code class="hljs"><span class="hljs-keyword">var</span> abi = [...]; <span class="hljs-comment">//ABI of CrowdFunding contract,can get from build/contracts/CrowdFunding.json</span>
-<span class="hljs-keyword">var</span> contractAddr = <span class="hljs-string">'lax1qtgycm7jkrq8csa2rgef6enlru0u02g8u82kpt'</span>; <span class="hljs-comment">//CrowdFundsing contract address</span>
+<span class="hljs-keyword">var</span> contractAddr = <span class="hljs-string">'atp1crcjuu9uwa9aukmf5dr5tq4ym6cv2kre0042ya'</span>; <span class="hljs-comment">//CrowdFundsing contract address</span>
 <span class="hljs-keyword">var</span> crowdFunding = <span class="hljs-keyword">new</span> <span class="hljs-type">web3</span>.platon.Contract(abi,contractAddr);
 </code></pre>
 <p><strong>Step3.</strong>  Query the amount raised</p>
 <pre><code class="hljs">crowdFunding.methods.amountRaised().call(<span class="hljs-literal">null</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error,result</span>)</span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"result:"</span> + result);}); <span class="hljs-comment">//query the amount raised</span>
 </code></pre>
 <p><strong>Step4.</strong>  Crowdfunder judge the success of crowdfunding</p>
-<pre><code class="hljs">crowdFunding.methods.safeWithdrawal().send({<span class="hljs-keyword">from</span>:'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'}).<span class="hljs-keyword">on</span><span class="hljs-params">('data', function<span class="hljs-params">(event)</span>{ console.log<span class="hljs-params">(event)</span>;})</span>.<span class="hljs-keyword">on</span><span class="hljs-params">('error', console.error)</span>; 
+<pre><code class="hljs">crowdFunding.methods.safeWithdrawal().send({<span class="hljs-keyword">from</span>:'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'}).<span class="hljs-keyword">on</span><span class="hljs-params">('data', function<span class="hljs-params">(event)</span>{ console.log<span class="hljs-params">(event)</span>;})</span>.<span class="hljs-keyword">on</span><span class="hljs-params">('error', console.error)</span>; 
 </code></pre>
 <p>Call contract command description:</p>
 <ul>
@@ -831,9 +831,9 @@ contract CrowdFunding {
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="development-costs"></a><a href="#development-costs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development Costs</h2>
 <h3><a class="anchor" aria-hidden="true" id="introduction-3"></a><a href="#introduction-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
-<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, performing energy conversion, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. The cost of developing smart contracts on the PlatON network is similar to that of developing on Ethereum. This manual will analyze and compare in an intuitive format, allowing users to have a clearer understanding of development costs.</p>
+<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, performing energy conversion, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. The cost of developing smart contracts on the Alaya network is similar to that of developing on Ethereum. This manual will analyze and compare in an intuitive format, allowing users to have a clearer understanding of development costs.</p>
 <h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
-<p>This article will use a table to compare different development costs of small, medium and large contracts, and compare PlatON with Ethereum. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source(<a href="https://github.com/yep/eth-tweet">eth-tweet</a>) contract The large contract is a smart contract that complies with the ERC20 standard.</p>
+<p>This article will use a table to compare different development costs of small, medium and large contracts, and compare Alaya with Ethereum. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source(<a href="https://github.com/yep/eth-tweet">eth-tweet</a>) contract The large contract is a smart contract that complies with the ERC20 standard.</p>
 <h4><a class="anchor" aria-hidden="true" id="data-overview"></a><a href="#data-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Overview</h4>
 <p><strong>Simple Storage Contract</strong></p>
 <table>
@@ -841,7 +841,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Small-sized</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">127173</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">635865 <code>Gwei</code></td><td style="text-align:left">0.000635865 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -851,7 +851,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">621385</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">3106925 <code>Gwei</code></td><td style="text-align:left">0.003106925 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -861,7 +861,7 @@ contract CrowdFunding {
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">Large-sized</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">1282171</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">6410855  <code>Gwei</code></td><td style="text-align:left">0.006410855 <code>ETH</code></td></tr>
 </tbody>
 </table>
@@ -888,11 +888,11 @@ contract SimpleTest {
 </code></pre>
 <p>ByteSize：<code>311 byte =&gt; 0.3 kb</code></p>
 <h6><a class="anchor" aria-hidden="true" id="cost"></a><a href="#cost" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cost</h6>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>GasUsed: 76953</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  384765 <code>gVON</code>（0.000384765 <code>LAT</code>）</li>
+<li>Costs:  384765 <code>gVON</code>（0.000384765 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -910,11 +910,11 @@ contract SimpleTest {
 </code></pre>
 <p>ByteSize： <code>2130.5 byte =&gt; 2.08 kb</code></p>
 <h6><a class="anchor" aria-hidden="true" id="cost-1"></a><a href="#cost-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cost</h6>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>GasUsed: 257065</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  1285325 <code>gVON</code>（0.001285325 <code>LAT</code>）</li>
+<li>Costs:  1285325 <code>gVON</code>（0.001285325 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -932,11 +932,11 @@ contract SimpleTest {
 </code></pre>
 <p>ByteSize： <code>4557.5 byte =&gt; 4.45 kb</code></p>
 <h6><a class="anchor" aria-hidden="true" id="cost-2"></a><a href="#cost-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cost</h6>
-<p>PlatON</p>
+<p>Alaya</p>
 <ul>
 <li>GasUsed: 552823</li>
 <li>GasPrice: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>Costs:  2764115 <code>gVON</code>（0.002764115 <code>LAT</code>）</li>
+<li>Costs:  2764115 <code>gVON</code>（0.002764115 <code>ATP</code>）</li>
 </ul>
 <p>Ethereum</p>
 <ul>
@@ -949,13 +949,13 @@ contract SimpleTest {
 <h3><a class="anchor" aria-hidden="true" id="introduction-4"></a><a href="#introduction-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h3>
 <p>This guide introduces users with some key points that need to be paid attention in the development of smart contracts, mainly in the practice of actual development. Users can use this guide to quickly understand how to set a reasonable fee for a transaction, how to avoid losing the fee due to transaction failure, and how to encode a more standardized smart contract.</p>
 <h3><a class="anchor" aria-hidden="true" id="reasonable-cost-setting"></a><a href="#reasonable-cost-setting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reasonable Cost Setting</h3>
-<p>When you need to deploy a contract on the main network of PlatON, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in PlatON. This restriction is mainly accomplished through Gas. Gas is the fuel value of the PlatON network world, which determines the normal operation of the PlatON network ecosystem. Gas is usually used to measure how much &quot;work&quot; is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the PlatON network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by LAT. Any transaction, contract execution, and data storage on the network need to use Gas.</p>
-<p>PlatON is similar to Ethereum's blockchain system. It uses <code>LAT</code> for payment and maintenance networks. One LAT is divided into:<code>mLAT/uLAT/gVON/mVON/kVON/VON</code>, and <code>VON</code> is the smallest unit.</p>
+<p>When you need to deploy a contract on the main network of Alaya, you need to set a reasonable fee limit. The fee limit refers to the upper limit of the energy consumption cost of smart contract deployment/execution in Alaya. This restriction is mainly accomplished through Gas. Gas is the fuel value of the Alaya network world, which determines the normal operation of the Alaya network ecosystem. Gas is usually used to measure how much &quot;work&quot; is required to perform certain actions, and these workloads are the amount of fees that need to be paid to the Alaya network in order to perform the action. In a simple understanding, Gas is the commission for network miners, and is paid by ATP. Any transaction, contract execution, and data storage on the network need to use Gas.</p>
+<p>Alaya is similar to Ethereum's blockchain system. It uses <code>ATP</code> for payment and maintenance networks. One ATP is divided into:<code>mATP/uATP/gVON/mVON/kVON/VON</code>, and <code>VON</code> is the smallest unit.</p>
 <p>Gas consists of two parts: GasLimit and GasPrice. <code>GasLimit</code> is the maximum<code>Gas</code> consumption (minimum 21,000) that a user is willing to pay to perform an operation or confirm a transaction. GasPrice is the unit price of each Gas.</p>
 <p>When a user sends a transaction, GasLimit and GasPrice are set. <code>GasLimit * GasPrice</code> is the user's transaction cost, and the cost is rewarded to the miner as a commission.</p>
 <p>The higher the GasPrice of the transaction, the higher the execution priority of the transaction and the greater the transaction cost. After each transaction is completed, the remaining unused Gas will be returned to the sender's address account. It is important to note that if the execution of the transaction fails due to the GasLimit is too low, the Gas will not be returned to the user's address at this time, and the user still needs to pay the energy cost for the failed transaction. Therefore, regardless of whether the transaction is executed successfully, the transaction sender needs to pay a certain calculation fee to the miner.</p>
-<p>In the <code>PlatON</code> network, the maximum gas limit is<code>4,700,000</code> and the minimum is <code>22,000</code>. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: <code>1,000,000</code>. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface <code>platon_estimateGas</code> can be called for approximate estimation to avoid failure due to insufficient Gas. <a href="/alaya-devdocs/en/Json_Rpc">Click to view JSON-RPC reference documentation</a>.</p>
-<p><strong>LAT Unit Conversion</strong></p>
+<p>In the <code>Alaya</code> network, the maximum gas limit is<code>4,700,000</code> and the minimum is <code>22,000</code>. Too low or too high will cause transaction failure. When deploying large contracts or calling complex functions in contracts, you can increase the gas limit, for example: <code>1,000,000</code>. If it is a normal transfer, set it to the lowest value. The specific value needs to be estimated according to the size and complexity of the contract. Before the contract is released, the interface <code>platon_estimateGas</code> can be called for approximate estimation to avoid failure due to insufficient Gas. <a href="/alaya-devdocs/en/Json_Rpc">Click to view JSON-RPC reference documentation</a>.</p>
+<p><strong>ATP Unit Conversion</strong></p>
 <table>
 <thead>
 <tr><th style="text-align:left">Unit</th><th style="text-align:left">VON Value</th><th style="text-align:left">VON</th></tr>
@@ -965,13 +965,13 @@ contract SimpleTest {
 <tr><td style="text-align:left">kVON</td><td style="text-align:left">1e3 VON</td><td style="text-align:left">1,000</td></tr>
 <tr><td style="text-align:left">mVON</td><td style="text-align:left">1e6 VON</td><td style="text-align:left">1,000,000</td></tr>
 <tr><td style="text-align:left">gVON</td><td style="text-align:left">1e9 VON</td><td style="text-align:left">1,000,000,000</td></tr>
-<tr><td style="text-align:left">LAT</td><td style="text-align:left">1e18 VON</td><td style="text-align:left">1,000,000,000,000,000,000</td></tr>
-<tr><td style="text-align:left">mLAT</td><td style="text-align:left">1e24 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000</td></tr>
-<tr><td style="text-align:left">gLAT</td><td style="text-align:left">1e27 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">ATP</td><td style="text-align:left">1e18 VON</td><td style="text-align:left">1,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">mATP</td><td style="text-align:left">1e24 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000</td></tr>
+<tr><td style="text-align:left">gATP</td><td style="text-align:left">1e27 VON</td><td style="text-align:left">1,000,000,000,000,000,000,000,000,000</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="avoid-timeouts"></a><a href="#avoid-timeouts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Timeouts</h3>
-<p>Sending transactions on the PlatON network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum <code>GasLimit</code> value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.</p>
+<p>Sending transactions on the Alaya network does not have the concept of timeout, but it will eventually stop according to the set gas limit value. If the limit value is lower than the consumption required for contract deployment, the transaction execution fails and the corresponding processing fee will be deducted. The fee setting cannot be infinite, because in the network, the block itself has a maximum <code>GasLimit</code> value. When the GasLimit of the transaction exceeds this value, the transaction will not be accepted.</p>
 <p>If the call function of a published contract is called (a call is a stateless operation in the contract logic), there is a 5s timeout limit. If the contract logic is not executed within 5s, a timeout will occur and the virtual machine will forcely exit , causing the query to fail.</p>
 <p>To avoid contract-related transaction failures, try breaking large contracts into smaller pieces and referencing each other as needed. To avoid infinite loops, be aware of common pitfalls and recursive calls.</p>
 <h3><a class="anchor" aria-hidden="true" id="punishment-for-illegal-operations"></a><a href="#punishment-for-illegal-operations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Punishment For Illegal Operations</h3>
@@ -981,8 +981,8 @@ contract SimpleTest {
 <li>Manually changed the instruction code for the normally compiled contract;</li>
 <li>The contract compiler version is not consistent with the contract version supported by the network lock;</li>
 </ol>
-<p>When operating a contract in the PlatON network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.</p>
-<p>The normal operation is to use the latest <code>Truffle</code>/<code>PlatON-CDT</code> officially provided by PlatON to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.</p>
+<p>When operating a contract in the Alaya network. First, you must confirm the smart contract version supported by the current network, and then select the compiler of the corresponding version pair.</p>
+<p>The normal operation is to use the latest <code>Truffle</code>/<code>PlatON-CDT</code> officially provided by Alaya to compile/deploy/execute the contract. At the same time, before switching to the main network, it must be validated on the test network.</p>
 <h3><a class="anchor" aria-hidden="true" id="coding-standards"></a><a href="#coding-standards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coding Standards</h3>
 <h4><a class="anchor" aria-hidden="true" id="naming-rules"></a><a href="#naming-rules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Naming Rules</h4>
 <p>Basic Rules:</p>
@@ -1012,7 +1012,7 @@ contract SimpleTest {
 <h4><a class="anchor" aria-hidden="true" id="suggestions"></a><a href="#suggestions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Suggestions</h4>
 <ul>
 <li>In the smart contract, to get the value of the state variable modified by the public, there is no need to write a function of <code>get</code>.</li>
-<li>In a smart contract, if an anonymous function modified by payable is added to the contract, the contract address can accept LAT transfers.</li>
+<li>In a smart contract, if an anonymous function modified by payable is added to the contract, the contract address can accept ATP transfers.</li>
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="contract-security-development-guide"></a><a href="#contract-security-development-guide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contract Security Development Guide</h2>

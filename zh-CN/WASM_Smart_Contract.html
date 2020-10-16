@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>WASM智能合约 · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="PlatON区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。"/><meta name="docsearch:language" content="zh-CN"/><meta property="og:title" content="WASM智能合约 · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="PlatON区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。"/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=zh"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/en/WASM_Smart_Contract">English</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>WASM智能合约 · Alaya</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Alaya区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。"/><meta name="docsearch:language" content="zh-CN"/><meta property="og:title" content="WASM智能合约 · Alaya"/><meta property="og:type" content="website"/><meta property="og:url" content="https://luo-dahui.github.io//alaya-devdocs/"/><meta property="og:description" content="Alaya区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。"/><meta property="og:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://luo-dahui.github.io//alaya-devdocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/alaya-devdocs/img/logo.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script src="/alaya-devdocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/alaya-devdocs/css/main.css"/><script src="/alaya-devdocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://www.platon.network/?lang=zh"><img class="logo" src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/alaya-devdocs/img/language.svg" alt="Languages icon"/>中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/alaya-devdocs/en/WASM_Smart_Contract">English</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,8 +66,8 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">WASM智能合约</h1></header><article><div><span><p>PlatON区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。</p>
-<p>开发高性能和安全的智能合约，C++是最好的语言。PlatON WASM合约支持C++编写，同时在目前最为成熟的编译工具链clang/llvm的C/C++编译器基础上定制一个符合PlatON协议标准的编译器，本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题，引导开发者可以使用C++在PlatON网络快速开发出高质量的智能合约。</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">WASM智能合约</h1></header><article><div><span><p>Alaya区块链支持使用WebAssembly (WASM)来执行用户编写的智能合约，WASM是一种为栈式虚拟机设计的二进制指令集。WASM被设计为可供类似C/C++/Rust等高级语言的平台编译目标，最初设计目的是解决 JavaScript 的性能问题。WASM是由 W3C 牵头正在推进的 Web 标准，并得到了谷歌、微软和 Mozilla 等浏览器厂商的支持。</p>
+<p>开发高性能和安全的智能合约，C++是最好的语言。Alaya WASM合约支持C++编写，同时在目前最为成熟的编译工具链clang/llvm的C/C++编译器基础上定制一个符合Alaya协议标准的编译器，本开发指南是从开发者角度介绍智能合约的开发流程和开发过程中需要注意的常见问题，引导开发者可以使用C++在Alaya网络快速开发出高质量的智能合约。</p>
 <p>主要从以下几个方面进行讲解：</p>
 <ul>
 <li><a href="#入门">入门</a></li>
@@ -78,7 +78,7 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="入门"></a><a href="#入门" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>入门</h2>
 <h3><a class="anchor" aria-hidden="true" id="概要"></a><a href="#概要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
-<p>本教程主要是指导用户在PlatON上使用wasm语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。</p>
+<p>本教程主要是指导用户在Alaya上使用wasm语言创建简单的HelloWorld智能合约，通过platon-truffle编译，部署，调用此合约。</p>
 <h3><a class="anchor" aria-hidden="true" id="platon-truffle开发工具介绍"></a><a href="#platon-truffle开发工具介绍" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>platon-truffle开发工具介绍</h3>
 <p>platon-truffle是PlatON提供的一款能够在本地编译、部署、调用智能合约的工具，具体的安装及使用手册参见</p>
 <ul>
@@ -134,7 +134,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <li><p>ACTION 和 CONST 修饰的成员函数表示可调用函数，此类成员函数不可以重载。ACTION 函数会修改链上数据，CONST 函数只是查询属性不会修改链上数据。</p></li>
 <li><p>可调用函数参数列表中的类型为自定义类型，此类型定义中需加上 PLATON_SERIALIZE 宏声明序列化函数，此类型继承自其他类型，需加上 PLATON_SERIALIZE_DERIVED 宏声明序列化函数。</p></li>
 <li><p>可调用函数只有在PLATON_DISPATCH 宏定义统一入口函数，才能够被外部调用。</p></li>
-<li><p>目前 platon 会将合约类的成员变量持久化存储，成员变量必须是 platon::StorageType 类型，platon::StorageType模板的第一个参数字符串后面加上_n，字符串必须为.12345abcdefghijklmnopqrstuvwxyz这32字符中的字符。第二个参数为实际存储的具体类型。成员函数修改成员变量需要通过 self() 函数获取具体类型的实例，然后执行相应的实例函数。</p></li>
+<li><p>目前 Alaya 会将合约类的成员变量持久化存储，成员变量必须是 platon::StorageType 类型，platon::StorageType模板的第一个参数字符串后面加上_n，字符串必须为.12345abcdefghijklmnopqrstuvwxyz这32字符中的字符。第二个参数为实际存储的具体类型。成员函数修改成员变量需要通过 self() 函数获取具体类型的实例，然后执行相应的实例函数。</p></li>
 <li><p>platon::StorageType 模板的第二个参数类型为自定义类型，此类型定义中需加上 PLATON_SERIALIZE 宏声明序列化函数，此类型继承自其他类型，需加上 PLATON_SERIALIZE_DERIVED 宏声明序列化函数。</p></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="编译helloworld合约"></a><a href="#编译helloworld合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>编译HelloWorld合约</h3>
@@ -189,7 +189,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <span class="hljs-symbol">       host:</span> <span class="hljs-string">"10.1.1.6"</span>,     <span class="hljs-comment">// 区块链所在服务器主机</span>
 <span class="hljs-symbol">       port:</span> <span class="hljs-number">8806</span>,            <span class="hljs-comment">// 链端口号</span>
 <span class="hljs-symbol">       network_id:</span> <span class="hljs-string">"*"</span>,       <span class="hljs-comment">// Any network (default: none)</span>
-<span class="hljs-symbol">       from:</span> <span class="hljs-string">"lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl"</span>,
+<span class="hljs-symbol">       from:</span> <span class="hljs-string">"atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp"</span>,
 <span class="hljs-symbol">       gas:</span> <span class="hljs-number">999999</span>,
 <span class="hljs-symbol">       gasPrice:</span> <span class="hljs-number">50000000004</span>,
     },
@@ -203,7 +203,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <pre><code class="hljs"><span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.importRawKey</span>("您的钱包私钥","您的钱包密码");
 </code></pre>
 <p>导入成功将看到私钥对应的地址：</p>
-<pre><code class="hljs"><span class="hljs-symbol">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl</span>'
+<pre><code class="hljs">'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp'
 </code></pre>
 <p>解锁钱包账户</p>
 <pre><code class="hljs"> <span class="hljs-selector-tag">web3</span><span class="hljs-selector-class">.platon</span><span class="hljs-selector-class">.personal</span><span class="hljs-selector-class">.unlockAccount</span>(<span class="hljs-string">'您的钱包地址'</span>,<span class="hljs-string">'您的钱包密码'</span>,<span class="hljs-number">999999</span>);
@@ -222,9 +222,9 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 <pre><code class="hljs">receipt:  { blockHash:
    '0x<span class="hljs-number">266733</span>b693ba<span class="hljs-number">650315</span>a59c34e<span class="hljs-number">7280</span>4c06ca3e27fab<span class="hljs-number">14562579</span>7bd<span class="hljs-number">4225</span>9b572c5',
   blockNumber: <span class="hljs-number">70441</span>,
-  contractAddress: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  contractAddress: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   cumulativeGasUsed: <span class="hljs-number">291314</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">291314</span>,
   logs: [],
   logsBloom:
@@ -238,15 +238,15 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 ======================
 
    &gt; transactionHash:     <span class="hljs-number">0</span>x60946ebf0ccddc76a0234353435de73e7901888227fb2f03922fb0ce265a4e9d
-   &gt; contract address:    lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np
+   &gt; contract address:    atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx
    &gt; block number:        <span class="hljs-number">70441</span>
    &gt; block timestamp:     <span class="hljs-number">1583247148341</span>
-   &gt; account:             lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl
+   &gt; account:             atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp
    &gt; balance:             <span class="hljs-number">3533694129556768659166595001485837031654967793751237866225582808584074296</span>
    &gt; gas limit:           <span class="hljs-number">100000000</span>
    &gt; gas used:            <span class="hljs-number">291314</span>
-   &gt; gas price:           <span class="hljs-number">0.000000050000000004</span> LAT
-   &gt; total cost:          <span class="hljs-number">0.014565700001165256</span> LAT
+   &gt; gas price:           <span class="hljs-number">0.000000050000000004</span> ATP
+   &gt; total cost:          <span class="hljs-number">0.014565700001165256</span> ATP
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="调用helloworld合约"></a><a href="#调用helloworld合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>调用HelloWorld合约</h3>
 <p><strong>step1.</strong>  进入platon-truffle控制台</p>
@@ -257,7 +257,7 @@ PLATON_DISPATCH(HelloWorld, (init)(add_message)(get_message_size)(get_message_bo
 </ul>
 <p><strong>step2.</strong>  构建合约对象</p>
 <pre><code class="hljs css language-json">var abi = [{"baseclass":[],"fields":[{"name":"head","type":"string"}],"name":"message","type":"struct"},{"baseclass":["message"],"fields":[{"name":"body","type":"string"},{"name":"end","type":"string"}],"name":"my_message","type":"struct"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"init","output":"void","type":"Action"},{"constant":false,"input":[{"name":"one_message","type":"my_message"}],"name":"add_message","output":"void","type":"Action"},{"constant":true,"input":[],"name":"get_message_size","output":"uint8","type":"Action"},{"constant":true,"input":[{"name":"index","type":"uint8"}],"name":"get_message_body","output":"string","type":"Action"}];
-var contractAddr = 'lax1p0698y95s6ysfphxavl36hywppq0mz6ks673np';
+var contractAddr = 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx';
  
 var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 }); 
 </code></pre>
@@ -269,7 +269,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 </ul>
 <p><strong>step3.</strong>  调用合约</p>
 <pre><code class="hljs css language-javascript">helloworld.methods.add_message([[<span class="hljs-string">"5"</span>], <span class="hljs-string">"6"</span>, <span class="hljs-string">"7"</span>]).send({
-    <span class="hljs-attr">from</span>: <span class="hljs-string">'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl'</span>,<span class="hljs-attr">gas</span>: <span class="hljs-number">999999</span>
+    <span class="hljs-attr">from</span>: <span class="hljs-string">'atp1jtfqqqr6436ppj6ccnrh8xjg7qals3ctnnmurp'</span>,<span class="hljs-attr">gas</span>: <span class="hljs-number">999999</span>
 }).on(<span class="hljs-string">'receipt'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">receipt</span>) </span>{
     <span class="hljs-built_in">console</span>.log(receipt);
 }).on(<span class="hljs-string">'error'</span>, <span class="hljs-built_in">console</span>.error);
@@ -289,12 +289,12 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
   blockNumber: <span class="hljs-number">74665</span>,
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">108549</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">108549</span>,
   logsBloom:
    '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d<span class="hljs-number">0000</span>a',
   transactionIndex: <span class="hljs-number">0</span>,
@@ -304,12 +304,12 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
   blockNumber: <span class="hljs-number">74665</span>,
   contractAddress: <span class="hljs-literal">null</span>,
   cumulativeGasUsed: <span class="hljs-number">108549</span>,
-  from: 'lax1uqug0zq7rcxddndleq4ux2ft3tv6dqljphydrl',
+  from: 'atp1jtfqqqr<span class="hljs-number">6436</span>ppj6ccnrh8xjg7qals3ctnnmurp',
   gasUsed: <span class="hljs-number">108549</span>,
   logsBloom:
    '0x<span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000000000</span><span class="hljs-number">00000000</span>',
   status: true,
-  to: 'lax1p<span class="hljs-number">0698</span>y95s6ysfphxavl36hywppq0mz6ks673np',
+  to: 'atp12ts3s0zd7s8hm2vwv8wxe3rpvrwpv6tpsx8shx',
   transactionHash:
    '0x2b5e590df7e70ad428b1ccb06bda5dcce47f84c4d981c2fb475aca9ec9d<span class="hljs-number">0000</span>a',
   transactionIndex: <span class="hljs-number">0</span>,
@@ -328,7 +328,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="合约开发成本"></a><a href="#合约开发成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约开发成本</h2>
 <h3><a class="anchor" aria-hidden="true" id="概要-1"></a><a href="#概要-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
-<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 <code>PlatON</code> 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 <code>WASN</code> 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 <code>PlatON</code> 的 <code>EVM</code>/<code>WASM</code>虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ERC20</code> 标准的智能合约。</p>
+<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 <code>Alaya</code> 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 <code>WASN</code> 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 <code>Alaya</code> 的 <code>EVM</code>/<code>WASM</code>虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ERC20</code> 标准的智能合约。</p>
 <h4><a class="anchor" aria-hidden="true" id="资源消耗"></a><a href="#资源消耗" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>资源消耗</h4>
 <p><strong>简单set/get合约</strong></p>
 <table>
@@ -336,9 +336,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">76953</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">384765 <code>gVON</code></td><td style="text-align:left">0.000384765 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">小型合约</td><td style="text-align:left">0.3 kb</td><td style="text-align:left">127173</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">635865 <code>Gwei</code></td><td style="text-align:left">0.000635865 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">小型合约</td><td style="text-align:left">13.55 kb</td><td style="text-align:left">184043</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">920215 <code>gVON</code></td><td style="text-align:left">0.000920215 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">小型合约</td><td style="text-align:left">13.55 kb</td><td style="text-align:left">184043</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">920215 <code>gVON</code></td><td style="text-align:left">0.000920215 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <p><strong>微博客</strong></p>
@@ -347,9 +347,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">257065</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1285325 <code>gVON</code></td><td style="text-align:left">0.001285325 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">中型合约</td><td style="text-align:left">2.08 kb</td><td style="text-align:left">621385</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">3106925 <code>Gwei</code></td><td style="text-align:left">0.003106925 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">中型合约</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">中型合约</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <p><strong>ERC20标准Token</strong></p>
@@ -358,9 +358,9 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:left">PlatON-EVM</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-EVM</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">552823</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2764115  <code>gVON</code></td><td style="text-align:left">0.002764115 <code>ATP</code></td></tr>
 <tr><td style="text-align:left">Ethereum</td><td style="text-align:left">大型合约</td><td style="text-align:left">4.45 kb</td><td style="text-align:left">1282171</td><td style="text-align:left">5,000,000,000 <code>wei</code></td><td style="text-align:left">6410855  <code>Gwei</code></td><td style="text-align:left">0.006410855 <code>ETH</code></td></tr>
-<tr><td style="text-align:left">PlatON-WASM</td><td style="text-align:left">大型合约</td><td style="text-align:left">35.9 kb</td><td style="text-align:left">486274</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2431370  <code>gVON</code></td><td style="text-align:left">0.00243137 <code>LAT</code></td></tr>
+<tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">大型合约</td><td style="text-align:left">35.9 kb</td><td style="text-align:left">486274</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">2431370  <code>gVON</code></td><td style="text-align:left">0.00243137 <code>ATP</code></td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="小型合约示例"></a><a href="#小型合约示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>小型合约示例</h3>
@@ -417,23 +417,23 @@ PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<sp
 <p>字节大小：<code>13882 byte =&gt; 13.55 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本"></a><a href="#创建部署合约成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>Gas消耗: 76953</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  384765 <code>gVON</code>（0.000384765 <code>LAT</code>）</li>
+<li>总成本:  384765 <code>gVON</code>（0.000384765 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
 <li>Gas消耗: 127173</li>
 <li>Gas单价: 5,000,000,000 (5 <code>Gwei</code>)</li>
-<li>总成本:  635865 <code>Gwei</code>（0.000635865 <code>ETH</code>）</li>
+<li>总成本:  635865 <code>Gwei</code>（0.000635865 <code>ATP</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>Gas消耗: 184043</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  920215 <code>gVON</code>（0.000920215 <code>LAT</code>）</li>
+<li>总成本:  920215 <code>gVON</code>（0.000920215 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="中型合约示例"></a><a href="#中型合约示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>中型合约示例</h3>
@@ -563,11 +563,11 @@ CONTRACT TweetAccount: public platon::Contract
 <p>字节大小： <code>30788</code> byte =&gt; 30.07 kb`</p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本-1"></a><a href="#创建部署合约成本-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>Gas消耗: 257065</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  1285325 <code>gVON</code>（0.001285325 <code>LAT</code>）</li>
+<li>总成本:  1285325 <code>gVON</code>（0.001285325 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
@@ -575,11 +575,11 @@ CONTRACT TweetAccount: public platon::Contract
 <li>Gas单价: 5,000,000,000 (5 <code>Gwei</code>)</li>
 <li>总成本:  3106925 <code>Gwei</code>（0.003106925 <code>ETH</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>Gas消耗: 349713</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  1748565 <code>gVON</code>（0.001748565 <code>LAT</code>）</li>
+<li>总成本:  1748565 <code>gVON</code>（0.001748565 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="大型合约示例"></a><a href="#大型合约示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>大型合约示例</h3>
@@ -754,11 +754,11 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 <p>字节大小： <code>36764 byte =&gt; 35.9 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本-2"></a><a href="#创建部署合约成本-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
-<p>PlatON-EVM</p>
+<p>Alaya-EVM</p>
 <ul>
 <li>Gas消耗: 552823</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  2764115 <code>gVON</code>（0.002764115 <code>LAT</code>）</li>
+<li>总成本:  2764115 <code>gVON</code>（0.002764115 <code>ATP</code>）</li>
 </ul>
 <p>以太坊</p>
 <ul>
@@ -766,11 +766,11 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 <li>Gas单价: 5,000,000,000 (5 <code>Gwei</code>)</li>
 <li>总成本:  6410855 <code>Gwei</code>（0.006410855 <code>ETH</code>）</li>
 </ul>
-<p>PlatON-WASM</p>
+<p>Alaya-WASM</p>
 <ul>
 <li>Gas消耗: 486274</li>
 <li>Gas单价: 5,000,000,000 (5 <code>gVON</code>)</li>
-<li>总成本:  2431370 <code>gVON</code>（0.00243137 <code>LAT</code>）</li>
+<li>总成本:  2431370 <code>gVON</code>（0.00243137 <code>ATP</code>）</li>
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="最佳实践"></a><a href="#最佳实践" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最佳实践</h2>
@@ -779,14 +779,14 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 用户可以通过本指南快速了解针对一笔交易如何合理的设置手续费, 如何避免被因交易失败
 的同时损失手续费以及如何编码更加规范的智能合约.</p>
 <h3><a class="anchor" aria-hidden="true" id="费用合理设置"></a><a href="#费用合理设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>费用合理设置</h3>
-<p>当需要在 <code>PlatON</code> 的主网上部署合约时, 需要设置一个合理的费用限制. 费用限制是指
-<code>PlatON</code> 中智能合约部署/执行的能源消耗成本的上限. 该限制主要通过 <code>Gas</code> 完成,
-<code>Gas</code> 是 <code>PlatON</code> 网络世界的燃料值, 它决定了 <code>PlatON</code> 网络生态系统的正常运行. 通
+<p>当需要在 <code>Alaya</code> 的主网上部署合约时, 需要设置一个合理的费用限制. 费用限制是指
+<code>Alaya</code> 中智能合约部署/执行的能源消耗成本的上限. 该限制主要通过 <code>Gas</code> 完成,
+<code>Gas</code> 是 <code>Alaya</code> 网络世界的燃料值, 它决定了 <code>Alaya</code> 网络生态系统的正常运行. 通
 常使用 <code>Gas</code> 来衡量执行某些动作需要多少&quot;工作量&quot;, 这些工作量就是为了执行该动作所
-需要支付给 <code>PlatON</code> 网络的费用额度. 简单理解, <code>Gas</code> 是网络旷工的佣金, 并通过
-<code>LAT</code> 的方式支付, 在网络上的任何交易, 合约执行, 数据存储, 都需要使用到 <code>Gas</code>.</p>
-<p>PlatON 与以太坊区块链系统类似, 使用 <code>LAT</code> 进行支付和维护网络, 一枚 <code>LAT</code> 分为:
-<code>mLAT/uLAT/gVON/mVON/kVON/VON</code>, 其中VON是最小单位.</p>
+需要支付给 <code>Alaya</code> 网络的费用额度. 简单理解, <code>Gas</code> 是网络旷工的佣金, 并通过
+<code>ATP</code> 的方式支付, 在网络上的任何交易, 合约执行, 数据存储, 都需要使用到 <code>Gas</code>.</p>
+<p>Alaya 与以太坊区块链系统类似, 使用 <code>ATP</code> 进行支付和维护网络, 一枚 <code>ATP</code> 分为:
+<code>mATP/uATP/gVON/mVON/kVON/VON</code>, 其中VON是最小单位.</p>
 <p><code>Gas</code> 主要由两个部分组成: GasLimit(限制)和GasPrice(单价). 其中 <code>GasLimit</code> 是用户
 愿意为执行某个操作或确认交易支付的最大 <code>Gas</code> 消耗量(最少21,000). GasPrice是
 <code>VON</code> 的数量, 用于愿意为每个 <code>Gas</code> 所支付的单价.</p>
@@ -796,11 +796,11 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 完成后, 剩余未使用的Gas都会退回到发送者的地址账户中. 有一点要特别注意, 如果因为
 <code>GasLimit</code> 设置过低导致交易执行失败, 此时的 <code>Gas</code> 不会被回退到用户地址, 用户依然
 需要为这次失败的交易支付能量成本. 因此, 无论交易是否执行成功, 交易发送者都需要向旷工支付一定的计算费用.</p>
-<p>在 <code>PlatON</code> 网络中, 默认最高 <code>Gas</code> 的限制为 <code>100,800,000</code>, 最低为 <code>22,000</code>, 过低或者过高都会导
+<p>在 <code>Alaya</code> 网络中, 默认最高 <code>Gas</code> 的限制为 <code>100,800,000</code>, 最低为 <code>22,000</code>, 过低或者过高都会导
 致交易失败. 在部署大型合约或者运行复杂功能时, 可以将Gas的限制调高, 例如:
 <code>1,000,000</code>. 如果是普通转账则设置为最低值即可. 具体的值需要根据合约的规模及复杂度
 进行估算, 在合约发布前可以调用接口 <code>platon_estimateGas</code> 进行大概估算, 避免因不足而导致失败.</p>
-<p><strong>LAT 单位转换</strong></p>
+<p><strong>ATP 单位转换</strong></p>
 <table>
 <thead>
 <tr><th>单位</th><th>VON值</th><th>VON</th></tr>
@@ -810,16 +810,16 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 <tr><td>kVON</td><td>1e3 VON</td><td>1,000</td></tr>
 <tr><td>mVON</td><td>1e6 VON</td><td>1,000,000</td></tr>
 <tr><td>gVON</td><td>1e9 VON</td><td>1,000,000,000</td></tr>
-<tr><td>microLAT</td><td>1e12 VON</td><td>1,000,000,000,000</td></tr>
-<tr><td>milliLAT</td><td>1e15 VON</td><td>1,000,000,000,000,000</td></tr>
-<tr><td>LAT</td><td>1e18 VON</td><td>1,000,000,000,000,000,000</td></tr>
-<tr><td>kLAT</td><td>1e21 VON</td><td>1,000,000,000,000,000,000,000</td></tr>
-<tr><td>mLAT</td><td>1e24 VON</td><td>1,000,000,000,000,000,000,000,000</td></tr>
-<tr><td>gLAT</td><td>1e27 VON</td><td>1,000,000,000,000,000,000,000,000,000</td></tr>
+<tr><td>microATP</td><td>1e12 VON</td><td>1,000,000,000,000</td></tr>
+<tr><td>milliATP</td><td>1e15 VON</td><td>1,000,000,000,000,000</td></tr>
+<tr><td>ATP</td><td>1e18 VON</td><td>1,000,000,000,000,000,000</td></tr>
+<tr><td>kATP</td><td>1e21 VON</td><td>1,000,000,000,000,000,000,000</td></tr>
+<tr><td>mATP</td><td>1e24 VON</td><td>1,000,000,000,000,000,000,000,000</td></tr>
+<tr><td>gATP</td><td>1e27 VON</td><td>1,000,000,000,000,000,000,000,000,000</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="避免超时"></a><a href="#避免超时" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>避免超时</h3>
-<p>在 <code>PlatON</code> 网络上发送交易, 没有超时的概念, 但是最终会根据所设置的 Gas 限制值停
+<p>在 <code>Alaya</code> 网络上发送交易, 没有超时的概念, 但是最终会根据所设置的 Gas 限制值停
 止, 如果限制值低于合约部署所需要的消耗, 则交易发送失败, 同时会扣除对应的手续费.
 手续费的设定不可能无限大, 因为在网络中, 区块本身有一个最大的 Gas 上限, 当交易的
 <code>GasLimit</code> 超过该值时, 交易将无法被接收.</p>
@@ -838,8 +838,8 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 <li>合约编译器版本与网络锁支持的合约版本不一致</li>
 <li>使用浮点数运算</li>
 </ol>
-<p>在 <code>PlatON</code> 网络中操作合约时, 请务必先确认当前网络所支持的智能合约版本, 然后选择对应版本对的编译器.</p>
-<p>常规操作是使用 <code>PlatON</code> 官方提供的最新的Truffle/PlatON-CDT来编译/部署/执行合约,
+<p>在 <code>Alaya</code> 网络中操作合约时, 请务必先确认当前网络所支持的智能合约版本, 然后选择对应版本对的编译器.</p>
+<p>常规操作是使用 <code>Alaya</code> 官方提供的最新的Truffle/PlatON-CDT来编译/部署/执行合约,
 同时在切换到主网操作前, 务必在测试网进行有效的验证.</p>
 <h3><a class="anchor" aria-hidden="true" id="cc语言限制"></a><a href="#cc语言限制" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>C/C++语言限制</h3>
 <p><strong>C/C++不支持的特性</strong></p>
@@ -1075,7 +1075,7 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 <h4><a class="anchor" aria-hidden="true" id="make_address-12"></a><a href="#make_address-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>make_address() 1/2</h4>
 <pre><code class="hljs css language-cpp">template &lt;size_t M&gt; std::pair&lt;Address, bool&gt; make_address(const char (&amp;str)[M])
 </code></pre>
-<p>CDT 默认识别的地址是主网地址也就是地址前缀为lat，如果要识别测试网地址前缀为lax，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。</p>
+<p>CDT 默认识别的地址是主网地址也就是地址前缀为atp，如果要识别测试网地址前缀为atx，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。</p>
 <p>将C风格字符串转换为地址对象。</p>
 <ul>
 <li><strong>参数</strong>
@@ -1090,7 +1090,7 @@ GasPrice)是用户的交易成本, 同时该成本会作为佣金奖励给旷工
 <h4><a class="anchor" aria-hidden="true" id="make_address-22"></a><a href="#make_address-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>make_address() 2/2</h4>
 <pre><code class="hljs css language-cpp">std::pair&lt;Address, bool&gt; make_address(const std::string &amp;str_address)
 </code></pre>
-<p>CDT 默认识别的地址是主网地址也就是地址前缀为lat，如果要识别测试网地址前缀为lax，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。</p>
+<p>CDT 默认识别的地址是主网地址也就是地址前缀为atp，如果要识别测试网地址前缀为atx，需要定义宏TESTNET，在合约第一行加上#define TESTNET即可。</p>
 <p>将字符串转换为地址对象。</p>
 <ul>
 <li><strong>参数</strong>
@@ -2148,7 +2148,7 @@ platon_delegate_call&lt;<span class="hljs-keyword">int</span>&gt;(Address(<span 
 <span class="hljs-comment">//...</span>
 </code></pre>
 <ul>
-<li><code>platon</code> 启动命令指定日志级别4, 打开 <code>debug</code> 标志</li>
+<li><code>Alaya</code> 启动命令指定日志级别4, 打开 <code>debug</code> 标志</li>
 </ul>
 <pre><code class="hljs css language-shell">./platon --debug --verbosity 4 ...
 </code></pre>
