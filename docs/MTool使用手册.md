@@ -51,7 +51,7 @@ Proceed as follows:
 **Step1. Download MTool toolkit**
 
 ```bash
-wget http://47.91.153.183/alaya/mtool/linux/0.13.2/mtool-client.zip
+wget http://download.alaya.network/alaya/mtool/linux/0.13.2/mtool-client.zip
 ```
 
 **Step2. Extract the MTool toolkit**

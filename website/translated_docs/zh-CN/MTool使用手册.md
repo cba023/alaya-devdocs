@@ -51,7 +51,7 @@ mtool-client --version
 **step1. 下载MTool工具包**
 
 ``` bash
-wget http://47.91.153.183/alaya/mtool/linux/0.13.2/mtool-client.zip
+wget http://download.alaya.network/alaya/mtool/linux/0.13.2/mtool-client.zip
 ```
 
 **step2. 解压MTool工具包**
