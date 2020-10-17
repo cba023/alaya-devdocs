@@ -34,7 +34,7 @@ mtool-client --version
 
 **step1. 下载MTool安装包**
 
-在在线机器上，复制链接<http://47.91.153.183/alaya/mtool/windows/0.13.2/mtool-setup.exe> 到浏览器下载MTool安装包。
+在在线机器上，复制链接<http://download.alaya.network/alaya/mtool/windows/0.13.2/mtool-setup.exe> 到浏览器下载MTool安装包。
 
 **step2. 安装MTool**
 
