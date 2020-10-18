@@ -30,7 +30,7 @@ Anyone and any organization can join the Alaya main network.
 **Execute the following command to join the Baleyworld as a validator node**
 
 ```bash
-nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
+cd ~/platon-node/ && nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
 ```
 
 **Prompt:**
@@ -67,35 +67,7 @@ platon attach http://localhost:6789
 ### View peers of a node
 
 ```bash
-> admin.peers
-[{
-    caps: ["cbft/1", "platon/62", "platon/63"],
-    id: "0dd4e447cf23f4bfc94b1568bae626bf4894ce2e9d5ca474e3cc73ec7e9d4de550fffc1e2fc64cca25d42aecf6169cf8f8c0f4fe6adb847c33dc6ceb6f001bd1",
-    name: "PlatONnetwork/platon/v0.8.0-unstable-c5fc6b19/linux-amd64/go1.11.11",
-    network: {
-      consensus: true,
-      inbound: true,
-      localAddress: "127.0.0.1:16789",
-      remoteAddress: "127.0.0.1:47706",
-      static: false,
-      trusted: false
-    },
-    protocols: {
-      cbft: {
-        commitBn: 0,
-        highestQCBn: 0,
-        lockedBn: 0,
-        protocolVersion: 1
-      },
-      platon: {
-        head: "0x88a4fe315ce13b3010abf4ab5d120f25a21ac2ccae8ec563ad259e47e24b24bc",
-        number: 0,
-        version: 63
-      }
-    }
-},
-...
-]
+admin.peers
 ```
 
 
@@ -105,8 +77,9 @@ platon attach http://localhost:6789
 You can get the block height of the current node by executing the following command in the `Alaya` console.
 
 ```bash
-> platon.blockNumber
-2235
+platon.blockNumber
 ```
 
 A series of Alaya main network nodes appear in the node list and the block height is increasing, indicating that the connection is successful.
+
+Type exit to exit the console.

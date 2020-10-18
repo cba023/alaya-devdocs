@@ -29,7 +29,7 @@ Alaya主网络将于北京时间2020年10月24日正式上线对外开放，Chai
 执行以下命令即可启动验证节点加入Alaya主网络：
 
 ```bash
-nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
+cd ~/platon-node/ && nohup platon --identity alaya-node --datadir ./data --port 16789 --alaya --rpcport 6789 --rpcapi "db,platon,net,web3,admin,personal" --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 3 --rpcaddr 127.0.0.1 --syncmode "full" > ./data/platon.log 2>&1 &
 ```
 
 **提示：**
@@ -68,35 +68,7 @@ platon attach http://localhost:6789
 ### 查看节点的  peers
 
 ```bash
-> admin.peers
-[{
-    caps: ["cbft/1", "platon/62", "platon/63"],
-    id: "0dd4e447cf23f4bfc94b1568bae626bf4894ce2e9d5ca474e3cc73ec7e9d4de550fffc1e2fc64cca25d42aecf6169cf8f8c0f4fe6adb847c33dc6ceb6f001bd1",
-    name: "PlatONnetwork/platon/v0.8.0-unstable-c5fc6b19/linux-amd64/go1.11.11",
-    network: {
-      consensus: true,
-      inbound: true,
-      localAddress: "127.0.0.1:16789",
-      remoteAddress: "127.0.0.1:47706",
-      static: false,
-      trusted: false
-    },
-    protocols: {
-      cbft: {
-        commitBn: 0,
-        highestQCBn: 0,
-        lockedBn: 0,
-        protocolVersion: 1
-      },
-      platon: {
-        head: "0x88a4fe315ce13b3010abf4ab5d120f25a21ac2ccae8ec563ad259e47e24b24bc",
-        number: 0,
-        version: 63
-      }
-    }
-},
-...
-]
+admin.peers
 ```
 
 
@@ -106,8 +78,9 @@ platon attach http://localhost:6789
 通过在`Alaya`控制台中执行以下命令查看当前节点的块高。
 
 ```bash
-> platon.blockNumber
-2235
+platon.blockNumber
 ```
 
 节点列表中出现一系列Alaya网络节点并且块高在不断增长，则表示连接成功！
+
+输入exit退出控制台。
