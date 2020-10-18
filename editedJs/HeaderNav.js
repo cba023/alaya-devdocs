@@ -303,7 +303,7 @@ class HeaderNav extends React.Component {
           <header>
             <a
               href={
-                'https://www.platon.network/' +
+                'https://www.alaya.network/' +
                 (env.translation.enabled ? (this.props.language == 'zh-CN'? '?lang=zh': '?lang='+this.props.language) : '')
               }>
               {siteConfig.headerIcon && (
