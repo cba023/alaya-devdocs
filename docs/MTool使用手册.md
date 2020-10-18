@@ -65,7 +65,7 @@ wget http://download.alaya.network/alaya/mtool/linux/0.13.2/mtool-client.zip
 > The script is downloaded to the <font color=red>mtool-client</font> directory, otherwise the script cannot find the path of the new version of mtool.
 
 ```bash
-wget http://47.91.153.183/opensource/scripts/mtool_install.sh
+wget http://download.alaya.network/opensource/scripts/mtool_install.sh
 ```
 
 **Step4. Execute command**

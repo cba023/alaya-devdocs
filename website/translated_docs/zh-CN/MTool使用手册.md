@@ -65,7 +65,7 @@ wget http://download.alaya.network/alaya/mtool/linux/0.13.2/mtool-client.zip
 >脚本下载到<font color=red>mtool-client</font> 目录下，否则脚本无法找到新版本mtool的路径。
 
 ``` bash
-wget http://47.91.153.183/opensource/scripts/mtool_install.sh
+wget http://download.alaya.network/opensource/scripts/mtool_install.sh 
 ```
 
 **step4. 执行命令**
