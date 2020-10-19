@@ -132,6 +132,24 @@
 </code></pre>
 <p>Enter the password once and confirm the password again to create the wallet file. After the creation is successful, the staking wallet file <code>reward.json</code> will be generated in the directory<code>$MTOOLDIR/keystore</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="configure-verification-node-information"></a><a href="#configure-verification-node-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure verification node information</h3>
+<h4><a class="anchor" aria-hidden="true" id="download-the-script"></a><a href="#download-the-script" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download the script</h4>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> <span class="hljs-variable">$MTOOLDIR</span> &amp;&amp; wget http://download.alaya.network/opensource/scripts/validator_conf.sh
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="run-the-script-configuration"></a><a href="#run-the-script-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the script configuration</h4>
+<pre><code class="hljs css language-bash">$ chmod +x validator_conf.sh &amp;&amp; ./validator_conf.sh
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>When  the prompt shows &quot;Please enter the platon node IP address:&quot;, please enter the Alaya node server ip address.</li>
+<li>When  the prompt shows &quot;Please enter the delegatedRewardRate(0~10000):&quot;, please enter the proportion of dividends, ranging from 0 to 10000, in units (ten thousandths of a percentage). For example, if you enter 5000, it means that the proportion of dividends is 50%.</li>
+<li>When  the prompt shows &quot;Enter your name:&quot;, please enter the username when configuring Alaya node.</li>
+<li>When  the prompt shows &quot;Enter your password:&quot;, please enter the password when configuring Alaya node.</li>
+<li>When  the prompt shows &quot;Enter your platon node name:&quot;, please enter the name of the Alaya node.</li>
+<li>When  the prompt shows &quot;Enter your platon node description:&quot;, please enter Alaya node description.</li>
+<li>When  the prompt shows &quot;validator conf success&quot;,  and when the validator_config.json content printed at the end is normal, it means that the script is executed successfully. If the script is not executed successfully, please contact our official customer service to feedback specific questions.</li>
+</ul>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="validator-node-information-configuration-file-description"></a><a href="#validator-node-information-configuration-file-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validator node information configuration file description</h4>
 <p>After the configuration of the validator node information is completed, the validator node information file validator_config.json will be generated in the validator subdirectory of the MTool installation directory. The file content is as follows:</p>
 <pre><code class="hljs css language-json">{
